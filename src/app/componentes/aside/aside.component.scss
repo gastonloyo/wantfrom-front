@@ -1,0 +1,51 @@
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
+
+.side-bar{
+    width: 22vw;
+    min-width: 230px;
+    background-color: white;
+    
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    border-radius: 15px 0 15px 15px;
+    
+
+    .menu_lateral{
+        list-style: none;
+        font-family: $fte-ppal;
+        font-size: 15px;
+        li{ 
+            ul{
+                display: none;
+                li{
+                    a{
+                        background-color:$color-ppal;
+                        color: white;
+                        font-weight: normal;
+                    }
+                }
+            }
+            a:hover{
+                color:$color-sec ;
+            }
+        }
+    }
+
+}
+a{
+    text-decoration: none;
+    color: $color-ppal;
+    font-weight: bold;
+    display: block;
+    padding-left: 25px;
+    padding: 5px;
+}
+li{
+    list-style: none;
+}
+.fa-chevron-down{
+margin-left: 15px;
+}
