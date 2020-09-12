@@ -92,9 +92,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           }
         },
         "lint": {

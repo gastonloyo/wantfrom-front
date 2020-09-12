@@ -1,0 +1,34 @@
+.banner{
+    width: 78vw;
+    max-width: 1050px;
+    height: 24vh;
+    max-height: 135px;
+    margin: auto;
+    margin-top: 8vh;
+    background-image: url(../../../assets/imagenes/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name:entrada;
+    animation-delay: 1s;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    
+    i{
+        margin-left: 1030px;
+        margin-top: 4px;
+        position: relative;
+        animation-name:entrada;
+        animation-delay: 1s;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}
+
+@keyframes entrada {
+    from{transform: translateX(-1100px);
+       
+    }
+    to {transform: translateX(0px);}
+
+
+}
