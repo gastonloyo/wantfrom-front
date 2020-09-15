@@ -1,0 +1,22 @@
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
+
+section{
+
+    background-color: $color-sec;
+    width: 100vw;
+    height: 14vh;
+    position: relative;
+    margin-top:950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        p{
+            color: white;
+            font-family: $fte-ppal;
+            
+        }
+    }
+}

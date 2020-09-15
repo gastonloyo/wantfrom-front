@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
+    
+    
+    
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+          <!-- logo -->
+          <div id="logo"><img src="imagenes/kisspng-snowflake-stock-photography-royalty-free-snowflakes-5abb700d03d6c9.9749042715222333570157.png" alt="logo" /></div>
+  
+          <!-- check-box -->
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <!-- menu-hamburguesa -->
+          <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+          </label>
+          <!-- contenido del menu -->
+          <ul class="menu">
+            <li><a href="">INICIAR SESIÓN</a></li>
+            <li><a href="">NOSOTROS</a></li>
+            <li><a href="">PROMOCIONES</a></li>
+            <li><a href="">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+          <img class="imagenprincipal" src="imagenes/living.jpg" alt="">
+      </main>
+
+
+      <section class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+        <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Carrito
+          (<span class="total-count"></span>)</button>
+          <button class="clear-cart btn btn-danger">Eliminar</button>
+        </div>
+    </section>
+      
+      
+      <!-- Main -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width:20rem;">
+      <img class="card-img-top" src="imagenes/15.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Almohadon 1</h4>
+        <p class="card-text">Precio: $2500</p>
+        <a href="#" data-name="Almohadon_1" data-price="2500" class="add-to-cart btn btn-primary">Agregar al carrito</a>
+      </div>
+      </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="imagenes/8340.41.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Almohadon 2</h4>
+        <p class="card-text">Precio: $3000</p>
+        <a href="#" data-name="Almohadon_2" data-price="3000" class="add-to-cart btn btn-primary">Agregar al carrito</a>
+      </div>
+      </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="imagenes/productos_31_.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Almohadon 3</h4>
+        <p class="card-text">Precio: $1500</p>
+        <a href="#" data-name="Almohadon_3" data-price="1500" class="add-to-cart btn btn-primary">Agregar al carrito</a>
+      </div>
+      </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Modal -->
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table">
+              
+            </table>
+            <div>Precio total: $<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            
+            <a href="formularios/formulario.html"><button type="button" class="btn btn-primary">Comprar</button></a>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script  src="java.js"> </script>
+
+</body>
+</html>
+      

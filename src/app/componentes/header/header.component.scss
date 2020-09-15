@@ -1,6 +1,7 @@
 
 $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
 
 header{
     display: flex;
@@ -10,12 +11,61 @@ header{
     height: 13vh;
     box-shadow: 3px 3px 5px grey;
     width: 100vw;
+
     img{
         width: 15vw;
         margin-top: 20px;
         margin-left: -10px;
+        &:hover{
+            transform: scale(1.2);
+           
+        }
          
       }
+    #boton_subir{
+        font-family: $fte-ppal;
+        font-size: 15px;
+        position: absolute;
+        left: 50px;
+        top: 14vh;
+        border: 3px solid orange;
+        padding: 4px 15px 50px 15px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        visibility: hidden;
+        z-index: 2;
+       
+
+    }
+    #cambiar{
+        font-family: $fte-ppal;
+        font-size: 15px;
+        position: absolute;
+        left: 90px;
+        top: 20vh;
+        background-color:orange;
+        padding: 4px 15px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        visibility: hidden;
+        
+        z-index: 2;
+    }
+    #salir{
+        font-family: $fte-ppal;
+        font-size: 15px;
+        position: absolute;
+        left:240px;
+        top: 20vh;
+        background-color:orange;
+        padding: 4px 15px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        visibility: hidden;
+        z-index: 2;
+    }
 }
 /////// menu ///////
 ul{
@@ -33,7 +83,7 @@ ul{
         &:hover>ul{
             display: block;
             position: absolute;
-            z-index: 4;
+            z-index: 1;
         }
         a{
             text-decoration: none;
@@ -57,20 +107,18 @@ ul{
 }
 .submenu{
     display: none;
+    width: 130px;
+    background-color: $color-ppal;
+    padding: 18px 0px 5px 10px;
     
-    li{
-        
-        a{
-            background-color:$color-ppal;
-            
-            color: aliceblue;
-            &:hover{
-                background-color: aliceblue ;
-            }
-            &:visited{
-                color: white;
-            }
+    li{background-color:$color-ppal;
+        font-size: 14px;
+        color: aliceblue;
+        &:hover{
+            color:$color-sec ;
         }
+        
+
     }
     
 }
@@ -124,6 +172,10 @@ ul{
         }           
     
    
+}
+
+#nuevo_logo{
+    display: none;
 }
 
 

@@ -1,6 +1,9 @@
 @import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 $color-fondo:rgba(45, 123, 224, 0.192);
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
 
 *{
     padding: 0;
@@ -9,4 +12,25 @@ $color-fondo:rgba(45, 123, 224, 0.192);
 
 body{
     background-color:$color-fondo ;
+    
+}
+
+.botones{
+    background-color:$color-sec;
+    font-size: 13px;
+    color: white;
+    font-family: $fte-ppal;
+    border-radius: 5px;
+    border: 0px ;
+    margin-top:5px ;
+    padding: 3px 10px;
+    
+}
+.descrip{
+    font-size: 15px;
+    text-align: center;
+    color: grey;
+}
+.precio{
+    font-weight: bold;
 }

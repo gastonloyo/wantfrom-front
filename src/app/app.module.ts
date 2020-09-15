@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//inicio servicios
+import{ CargarScriptsService} from "./cargar-scripts.service";
 
+//fin servicio
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { AsideComponent } from './componentes/aside/aside.component';
-import { GridProductsComponent } from './componentes/grid-products/grid-products.component';
+import { ProductsComponent } from './componentes/products/products.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import Popper from 'popper.js';
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "angularfire2";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+
+
 
 @NgModule({
   declarations: [
@@ -16,14 +24,17 @@ import Popper from 'popper.js';
     HeaderComponent,
     BannerComponent,
     AsideComponent,
-    GridProductsComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CargarScriptsService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

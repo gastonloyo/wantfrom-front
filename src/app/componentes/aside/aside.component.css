@@ -1,0 +1,51 @@
+.side-bar {
+  width: 22vw;
+  min-width: 230px;
+  background-color: white;
+  position: absolute;
+  bottom: 45px;
+  left: 30px;
+  border-radius: 15px 0 15px 15px;
+}
+
+.side-bar .menu_lateral {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.side-bar .menu_lateral li ul {
+  display: none;
+}
+
+.side-bar .menu_lateral li ul li a {
+  background-color: #2d7be0;
+  color: white;
+  font-weight: normal;
+}
+
+.side-bar .menu_lateral li a:hover {
+  color: #103d77;
+}
+
+a {
+  text-decoration: none;
+  color: #2d7be0;
+  font-weight: bold;
+  display: block;
+  padding-left: 25px;
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+.fa-chevron-down {
+  margin-left: 15px;
+}
+
+.activado a {
+  background-color: lawngreen;
+}
+/*# sourceMappingURL=aside.component.css.map */

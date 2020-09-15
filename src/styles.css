@@ -1,0 +1,11 @@
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(45, 123, 224, 0.192);
+}
+/*# sourceMappingURL=styles.css.map */

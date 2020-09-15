@@ -1,0 +1,135 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2d7be0;
+  height: 13vh;
+  -webkit-box-shadow: 3px 3px 5px grey;
+          box-shadow: 3px 3px 5px grey;
+  width: 100vw;
+}
+
+header img {
+  width: 15vw;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+ul {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 28vw;
+  min-width: 350px;
+  margin-top: 20px;
+}
+
+.menu li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 4;
+}
+
+.menu li a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size .3s;
+  transition: background-size .3s;
+}
+
+.menu li a:visited {
+  color: white;
+}
+
+.menu li a:hover {
+  background-size: 100% 2px;
+}
+
+.menu li a:focus {
+  background-size: 100% 2px;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu li a {
+  background-color: #2d7be0;
+  color: aliceblue;
+}
+
+.submenu li a:hover {
+  background-color: aliceblue;
+}
+
+.submenu li a:visited {
+  color: white;
+}
+
+.buscador .barraDeBusqueda {
+  margin-top: 20px;
+  width: 30vw;
+  min-width: 200px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 28px;
+  border-radius: 30px 4px 4px 30px;
+  border: 1px solid #424040;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.buscador .barraDeBusqueda:focus {
+  outline: none;
+  border: 2px solid rgba(43, 41, 41, 0.582);
+  -webkit-box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+          box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+}
+
+.buscador .barraDeBusqueda:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.buscador .fa-search {
+  margin-left: -23px;
+  color: #5f5d5d;
+}
+
+.iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  width: 10vw;
+}
+
+.iconos i {
+  font-size: 1.2em;
+  margin-top: 17px;
+}
+/*# sourceMappingURL=header.component.css.map */

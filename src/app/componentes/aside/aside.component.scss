@@ -1,81 +1,55 @@
 $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
-*{
-    font-family: $fte-ppal;
-    list-style: none;
-    text-decoration: none;
+
+.contenedor{
+    position: relative;
 }
 
-.middle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-}
-.menu{
-    width: 300px;
-    border-radius: 15px 0 15px 15px;
-    overflow: hidden;
-
-}
-
-.item{
-    border-top: 1px solid $color-ppal;
-    overflow: hidden;
-}
-
-.btn{
-    display: block;
-    padding: 16px 20px;
+.side-bar{
+    width: 22vw;
+    min-width: 230px;
     background-color: white;
-    position: relative;
+    position: absolute;
+   top: 6vh;
+    left: 30px;
+    border-radius: 35px 0 35px 35px;
+    padding-bottom: 45px;
+    .menu_lateral{
+        list-style: none;
+        font-family: $fte-ppal;
+        font-size: 15px;
+        li{  padding-left: 15px;
+            ul{
+                
+                li{
+                    a{
+                        padding-left: 45px;
+                        color: grey;
+                        font-weight: normal;
+                    }
+                }
+            }
+            a:hover{
+                color:$color-sec ;
+            }
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: $color-ppal;
+    font-weight: bold;
+    display: block;
+    padding-left: 25px;
+    padding: 5px;
+}
+li{
+    list-style: none;
     
 }
-.btn::before{
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background-color: green;
-    left: 20px;
-    bottom: -20px;
-    transform: rotate(45deg);
-}
 
-.btn i{
-    margin-right: 10px;
-}
-.smenu{
-    background: $color-ppal;
-    overflow: hidden;
-    transition: max-height 0.3s;
-    max-height: 0;
-}
 
-.smenu a{
-    display: block;
-    padding: 16px 26px;
-    color: white;
-    font-size: 16px;
-    margin: 4px 0;
-    position: relative;
-}
-.smenu a:before{
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background-color: yellow;
-    left: 0;
-    top: 0;
-    transition: 0.3s;
-    opacity: 0;
 
-}
-.smenu a:hover:before{
-    opacity: 1;
-}
-.item:target .smenu{
-    max-height: 10em;
-}
+
+

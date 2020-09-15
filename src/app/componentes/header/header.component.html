@@ -1,15 +1,22 @@
 <header>
     
-    <img src="../../../assets/imagenes/logo.png" alt="logo"> 
+    <img src="../../../assets/imagenes/logo.png" alt="logo" id="logo_header"> 
     <nav>
-        <ul class="menu">
+
+     <input type="file" accept=".png , .jpg" (change)="uploadFile($event) " id="boton_subir" >
+     <button id="cambiar">Cargar</button>
+     <button id="salir">Salir</button>
+  
+     <img src="{{urlImage | async}}" id="nuevo_logo">
+
+     <ul class="menu">
             <li><a href="" >Home</a></li>
             <li><a href="">Categorías</a>
                  <ul class="submenu">
-                    <li><a href="">Categoria 1</a></li>
-                    <li><a href="">Categoria 2</a></li>
-                    <li><a href="">Categoria 3</a></li>
-                    <li><a href="">Categoria 4</a></li>
+                    <li>Categoria 1</li>
+                    <li>Categoria 2</li>
+                    <li>Categoria 3</li>
+                    <li>Categoria 4</li>
                 </ul>
             </li>
              <li ><a href="">Ofertas</a></li>
