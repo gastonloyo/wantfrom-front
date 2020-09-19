@@ -13,6 +13,7 @@ fetch(url)
     data.forEach(element => {
         
         const tarjeta= document.createElement('div');
+        tarjeta.classList.add("items");
        contenedor.appendChild(tarjeta);
        tarjeta.innerHTML=
        `<img src=${element.img}>
