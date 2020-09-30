@@ -14,7 +14,7 @@ import { CargarScriptsService } from "../../cargar-scripts.service";
 export class HeaderComponent implements OnInit {
  
   constructor(private storage : AngularFireStorage ,private _CargaScripts: CargarScriptsService) {
-    _CargaScripts.Carga(["/logo"]);
+    _CargaScripts.Carga(["/header"]);
   }
 
 uploadPercent: Observable<number>;

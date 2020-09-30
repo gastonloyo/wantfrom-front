@@ -8,4 +8,47 @@
 body {
   background-color: rgba(45, 123, 224, 0.192);
 }
+
+.botones {
+  background-color: #103d77;
+  font-size: 13px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: 5px;
+  padding: 3px 10px;
+}
+
+.descrip {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+}
+
+.precio {
+  font-weight: bold;
+}
+
+.items {
+  width: 17vw;
+  height: 330px;
+  border-radius: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  margin: 15px auto;
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -21,6 +21,55 @@ header img {
   margin-left: -10px;
 }
 
+header img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header #boton_subir {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  position: absolute;
+  left: 50px;
+  top: 14vh;
+  border: 3px solid orange;
+  padding: 4px 15px 50px 15px;
+  border-radius: 10px;
+  background-color: white;
+  visibility: hidden;
+  z-index: 2;
+}
+
+header #cambiar {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  position: absolute;
+  left: 90px;
+  top: 20vh;
+  background-color: orange;
+  padding: 4px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  visibility: hidden;
+  z-index: 2;
+}
+
+header #salir {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  position: absolute;
+  left: 240px;
+  top: 20vh;
+  background-color: orange;
+  padding: 4px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  visibility: hidden;
+  z-index: 2;
+}
+
 ul {
   list-style: none;
   font-family: "Poppins", sans-serif;
@@ -41,7 +90,7 @@ ul {
 .menu li:hover > ul {
   display: block;
   position: absolute;
-  z-index: 4;
+  z-index: 1;
 }
 
 .menu li a {
@@ -69,19 +118,19 @@ ul {
 
 .submenu {
   display: none;
+  width: 130px;
+  background-color: #2d7be0;
+  padding: 18px 0px 5px 10px;
 }
 
-.submenu li a {
+.submenu li {
   background-color: #2d7be0;
+  font-size: 14px;
   color: aliceblue;
 }
 
-.submenu li a:hover {
-  background-color: aliceblue;
-}
-
-.submenu li a:visited {
-  color: white;
+.submenu li:hover {
+  color: #103d77;
 }
 
 .buscador .barraDeBusqueda {
@@ -131,5 +180,9 @@ ul {
 .iconos i {
   font-size: 1.2em;
   margin-top: 17px;
+}
+
+#nuevo_logo {
+  display: none;
 }
 /*# sourceMappingURL=header.component.css.map */

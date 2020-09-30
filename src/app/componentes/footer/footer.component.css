@@ -1,1 +1,22 @@
-/* No CSS *//*# sourceMappingURL=footer.component.css.map */
+section {
+  background-color: #103d77;
+  width: 100vw;
+  height: 14vh;
+  position: relative;
+  margin-top: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section div p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+/*# sourceMappingURL=footer.component.css.map */
