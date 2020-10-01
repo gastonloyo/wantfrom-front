@@ -17,7 +17,6 @@ header {
 
 header img {
   width: 15vw;
-  margin-top: 20px;
   margin-left: -10px;
 }
 
@@ -82,9 +81,8 @@ ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 28vw;
+  width: 22vw;
   min-width: 350px;
-  margin-top: 20px;
 }
 
 .menu li:hover > ul {
@@ -134,14 +132,12 @@ ul {
 }
 
 .buscador .barraDeBusqueda {
-  margin-top: 20px;
-  width: 30vw;
-  min-width: 200px;
+  width: 36vw;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  height: 28px;
+  height: 40px;
   border-radius: 30px 4px 4px 30px;
-  border: 1px solid #424040;
+  border: 1px solid #2d7be0;
   color: #333;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -157,12 +153,11 @@ ul {
 }
 
 .buscador .barraDeBusqueda:hover {
-  color: black;
   cursor: pointer;
 }
 
 .buscador .fa-search {
-  margin-left: -23px;
+  margin-left: -2.5vw;
   color: #5f5d5d;
 }
 
@@ -174,12 +169,17 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
-  width: 10vw;
+  width: 8vw;
+  margin-left: 10px;
 }
 
 .iconos i {
   font-size: 1.2em;
-  margin-top: 17px;
+}
+
+.iconos i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #nuevo_logo {

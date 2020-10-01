@@ -19,31 +19,33 @@ $color-sec:rgb(16, 61, 119);
         list-style: none;
         font-family: $fte-ppal;
         font-size: 15px;
-        li{  padding-left: 15px;
+        li{ 
+            color: $color-ppal;
+            font-weight: bold;
+            display: block;
+            margin-left: 20px;
+            margin-top: 4px;
+            
+            &:hover{
+                color:$color-sec ;
+            }
             ul{
                 
                 li{
-                    a{
-                        padding-left: 45px;
-                        color: grey;
-                        font-weight: normal;
+                    padding-left: 25px;
+                    color: grey;
+                    font-weight: normal;
+                    &:hover{
+                        cursor: pointer;
                     }
+                    
                 }
             }
-            a:hover{
-                color:$color-sec ;
-            }
+        
         }
     }
 }
-a{
-    text-decoration: none;
-    color: $color-ppal;
-    font-weight: bold;
-    display: block;
-    padding-left: 25px;
-    padding: 5px;
-}
+
 li{
     list-style: none;
     

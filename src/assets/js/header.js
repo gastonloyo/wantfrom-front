@@ -61,6 +61,8 @@ input.addEventListener("keyup", ()=>{
   }
 })
 
+input.addEventListener("focus", ()=> boton.style.color="rgb(16, 61, 119)")
+input.addEventListener("blur",()=> boton.style.color="" )
 
 function buscar() {
  const quieroBuscar = input.value;
@@ -68,27 +70,30 @@ function buscar() {
  fetch(api)
    .then(response => response.json())
    .then(data => {
-     console.log(data); renderInfo(data)  } )
+     console.log(data);titulo.innerText="Resultados para: "+quieroBuscar ; renderInfo(data)  } )
    .catch(error => console.log("error:", error));
 
 }
 
 
 function renderInfo(data) {
-    
-    //  data.forEach(element => {
-    //   const resultados = document.getElementById("resultados");
-    //     const tarjeta= document.createElement('div');
-    //     tarjeta.classList.add("items");
-    //    resultados.appendChild(tarjeta);
-    //    tarjeta.innerHTML=
-    //    `<img src=${element.img}>
-    //    <h3>${element.nombre}</h3>
-    //    <p class="descrip">${element.descripcion}</p>
-    //    <p class="precio">${"$" + element.precio}</p>
-    //    <button class="botones">Agregar al Carrito</button>
-    //    <button class="botones">Ver más...</button>
-    //    `;       
-    //  });
+  contenedorDestacados.style.visibility="hidden";
+  resultados.innerHTML="";
+  contenedorCategorias.innerHTML="";
+  contenedorDestacados.innerHTML="";
+     data.forEach(element => {
+      const resultados = document.getElementById("resultados");
+        const tarjeta= document.createElement('div');
+        tarjeta.classList.add("items");
+       resultados.appendChild(tarjeta);
+       tarjeta.innerHTML=
+       `<img src=${element.img}>
+       <h3>${element.nombre}</h3>
+       <p class="descrip">${element.descripcion}</p>
+       <p class="precio">${"$" + element.precio}</p>
+       <button class="botones">Agregar al Carrito</button>
+       <button class="botones">Ver más...</button>
+       `;       
+     });
     
 }

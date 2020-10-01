@@ -14,7 +14,6 @@ header{
 
     img{
         width: 15vw;
-        margin-top: 20px;
         margin-left: -10px;
         &:hover{
             transform: scale(1.2);
@@ -76,9 +75,9 @@ ul{
 .menu{
     display: flex;
     justify-content: space-around;
-    width: 28vw;
+    width: 22vw;
     min-width: 350px;
-    margin-top: 20px;
+    
     li{
         &:hover>ul{
             display: block;
@@ -129,31 +128,31 @@ ul{
 	
 .buscador{
     .barraDeBusqueda{
-        margin-top: 20px;
-        width: 30vw;
-        min-width: 200px;
+       
+        width:36vw;
         box-sizing: content-box;
-        height: 28px;
+        height: 40px;
         border-radius: 30px 4px 4px 30px; 
-        border: 1px solid  rgb(66, 64, 64);
+        border: 1px solid $color-ppal;
         color: #333;
         font-family: $fte-ppal;
         font-size: 16px;
         padding-left: 15px;
         padding-right: 30px;
+        
         &:focus{
             outline: none;
             border: 2px solid rgba(43, 41, 41, 0.582);
             box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
           }
         &:hover{
-            color: rgb(0, 0, 0);
+        
             cursor: pointer;
           } 
     }
 
     .fa-search {
-        margin-left: -23px;
+        margin-left: -2.5vw;
         color: rgb(95, 93, 93);
     }
    
@@ -164,11 +163,15 @@ ul{
     display: flex;
     justify-content: space-between;
     color: white;
-    width: 10vw;
+    width: 8vw;
+    margin-left: 10px;
  
      i{
         font-size: 1.2em;
-        margin-top: 17px;
+        &:hover{
+            transform: scale(1.1);
+          } 
+     
         }           
     
    

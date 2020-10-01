@@ -1,4 +1,4 @@
-const url = "https://deofis-corazon-api.herokuapp.com/api/catalogo/destacados"
+const url = "https://deofis-tienda-apirest.herokuapp.com/api/catalogo/destacados"
 fetch(url)
   .then(response => response.json())
   .then(data =>
@@ -7,14 +7,14 @@ fetch(url)
   )
   .catch(error => console.log("error:", error));
 
-  const contenedor = document.getElementById("test");
+  const contenedorDestacados = document.getElementById("contenedorDestacados");
 
   function createElement(data){
     data.forEach(element => {
         
         const tarjeta= document.createElement('div');
         tarjeta.classList.add("items");
-       contenedor.appendChild(tarjeta);
+       contenedorDestacados.appendChild(tarjeta);
        tarjeta.innerHTML=
        `<img src=${element.img}>
        <h3>${element.nombre}</h3>
