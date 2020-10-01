@@ -75,9 +75,9 @@ function buscar() {
 
 
 function renderInfo(data) {
-   
-    // forEach(element => {
-        
+    
+    //  data.forEach(element => {
+    //   const resultados = document.getElementById("resultados");
     //     const tarjeta= document.createElement('div');
     //     tarjeta.classList.add("items");
     //    resultados.appendChild(tarjeta);
@@ -88,10 +88,7 @@ function renderInfo(data) {
     //    <p class="precio">${"$" + element.precio}</p>
     //    <button class="botones">Agregar al Carrito</button>
     //    <button class="botones">Ver más...</button>
-    //    `;
-      
-       
-        
-    // });
+    //    `;       
+    //  });
     
 }
