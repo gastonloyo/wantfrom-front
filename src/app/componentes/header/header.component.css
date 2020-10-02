@@ -2,9 +2,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -12,12 +12,12 @@ header {
   height: 13vh;
   -webkit-box-shadow: 3px 3px 5px grey;
           box-shadow: 3px 3px 5px grey;
-  width: 100vw;
+  width: 100%;
 }
 
 header img {
   width: 15vw;
-  margin-left: -10px;
+  margin-left: 20px;
 }
 
 header img:hover {
@@ -81,8 +81,8 @@ ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 22vw;
-  min-width: 350px;
+  width: 20vw;
+  margin-left: -35px;
 }
 
 .menu li:hover > ul {
@@ -143,6 +143,7 @@ ul {
   font-size: 16px;
   padding-left: 15px;
   padding-right: 30px;
+  margin-left: -35px;
 }
 
 .buscador .barraDeBusqueda:focus {
@@ -153,7 +154,7 @@ ul {
 }
 
 .buscador .barraDeBusqueda:hover {
-  cursor: pointer;
+  cursor: text;
 }
 
 .buscador .fa-search {
@@ -161,25 +162,54 @@ ul {
   color: #5f5d5d;
 }
 
-.iconos {
+#contenedor_iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 18vw;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 20px;
+}
+
+#contenedor_iconos .iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 12.5vw;
+  margin-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contenedor_iconos .iconos i {
   color: white;
-  width: 8vw;
-  margin-left: 10px;
+  font-size: 1.4em;
+  margin-bottom: 5px;
 }
 
-.iconos i {
-  font-size: 1.2em;
-}
-
-.iconos i:hover {
+#contenedor_iconos .iconos i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#contenedor_iconos .iconos .fa-user-circle {
+  font-size: 1.9em;
+}
+
+#contenedor_iconos .iconos p {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: white;
 }
 
 #nuevo_logo {

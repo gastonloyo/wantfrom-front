@@ -5,16 +5,16 @@ $color-sec:rgb(16, 61, 119);
 
 header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: $color-ppal;
     height: 13vh;
     box-shadow: 3px 3px 5px grey;
-    width: 100vw;
+    width: 100%;
 
     img{
         width: 15vw;
-        margin-left: -10px;
+        margin-left: 20px;
         &:hover{
             transform: scale(1.2);
            
@@ -75,8 +75,9 @@ ul{
 .menu{
     display: flex;
     justify-content: space-around;
-    width: 22vw;
-    min-width: 350px;
+    width: 20vw;
+    margin-left: -35px;
+  
     
     li{
         &:hover>ul{
@@ -139,6 +140,7 @@ ul{
         font-size: 16px;
         padding-left: 15px;
         padding-right: 30px;
+        margin-left: -35px;
         
         &:focus{
             outline: none;
@@ -147,7 +149,7 @@ ul{
           }
         &:hover{
         
-            cursor: pointer;
+            cursor: text;
           } 
     }
 
@@ -159,24 +161,45 @@ ul{
 }
 
 ////iconos////
-.iconos {
+#contenedor_iconos{
     display: flex;
     justify-content: space-between;
-    color: white;
-    width: 8vw;
-    margin-left: 10px;
- 
-     i{
-        font-size: 1.2em;
-        &:hover{
-            transform: scale(1.1);
-          } 
-     
-        }           
-    
-   
+    width: 18vw;
+    align-items: baseline;
+    margin-top: 20px;
+    .iconos {
+        display: flex;
+        flex-direction: column;
+        width: 12.5vw;
+        margin-right: 20px;
+        align-items: center;
+            
+
+        i{
+            color: white;
+            font-size: 1.4em;
+            margin-bottom: 5px;
+            &:hover{
+                transform: scale(1.1);
+            } 
+        }
+        .fa-user-circle{
+            font-size: 1.9em;
+
+        }
+        p{
+            font-family: $fte-ppal;
+            font-size: 10px;
+            color: white;
+        }
+        
+    }
+
 }
 
+
+
+    
 #nuevo_logo{
     display: none;
 }
