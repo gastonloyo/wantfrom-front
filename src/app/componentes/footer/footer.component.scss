@@ -2,20 +2,185 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
-section{
-
-    background-color: $color-sec;
-    width: 100vw;
-    height: 14vh;
+.footer{
+    background-color: rgb(218, 216, 216);
     position: relative;
-    margin-top:950px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div{
+    top: 1000px;
+    font-family: $fte-ppal;
+    article{
+       .row1{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 35px;
+       margin-bottom: 35px;
+        width: fit-content;
+        margin-left: 50px;
+        .caja{
+            width: 300px;
+            h4{
+                margin-bottom: 10px;
+                color: $color-sec;
+            }
+            p{
+                font-size: 15px;
+                color: rgb(102, 100, 100);
+                line-height: 27px;
+            }
+            .campo{
+                display: flex;
+                align-items: center;
+                margin-bottom: 7px;
+                i{
+                    margin-right: 15px;
+                    color: rgb(68, 66, 66);
+                }
+                .direccion{
+                    line-height: 20px;
+                }
+         
+            }
+            .ubic{
+                align-items: flex-start;
+                margin-left: 3px;
+            }
+            .redes{
+               width: fit-content;
+               .iconos{
+                   display: flex;
+                   justify-content: space-around;
+                   align-items: center;
+                    a{
+                        text-decoration: none;
+                    
+                        i{
+                            color: rgb(68, 66, 66);
+                            font-size: 2.5em;
+                        }
+                        .fa-facebook{
+                            color: blue;
+                        }
+                        .fa-linkedin{
+                            color: rgb(46, 156, 247);
+                        }
+                        img{
+                            width:37px ;
+                            height: 37px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .marca{
+                margin-top: 25px;
+                width: fit-content;  
+            }
+        }
+        .newsletter{
+            border-radius: 15px;
+            background-color: $color-ppal;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 15px;
+            box-shadow: 3px 4px 3px grey;
+            h3{
+                color: black;
+                font-family: $fte-ppal;
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+            p{
+                text-align: center;
+                width: 260px;
+                line-height: 18px;
+                color: white;
+                margin-bottom: 16px;
+            }
+            .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .insertemail{
+                width:80%;
+                height: 40px;
+            
+                border-radius: 25px; 
+                border: 1px solid $color-ppal;
+                font-family: $fte-ppal;
+                font-size: 16px;
+                padding-left: 15px;
+                padding-right: 30px;
+               }
+            .enviar{
+                width: fit-content;
+                position: relative;
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                
+                i{
+                    position: absolute;
+                    font-size: 18px;
+                    color: $color-sec;
+                    right: 5px;
+                    
+                }
+                .btn_suscribir{
+                    box-sizing: border-box;
+                    height: 24px;
+                    display: block;
+                    padding: 4px 30px 20px 10px;
+                    font-family: $fte-ppal;
+                    background-color: white;
+                    color:$color-sec;
+                    font-weight: bolder;
+                    border: 1px solid $color-sec;
+                    border-radius: 5px;
+                    
+                    &:hover{
+                        box-shadow: 1px 2px 1px rgba(255, 255, 255, 0.534);
+                    }
+                }
+              
+               
+            }
+            
+            }
+            
+        }
+       }
+       .row2{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 30vw;
+           margin-left: 50px;
+           margin-bottom: 40px;
+           h4{
+               color: $color-sec;
+               font-family: $fte-ppal;
+               display: block;
+               margin-right: 40px;
+           }
+           img{
+               width: 44px;
+               height:28px;
+           }
+       }
+  
+    }
+    .copy{
+        background-color: $color-sec;
+        height: 30px;
         p{
             color: white;
-            font-family: $fte-ppal;
+            text-align: center;
+            font-size: 13px;
+            position: absolute;
+            bottom: 0px;
+            right: 5px;
             
         }
     }

@@ -15,83 +15,55 @@ header {
   width: 100%;
 }
 
-header img {
+header .logo {
   width: 15vw;
-  margin-left: 20px;
 }
 
-header img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+header .logo a img {
+  width: 215px;
+  height: 72px;
+  margin-left: 15px;
 }
 
-header #boton_subir {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  position: absolute;
-  left: 50px;
-  top: 14vh;
-  border: 3px solid orange;
-  padding: 4px 15px 50px 15px;
-  border-radius: 10px;
-  background-color: white;
-  visibility: hidden;
-  z-index: 2;
-}
-
-header #cambiar {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  position: absolute;
-  left: 90px;
-  top: 20vh;
-  background-color: orange;
-  padding: 4px 15px;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  visibility: hidden;
-  z-index: 2;
-}
-
-header #salir {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  position: absolute;
-  left: 240px;
-  top: 20vh;
-  background-color: orange;
-  padding: 4px 15px;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  visibility: hidden;
-  z-index: 2;
-}
-
-ul {
+header nav ul {
   list-style: none;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
 
-.menu {
+header nav ul .submenu {
+  display: none;
+  width: 130px;
+  background-color: #2d7be0;
+  padding: 18px 0px 5px 10px;
+}
+
+header nav ul .submenu li {
+  background-color: #2d7be0;
+  font-size: 14px;
+  color: aliceblue;
+}
+
+header nav ul .submenu li:hover {
+  color: #103d77;
+}
+
+header nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 20vw;
-  margin-left: -35px;
+  width: 15vw;
 }
 
-.menu li:hover > ul {
+header nav .menu li:hover > ul {
   display: block;
   position: absolute;
   z-index: 1;
 }
 
-.menu li a {
+header nav .menu li a {
   text-decoration: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
   background-image: linear-gradient(currentColor, currentColor);
@@ -102,67 +74,50 @@ ul {
   transition: background-size .3s;
 }
 
-.menu li a:visited {
+header nav .menu li a:visited {
   color: white;
 }
 
-.menu li a:hover {
+header nav .menu li a:hover {
   background-size: 100% 2px;
 }
 
-.menu li a:focus {
+header nav .menu li a:focus {
   background-size: 100% 2px;
 }
 
-.submenu {
-  display: none;
-  width: 130px;
-  background-color: #2d7be0;
-  padding: 18px 0px 5px 10px;
-}
-
-.submenu li {
-  background-color: #2d7be0;
-  font-size: 14px;
-  color: aliceblue;
-}
-
-.submenu li:hover {
-  color: #103d77;
-}
-
-.buscador .barraDeBusqueda {
+header .buscador .barraDeBusqueda {
   width: 36vw;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 40px;
   border-radius: 30px 4px 4px 30px;
   border: 1px solid #2d7be0;
-  color: #333;
+  color: black;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   padding-left: 15px;
   padding-right: 30px;
-  margin-left: -35px;
+  margin-left: -20px;
 }
 
-.buscador .barraDeBusqueda:focus {
+header .buscador .barraDeBusqueda:focus {
   outline: none;
   border: 2px solid rgba(43, 41, 41, 0.582);
   -webkit-box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
           box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
 }
 
-.buscador .barraDeBusqueda:hover {
+header .buscador .barraDeBusqueda:hover {
   cursor: text;
 }
 
-.buscador .fa-search {
+header .buscador .fa-search {
   margin-left: -2.5vw;
   color: #5f5d5d;
 }
 
-#contenedor_iconos {
+header #contenedor_iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +131,7 @@ ul {
   margin-top: 20px;
 }
 
-#contenedor_iconos .iconos {
+header #contenedor_iconos .iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,28 +146,24 @@ ul {
           align-items: center;
 }
 
-#contenedor_iconos .iconos i {
+header #contenedor_iconos .iconos i {
   color: white;
   font-size: 1.4em;
   margin-bottom: 5px;
 }
 
-#contenedor_iconos .iconos i:hover {
+header #contenedor_iconos .iconos i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#contenedor_iconos .iconos .fa-user-circle {
+header #contenedor_iconos .iconos .fa-user-circle {
   font-size: 1.9em;
 }
 
-#contenedor_iconos .iconos p {
+header #contenedor_iconos .iconos p {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   color: white;
-}
-
-#nuevo_logo {
-  display: none;
 }
 /*# sourceMappingURL=header.component.css.map */
