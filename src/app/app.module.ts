@@ -15,6 +15,9 @@ import Popper from 'popper.js';
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireStorageModule } from "@angular/fire/storage";
+import { HomeComponent } from './home/home.component';
+import { VermasComponent } from './componentes/products/vermas/vermas.component';
+
 
 
 
@@ -25,7 +28,10 @@ import { AngularFireStorageModule } from "@angular/fire/storage";
     BannerComponent,
     AsideComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    HomeComponent,
+    VermasComponent,
+  
   ],
   imports: [
     BrowserModule,

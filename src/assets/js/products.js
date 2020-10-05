@@ -16,19 +16,30 @@ fetch(url)
         tarjeta.classList.add("items");
        contenedorDestacados.appendChild(tarjeta);
        tarjeta.innerHTML=
-       `<img src=${element.img}>
-       <h3>${element.nombre}</h3>
+       `<img src=${element.img} class="producto">
+       <h3 >${element.nombre}</h3>
        <p class="descrip">${element.descripcion}</p>
        <p class="precio">${"$" + element.precio}</p>
        <button class="botones">Agregar al Carrito</button>
-       <button class="botones">Ver más...</button>
+       <a href="/vermas" ><button class="botones vermas"  >Ver más...</button> </a>
        `;
-      
-       
-        
+              
     });
+    for (let i = 0; i < data.length; i++) {
+      const img =document.getElementsByClassName("producto");
+      if (data[i].foto !== null){
+        img[i].src= data[i].foto;
+      } else {
+        img[i].src= "https://s.fenicio.app/f/claruy/productos/1-samsung-galaxy-s20-blue-2-dorso_450_600_1584036230_c04.jpg";
+        img[i].style.width = "140px";
+        img[i].style.height= "165px";
+      };
+    }
       
-  }
+  };
+
+
+
 
   
 // function createElement(data) {

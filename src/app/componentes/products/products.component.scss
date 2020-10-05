@@ -26,6 +26,15 @@ $color-sec:rgb(16, 61, 119);
         font-size:16px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        .botones{
+            background-color: indigo;
+            font-size: 40px;
+           
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
         
         
         
@@ -37,7 +46,4 @@ $color-sec:rgb(16, 61, 119);
 
 }
 
-.botones{
-    background-color: indigo;
-    font-size: 40px;
-}
+

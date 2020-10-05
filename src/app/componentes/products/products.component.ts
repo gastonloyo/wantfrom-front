@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CargarScriptsService} from "./../../cargar-scripts.service"
+import { CargarScriptsService} from "./../../cargar-scripts.service";
+//import {Router} from "@angular/router"
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

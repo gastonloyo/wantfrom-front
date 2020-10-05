@@ -29,8 +29,13 @@
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-.botones {
+.contenedor .tarjetas .botones {
   background-color: indigo;
   font-size: 40px;
+}
+
+.contenedor .tarjetas a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=products.component.css.map */
