@@ -1,3 +1,26 @@
+///////////////////// MENU ACORDEON /////////////////////
+$(document).ready(function(){
+	$('.menu li:has(ul)').click(function(e){
+		e.preventDefault();
+
+		if ($(this).hasClass('activado')){
+			$(this).removeClass('activado');
+			$(this).children('ul').slideUp();
+		} else {
+			$('.menu li ul').slideUp();
+			$('.menu li').removeClass('activado');
+			$(this).addClass('activado');
+			$(this).children('ul').slideDown();
+		}
+	});
+
+	$('.btn-menu').click(function(){
+		$('.contenedor-menu .menu').slideToggle();
+	});
+
+
+});
+
 ////////////////////////CATEGORIAS /////////////////////////////
 
 // traigo del html los elementos 
@@ -70,7 +93,7 @@ mayorPrecio.addEventListener("click",()=>{
 
 })
 
-/////////////////// MARCAS ///////////////////////
+///////////////// MARCAS ///////////////////////
 // elementos a usar 
 const samsung= document.getElementById("Samsung");
 const iphone = document.getElementById("Iphone");
@@ -140,3 +163,6 @@ function mostrarFiltro(data) {
        `;
     });
 }
+
+
+///// HOVER ///

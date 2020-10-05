@@ -1,47 +1,115 @@
+a {
+  text-decoration: none;
+}
+
 .contenedor {
   position: relative;
 }
 
-.side-bar {
+.contenedor-menu {
   width: 22vw;
-  min-width: 230px;
-  background-color: white;
+  min-width: 300px;
   position: absolute;
   top: 6vh;
   left: 30px;
-  border-radius: 35px 0 35px 35px;
-  padding-bottom: 45px;
-}
-
-.side-bar .menu_lateral {
-  list-style: none;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  line-height: 20px;
 }
 
-.side-bar .menu_lateral li {
-  color: #2d7be0;
-  font-weight: bold;
-  display: block;
-  margin-left: 20px;
-  margin-top: 4px;
+.contenedor-menu ul {
+  list-style: none;
 }
 
-.side-bar .menu_lateral li:hover {
+.contenedor-menu .menu li a {
   color: #103d77;
+  display: block;
+  padding: 15px 20px;
+  background: white;
 }
 
-.side-bar .menu_lateral li ul li {
-  padding-left: 25px;
-  color: grey;
+.contenedor-menu .menu {
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.contenedor-menu .menu li ul li:hover {
+  cursor: default;
+  background: white;
+  color: #103d77;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor-menu .menu .icono {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.contenedor-menu .menu .icono.izquierda {
+  float: left;
+  margin-right: 10px;
+}
+
+.contenedor-menu .menu .icono.derecha {
+  float: right;
+  margin-left: 10px;
+}
+
+.contenedor-menu .menu ul {
+  display: none;
+}
+
+.contenedor-menu .menu ul li {
+  background: #103d77;
+  color: #e9e9e9;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contenedor-menu .menu .activado > a {
+  background: #2d7be0;
+  color: #fff;
+}
+
+.filtros {
+  color: #103d77;
+  display: block;
+  padding: 5px 60px;
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.submenu_estatico {
+  list-style: none;
+  padding-left: 30px;
   font-weight: normal;
 }
 
-.side-bar .menu_lateral li ul li:hover {
+.submenu_estatico li {
+  line-height: 30px;
+}
+
+.submenu_estatico:hover {
   cursor: pointer;
 }
 
-li {
-  list-style: none;
+@media screen and (max-width: 450px) {
+  body {
+    padding-top: 80px;
+  }
+  .contenedor-menu {
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  .btn-menu {
+    display: block;
+  }
+  .contenedor-menu .menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=aside.component.css.map */
