@@ -17,6 +17,7 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { HomeComponent } from './home/home.component';
 import { VermasComponent } from './componentes/products/vermas/vermas.component';
+import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 
 
 
@@ -31,6 +32,7 @@ import { VermasComponent } from './componentes/products/vermas/vermas.component'
     ProductsComponent,
     HomeComponent,
     VermasComponent,
+    InicioSesionComponent,
   
   ],
   imports: [
