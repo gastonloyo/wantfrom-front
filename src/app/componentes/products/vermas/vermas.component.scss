@@ -1,0 +1,208 @@
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
+
+#contenedor-vermas{
+    display: flex;
+        justify-content: center;
+        
+       
+    section{
+        background-color: white;
+        border-radius: 22px;
+        margin-top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contenedor-uno{
+           
+            display: flex;
+            justify-content: space-between;
+            padding: 35px 15px;
+            width: 86vw;
+           
+            #izquierda{
+                display: flex;
+                justify-content: space-around;
+                width: 50vw;
+                #img-sec{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    div{
+                        width: 90px;
+                        height: 90px;
+                        box-sizing: border-box;
+                        &:hover{
+                            border: 3px solid $color-sec;
+                            box-shadow: 1px 2px 1px rgb(151, 147, 147);
+                        }
+                    }
+                    #img-uno{
+                        background-color: blue;
+                    }
+                    #img-dos{
+                        background-color: blue;
+                    }
+                    #img-tres{
+                        background-color: blue;
+                    }
+                    #img-cuatro{
+                        background-color: blue;
+                    }
+                }
+                #img-ppal{
+                    width:40vw;
+                    height: 420px;
+                    background-color: rosybrown;
+                }
+            }
+            #derecha{
+                border: 1.5px solid $color-ppal;
+                border-radius: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: 3vw;
+                width: 30vw;
+                #caja-titulo{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding-right: 5px;
+                    margin-bottom: 15px;
+                    margin-top: 7px;
+                    h2{
+                        font-size: 30px;
+                        font-family: $fte-ppal;
+                        width: 20vw;
+                        
+                       
+                    }
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        width:6vw ;
+                        align-items: center;
+                        i{
+                            font-size: 1.4em;
+                            color: $color-sec;
+                            &:hover{
+                                font-size: 1.6em;
+                            }
+                        }
+                    }
+                }
+                #caja-precio{
+                    h3{
+                        font-family: $fte-ppal;
+                        font-size: 40px;
+                        margin-bottom: 10px;
+                        color: $color-sec;
+                    }
+                    .medios-de-pago{
+                        h4{
+                            font-family: $fte-ppal;
+                            margin-bottom: 8px;
+                        }
+                        img{
+                            width: 60px;
+                            height: 38px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                #caja-carrito{
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                   
+                    div{
+                        display: flex;
+                        justify-content: space-around;
+                        width: 20vw;
+                        #cantidad{
+                            
+                            width: 55px;
+                            height: 35px;
+                            font-family: $fte-ppal;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 16px;
+                            border: 2px solid grey;
+                            border-radius: 5px;
+                        }
+                        #color{
+                            width: 120px;
+                            height: 35px;
+                            font-family: $fte-ppal;
+                            font-size: 16px;
+                            text-align: center;
+                            font-weight: bold;
+                            border: 2px solid grey;
+                            border-radius: 5px;
+                        }
+                    }
+                    #btn-carrito{
+                        background-color: $color-sec;
+                        color: white;
+                        font-family: $fte-ppal;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: 0px ;
+                        padding: 8px 18px;
+                        align-self: center;
+                        margin-top: 20px;
+                        
+                        
+                        &:hover{
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+            }
+        }
+        .contenedor-dos{
+            width:76vw ;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+            
+            
+            #datos{
+                display: flex;
+                justify-content: space-around;
+                border-bottom: 1px solid grey;
+                padding-bottom: 8px;
+            
+                p{
+                    font-size: 16px;
+                    font-family: $fte-ppal;
+                    
+                }
+            }
+            #descripcion-producto{
+            
+                width: 68vw;
+                align-self: center;
+                padding-top: 35px;
+                padding-bottom: 80px;
+                h3{
+                    font-family: $fte-ppal;
+                    font-size:21px ;
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-size: 15px;
+                    font-family: $fte-ppal;
+                    line-height: 25px; 
+                    color: grey;
+                }
+            }
+
+        }
+    }
+}
+

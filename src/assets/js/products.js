@@ -1,5 +1,5 @@
-const url = "https://deofis-tienda-apirest.herokuapp.com/api/catalogo/destacados"
-fetch(url)
+const url_destacados = "https://deofis-tienda-apirest.herokuapp.com/api/catalogo/destacados"
+fetch(url_destacados)
   .then(response => response.json())
   .then(data =>
    createElement(data)

@@ -27,7 +27,7 @@ $color-sec:rgb(16, 61, 119);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         .botones{
-            background-color: indigo;
+            background-color: $color-sec;
             font-size: 40px;
            
         }
