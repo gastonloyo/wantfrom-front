@@ -1,0 +1,180 @@
+section {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .fondo {
+  background-color: #2d7be0;
+  height: 40vh;
+  width: 100%;
+}
+
+section .contenedor-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -150px;
+  width: 30vw;
+}
+
+section .contenedor-form .campos-inicio-s {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 270px;
+}
+
+section .contenedor-form .campos-inicio-s h2 {
+  font-family: "Poppins", sans-serif;
+  color: #103d77;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: block;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+section .contenedor-form .campos-inicio-s #username {
+  margin-top: 12px;
+  height: 44px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: -10px;
+}
+
+section .contenedor-form .campos-inicio-s #password {
+  height: 44px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: -7px;
+}
+
+section .contenedor-form .campos-inicio-s #btn-entrar {
+  width: 100%;
+  height: 40px;
+  background-color: #103d77;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+section .contenedor-form .separacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+section .contenedor-form .separacion p {
+  color: grey;
+  font-size: 17px;
+}
+
+section .contenedor-form .separacion span {
+  display: block;
+  border-bottom: 1px solid grey;
+  width: 42%;
+}
+
+section .contenedor-form .social-media {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  margin-top: 15px;
+}
+
+section .contenedor-form .social-media button {
+  width: 100%;
+  height: 40px;
+}
+
+section .contenedor-form .social-media button a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+section .contenedor-form .social-media .btn1 {
+  background-color: #3b5998;
+}
+
+section .contenedor-form .social-media .btn2 {
+  background-color: #db4a39;
+}
+
+section .footer {
+  width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section .footer a {
+  text-decoration: none;
+  color: #103d77;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  margin-top: 125px;
+}
+/*# sourceMappingURL=inicio-sesion.component.css.map */
