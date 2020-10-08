@@ -5,6 +5,17 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
+%prop-botones-prod {
+    background-color:$color-sec;
+    font-size: 13px;
+    color: white;
+    font-family: $fte-ppal;
+    border-radius: 5px;
+    border: 0px ;
+    margin-top:5px ;
+    padding: 3px 10px;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -16,36 +27,66 @@ body{
 
 }
 
-.botones{
-    background-color:$color-sec;
-    font-size: 13px;
-    color: white;
+/////// inicio estilos de las grillas de productos ////
+.contenedorProductos{
+    width: 70vw;
+    background-color: #ffffff;
     font-family: $fte-ppal;
-    border-radius: 5px;
-    border: 0px ;
-    margin-top:5px ;
-    padding: 3px 10px;
-    
+    position: absolute;
+    right:2vw;
+    margin-top: 6vh;
+    border-radius: 7px;
+    h2{ 
+        font-family: $fte-ppal;
+        color: $color-sec;
+        display: block;
+        margin: 25px 0px 10px 17px;
+        text-align: left;
+    }
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size:16px;
+    .tarjetas{
+  
+        .items{
+            width: 17vw;
+            height: 330px;
+            border-radius: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.363);
+            margin:15px auto;
+            padding: 15px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                text-align: center;
+            }
+            .botones{
+             @extend %prop-botones-prod;
+            }
+            .descrip{
+                font-size: 15px;
+                text-align: center;
+                color: grey;
+            }
+            .precio{
+                font-weight: bold;
+            }
+            
+            a{
+             text-decoration: none;
+             color: white;
+             .vermas{
+                 @extend %prop-botones-prod;
+             }
+            } 
+        }
+        }
+    }
 }
-.descrip{
-    font-size: 15px;
-    text-align: center;
-    color: grey;
-}
-.precio{
-    font-weight: bold;
-}
+/////// fin estilos de las grillas de productos ////
 
-.items{
-    width: 17vw;
-    height: 330px;
-    border-radius: 15px;
-    border: 1px solid rgba(128, 128, 128, 0.363);
-    margin:15px auto;
-    padding: 15px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- 
-}
+
+

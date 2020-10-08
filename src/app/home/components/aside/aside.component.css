@@ -1,0 +1,97 @@
+.contenedor-menu .menu li a, #filtros {
+  color: #103d77;
+  display: block;
+  padding: 15px 20px;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  position: relative;
+}
+
+.contenedor .contenedor-menu {
+  width: 22vw;
+  min-width: 300px;
+  position: absolute;
+  top: 6vh;
+  left: 30px;
+  font-family: "Poppins", sans-serif;
+  line-height: 20px;
+}
+
+.contenedor .contenedor-menu .menu {
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.contenedor .contenedor-menu .menu li ul li {
+  background: #103d77;
+  color: white;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contenedor .contenedor-menu .menu li ul li:hover {
+  cursor: default;
+  background: white;
+  color: #103d77;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor .contenedor-menu .menu li .izquierda {
+  float: left;
+  margin-right: 10px;
+}
+
+.contenedor .contenedor-menu .menu li .derecha {
+  float: right;
+  margin-left: 10px;
+}
+
+.contenedor .contenedor-menu .menu li .icono {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.contenedor .contenedor-menu .menu .filtros {
+  color: #103d77;
+  display: block;
+  padding: 5px 60px;
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contenedor .contenedor-menu .menu .filtros .submenu_estatico {
+  list-style: none;
+  padding-left: 30px;
+  font-weight: normal;
+}
+
+.contenedor .contenedor-menu .menu .filtros .submenu_estatico li {
+  line-height: 30px;
+}
+
+.contenedor .contenedor-menu .menu .filtros .submenu_estatico:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.contenedor-menu .menu li a:hover {
+  background-color: #2d7be0;
+  color: white;
+}
+
+.contenedor-menu .menu .activado > a {
+  background: #2d7be0;
+  color: #fff;
+}
+/*# sourceMappingURL=aside.component.css.map */

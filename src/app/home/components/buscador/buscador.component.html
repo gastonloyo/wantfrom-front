@@ -1,0 +1,13 @@
+<app-aside></app-aside>
+<section class="contenedorProductos"> 
+    <!-- todos-->
+<h2 id="titulo"> Resultados para " "</h2>
+
+<div class="contenedor-grid">
+    <div class="tarjetas" *ngFor="let resultado of rdosBusqueda">
+        <app-tarjeta-producto [producto]="resultado"></app-tarjeta-producto>
+        
+    </div>
+</div>
+
+</section>

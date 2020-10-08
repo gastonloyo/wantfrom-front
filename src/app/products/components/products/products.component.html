@@ -1,0 +1,15 @@
+<section class="contenedorProductos"> 
+    <!-- todos-->
+<h2 >Productos Destacados</h2>
+
+ <!-- categorias-->
+<div id="contenedorCategorias" class="tarjetas"></div>
+
+ <!-- prod destacados-->
+ <div class="contenedor-grid">
+    <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+        <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
+    
+    </div>
+</div>
+

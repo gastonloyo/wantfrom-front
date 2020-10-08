@@ -9,6 +9,29 @@ body {
   background-color: rgba(45, 123, 224, 0.192);
 }
 
+.contenedor {
+  width: 70vw;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  right: 2vw;
+  margin-top: 6vh;
+  border-radius: 7px;
+}
+
+.contenedor .tarjetas {
+  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contenedor .tarjetas a {
+  text-decoration: none;
+  color: white;
+}
+
 .botones {
   background-color: #103d77;
   font-size: 13px;
