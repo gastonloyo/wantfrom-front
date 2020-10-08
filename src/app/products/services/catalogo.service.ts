@@ -9,7 +9,8 @@ import { Producto } from '../clases/producto';
   providedIn: 'root'
 })
 export class CatalogoService {
-url:string
+url:string;
+id:number;
   constructor(private http:HttpClient) { 
     this.url="http://deofistienda-env.eba-zdhxpdjp.sa-east-1.elasticbeanstalk.com/api";
 
@@ -29,6 +30,10 @@ url:string
       map(response=> response as Producto[])
     )
     
+  }
+  getInfoProducto():Observable<Producto[]>{
+    this.id=1;
+    return this.http.get(`${this.url}/catalogo/productos/ver/${this.id}`).pipe( map( (response:any) => response.producto as Producto[]));
   }
 
 }

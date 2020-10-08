@@ -10,22 +10,21 @@
                     <div id="img-cuatro"></div>
                 </div> 
                 <div id="img-ppal">
-                    <!-- aca iria la imagen-->
+                    
                 
                 </div> 
             </div>
             <div id="derecha">
                 <div id="caja-titulo">
-                    <h2> Celular Samsung Galaxy A51 </h2>
-                <!-- un h2 con el titulo-->
-                <div class="iconos-detalle-producto">
-                        <i class=" iconos far fa-heart"></i>
-                        <i class="iconos fas fa-share-alt"></i>
-                    </div>
+                    <h2>{{infoProducto.nombre}} </h2>
+                    <div class="iconos-detalle-producto">
+                        <a title="Agregar a Favoritos" > <i class=" iconos far fa-heart"></i></a>
+                        <a title="Copiá este link!" >  <i class="iconos fas fa-link"></i></a>
+                     </div>
+                 
                 </div>
                 <div id="caja-precio">
-                    <!-- un h3 con el pcio-->
-                    <h3>$27000</h3>
+                    <h3>${{infoProducto.precio}}</h3>
                     <div class="medios-de-pago" >
                         <h4>Medios de Pago</h4>
                         <img src="../../../../assets/imagenes/visa.png" alt="">
@@ -39,9 +38,8 @@
                         <input type="number" value="1" id="cantidad">
                         <select id="color">
                             <option >-Color-</option>
-                            <option value="negro">Negro</option>
-                            <option value="blanco">Blanco</option>
-                            <option value="dorado">Dorado</option>
+                            <option value="negro">{{infoProducto.color}}</option>
+                            
                         </select>
                     </div>
                     <input type="submit" value="Agregar al Carrito" id="btn-carrito">
@@ -51,17 +49,29 @@
         </article>
         <article class="contenedor-dos">
             <div id="datos">
-                <p>Marca:</p>
+                <p>Marca:     {{infoProducto.marca.nombre}}</p>
                 <p>Modelo:</p>
-                <p>Año:</p>
+                <p>Año:     {{infoProducto.fechaCreacion}}</p>
                 <p>Stock:</p>
 
             </div>
             <div id="descripcion-producto" >
                 <h3>Descripción </h3>
-                <p >Lorem ipsum, dolor sit amet consec<br> etur adipisicing elit. Sequi delectus debitis repudiandae nemo! Minus ali<br>quam saepe reprehenderit dignissimos quibusdam neque quos repellat vel debitis quia. Reprehenderit sed qui<br>squam natus? FugaLorem ipsum, dolor sit am<br>et consectetur adipisicing elit. Sequi delectus debitis repudiandae nemo! Minus aliquam saepe reprehenderit dignissimos quibusdam neque quos repellat vel debitis quia. Reprehenderit sed quisquam natus? Fuga.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi delectus debitis repudiandae nemo! Minus aliquam saepe reprehenderit dignissimos quibusdam neque quos repellat vel debitis quia. Reprehenderit sed quisquam natus? FugaLorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi delectus debitis repudiandae nemo! Minus aliquam saepe reprehenderit dignissimos quibusdam neque quos repellat vel debitis quia. Reprehenderit sed quisquam natus? Fuga</p>
+                <p >{{infoProducto.descripcion}}</p>
             </div>
         </article>
 
+        <article class="contenedor-tres" id="contenedor-tres">
+            <p>¿Tenés alguna pregunta?</p>
+            
+           <textarea  name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <div id="contenedorCartel">
+                <p id="cartel">Estamos para despejar todas tus dudas, dejános tu consulta</p>
+            </div>
+            <button type="submit" id="enviarMsg">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+           
+        </article>
     </section>
 </div> 

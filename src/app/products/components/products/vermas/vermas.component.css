@@ -1,3 +1,9 @@
+#contenedor-vermas section .contenedor-uno #izquierda #img-sec div, #contenedor-vermas section .contenedor-uno #izquierda #img-ppal {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #contenedor-vermas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,32 +76,33 @@
 }
 
 #contenedor-vermas section .contenedor-uno #izquierda #img-sec #img-uno {
-  background-color: blue;
+  background-image: url(https://d26lpennugtm8s.cloudfront.net/stores/086/894/products/img-20200518-wa00101-9587272a3a2cc19c4715898271067988-1024-1024.jpg);
 }
 
 #contenedor-vermas section .contenedor-uno #izquierda #img-sec #img-dos {
-  background-color: blue;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrVkIGh9jsHdgQi8RYojCJmVbWcvktrY4wWA&usqp=CAU);
 }
 
 #contenedor-vermas section .contenedor-uno #izquierda #img-sec #img-tres {
-  background-color: blue;
+  background-image: url(https://www.aquadelta.com.ar/img/articulos/termo_stanley_classic_750_ml_polar_blanco_1_imagen2.jpg);
 }
 
 #contenedor-vermas section .contenedor-uno #izquierda #img-sec #img-cuatro {
-  background-color: blue;
+  background-image: url(https://d2ye0ltusw47tz.cloudfront.net/196572-large_default/termo-stanley-clasico-14-lts-plegable-rojo-10-08999-007.jpg);
 }
 
 #contenedor-vermas section .contenedor-uno #izquierda #img-ppal {
   width: 40vw;
   height: 420px;
-  background-color: rosybrown;
+  background-image: url(https://d26lpennugtm8s.cloudfront.net/stores/086/894/products/img-20200518-wa00101-9587272a3a2cc19c4715898271067988-1024-1024.jpg);
 }
 
 #contenedor-vermas section .contenedor-uno #derecha {
   border: 1.5px solid #2d7be0;
   border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
   margin-left: 3vw;
   width: 30vw;
 }
@@ -135,12 +142,16 @@
           align-items: center;
 }
 
-#contenedor-vermas section .contenedor-uno #derecha #caja-titulo div i {
+#contenedor-vermas section .contenedor-uno #derecha #caja-titulo div a {
+  text-decoration: none;
+}
+
+#contenedor-vermas section .contenedor-uno #derecha #caja-titulo div a i {
   font-size: 1.4em;
   color: #103d77;
 }
 
-#contenedor-vermas section .contenedor-uno #derecha #caja-titulo div i:hover {
+#contenedor-vermas section .contenedor-uno #derecha #caja-titulo div a i:hover {
   font-size: 1.6em;
 }
 
@@ -270,5 +281,82 @@
   font-family: "Poppins", sans-serif;
   line-height: 25px;
   color: grey;
+}
+
+#contenedor-vermas section .contenedor-tres {
+  font-family: "Poppins", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+      grid-template-areas: "titulo titulo" "mensaje cartel" "mensaje enviar";
+  height: 270px;
+  margin-bottom: 50px;
+  width: 65%;
+  margin-top: 25px;
+}
+
+#contenedor-vermas section .contenedor-tres p {
+  font-size: 22px;
+  padding-bottom: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titulo;
+}
+
+#contenedor-vermas section .contenedor-tres #pregunta {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: mensaje;
+  width: 93%;
+  border: 2px solid #103d77;
+  border-radius: 30px 30px 0 30px;
+  padding: 15px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+#contenedor-vermas section .contenedor-tres div {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cartel;
+  background-color: lightblue;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+#contenedor-vermas section .contenedor-tres div #cartel {
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+#contenedor-vermas section .contenedor-tres button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: enviar;
+  background-color: white;
+  border: 2px solid #103d77;
+  border-radius: 8px 8px 8px 0;
+}
+
+#contenedor-vermas section .contenedor-tres button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 1px 2px 1px grey;
+          box-shadow: 1px 2px 1px grey;
+  cursor: pointer;
+}
+
+#contenedor-vermas section .contenedor-tres button i {
+  color: #103d77;
+  font-size: 1.6em;
 }
 /*# sourceMappingURL=vermas.component.css.map */

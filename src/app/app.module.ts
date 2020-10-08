@@ -1,9 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//inicio servicios
-import{ CargarScriptsService} from "./cargar-scripts.service";
-
-//fin servicio
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -47,7 +43,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
     AngularFireStorageModule,
     HttpClientModule
   ],
-  providers: [CargarScriptsService],
+  providers: [],
   bootstrap: [AppComponent],
   
 })

@@ -113,7 +113,8 @@ header .buscador .barraDeBusqueda:hover {
 }
 
 header .buscador .btn-lupa {
-  visibility: hidden;
+  background-color: " ";
+  border: none;
 }
 
 header .buscador .btn-lupa .fa-search {

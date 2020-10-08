@@ -25,7 +25,12 @@ a {
 
 .contenedor .contenedor-menu .menu {
   background-color: white;
-  padding-bottom: 40px;
+  padding: 9px 7px 40px 7px;
+  border-radius: 25px 0px 25px 25px;
+}
+
+.contenedor .contenedor-menu .menu li ul {
+  display: none;
 }
 
 .contenedor .contenedor-menu .menu li ul li {

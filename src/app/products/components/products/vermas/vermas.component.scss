@@ -2,6 +2,11 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
+%prop-bg-img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #contenedor-vermas{
     display: flex;
         justify-content: center;
@@ -15,7 +20,6 @@ $color-sec:rgb(16, 61, 119);
         flex-direction: column;
         align-items: center;
         .contenedor-uno{
-           
             display: flex;
             justify-content: space-between;
             padding: 35px 15px;
@@ -34,35 +38,40 @@ $color-sec:rgb(16, 61, 119);
                         width: 90px;
                         height: 90px;
                         box-sizing: border-box;
+                        @extend %prop-bg-img;
                         &:hover{
                             border: 3px solid $color-sec;
                             box-shadow: 1px 2px 1px rgb(151, 147, 147);
                         }
                     }
                     #img-uno{
-                        background-color: blue;
+                        background-image: url(https://d26lpennugtm8s.cloudfront.net/stores/086/894/products/img-20200518-wa00101-9587272a3a2cc19c4715898271067988-1024-1024.jpg);
+                    
                     }
                     #img-dos{
-                        background-color: blue;
+                        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrVkIGh9jsHdgQi8RYojCJmVbWcvktrY4wWA&usqp=CAU);
                     }
                     #img-tres{
-                        background-color: blue;
+                        background-image: url(https://www.aquadelta.com.ar/img/articulos/termo_stanley_classic_750_ml_polar_blanco_1_imagen2.jpg);
                     }
                     #img-cuatro{
-                        background-color: blue;
+                        background-image: url(https://d2ye0ltusw47tz.cloudfront.net/196572-large_default/termo-stanley-clasico-14-lts-plegable-rojo-10-08999-007.jpg);
+                        
                     }
                 }
                 #img-ppal{
                     width:40vw;
                     height: 420px;
-                    background-color: rosybrown;
+                    background-image: url(https://d26lpennugtm8s.cloudfront.net/stores/086/894/products/img-20200518-wa00101-9587272a3a2cc19c4715898271067988-1024-1024.jpg);
+                    @extend %prop-bg-img;
                 }
             }
             #derecha{
                 border: 1.5px solid $color-ppal;
                 border-radius: 20px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 10px;
                 margin-left: 3vw;
                 width: 30vw;
                 #caja-titulo{
@@ -85,13 +94,18 @@ $color-sec:rgb(16, 61, 119);
                         justify-content: space-between;
                         width:6vw ;
                         align-items: center;
-                        i{
-                            font-size: 1.4em;
-                            color: $color-sec;
-                            &:hover{
-                                font-size: 1.6em;
+                        a{
+                         text-decoration: none;
+                            
+                            i{
+                                font-size: 1.4em;
+                                color: $color-sec;
+                                &:hover{
+                                    font-size: 1.6em;
+                                }
                             }
                         }
+                        
                     }
                 }
                 #caja-precio{
@@ -203,6 +217,68 @@ $color-sec:rgb(16, 61, 119);
             }
 
         }
+        .contenedor-tres{
+            font-family: $fte-ppal;
+            display: grid;
+                grid-template-columns: 80% 20%;
+                grid-template-rows: 1fr 3fr 1fr;
+                grid-template-areas: "titulo titulo"
+                                    "mensaje cartel"
+                                    "mensaje enviar";
+                height: 270px;
+                margin-bottom: 50px;
+                width: 65%;
+                margin-top: 25px;
+            p{
+                font-size: 22px;
+                padding-bottom: 20px;
+                grid-area: titulo;
+                
+            }
+
+            #pregunta{
+                grid-area: mensaje;
+                width: 93%;
+               
+                border: 2px solid $color-sec;
+                border-radius: 30px 30px 0 30px;
+                padding: 15px 10px;
+                font-family: $fte-ppal;
+                font-size: 16px;
+            }
+            div{
+                grid-area: cartel;
+                background-color:lightblue;
+                height: fit-content;
+                padding: 10px 15px;
+                border-radius: 10px;
+                #cartel{
+                    font-size: 16px;
+                    text-align: center;
+                    padding-bottom: 0;
+                   
+                    }
+                }
+            button{
+                grid-area: enviar;
+                background-color: white;
+           
+                border: 2px solid $color-sec;
+                border-radius: 8px 8px 8px 0;
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 1px 2px 1px grey;
+                    cursor: pointer;
+                }
+                
+                i{
+                    color: $color-sec;
+                    font-size: 1.6em;
+                    
+                }
+                }                    
+        
+
+        }
     }
 }
-
