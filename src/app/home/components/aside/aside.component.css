@@ -11,6 +11,7 @@ a {
 
 .contenedor {
   position: relative;
+  width: 22vw;
 }
 
 .contenedor .contenedor-menu {

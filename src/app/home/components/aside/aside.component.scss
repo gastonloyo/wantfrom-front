@@ -15,10 +15,13 @@ a {
 }
 .contenedor{
     position: relative;
+    width: 22vw;
+    
     .contenedor-menu {
         width: 22vw;
         min-width: 300px;
         position: absolute;
+        
        top: 6vh;
         left: 30px;
         font-family: $fte-ppal;

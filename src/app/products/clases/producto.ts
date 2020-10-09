@@ -10,7 +10,7 @@ export class Producto {
     marca: Marca;
     categoria: Categoria;
     unidadMedida: UnidadMedida;
-    fechaCreacion: string;
+    fechaCreacion: number;
     foto: string;
     destacado: boolean;
     activo: boolean;

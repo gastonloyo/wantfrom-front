@@ -28,6 +28,9 @@ body {
   right: 2vw;
   margin-top: 6vh;
   border-radius: 7px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .contenedorProductos h2 {

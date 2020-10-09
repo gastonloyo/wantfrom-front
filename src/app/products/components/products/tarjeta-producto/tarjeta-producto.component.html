@@ -6,5 +6,5 @@
         <p class="precio">${{producto.precio}}</p>
 
         <button class="botones">Agregar al Carrito</button>
-    <a href="/vermas" ><button class="botones vermas"  >Ver más...</button> </a>
+    <a [routerLink]="['/vermas',producto.id]" ><button class="botones vermas"  >Ver más...</button> </a>
     </div>

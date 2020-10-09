@@ -1,3 +1,71 @@
+section .contenedor-form .campos-inicio-s h2, section .contenedor-form #contenedor-registrarse h2, section .contenedor-form #contenedor-forgot-psw h2 {
+  font-family: "Poppins", sans-serif;
+  color: #103d77;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: block;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  padding-bottom: 7px;
+}
+
+section .contenedor-form .campos-inicio-s, section .contenedor-form #contenedor-registrarse, section .contenedor-form #contenedor-forgot-psw {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+section .contenedor-form .campos-inicio-s .campo, section .contenedor-form #contenedor-registrarse .campo, section .contenedor-form #contenedor-forgot-psw .campo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+section .contenedor-form .campos-inicio-s .campo i, section .contenedor-form #contenedor-registrarse .campo i, section .contenedor-form #contenedor-forgot-psw .campo i {
+  position: absolute;
+  padding: 13px;
+  font-size: 1.1em;
+  color: grey;
+}
+
+section .contenedor-form .campos-inicio-s .campo #username, section .contenedor-form #contenedor-registrarse .campo #email, section .contenedor-form #contenedor-forgot-psw .campo #email {
+  margin-top: 7px;
+  height: 44px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .contenedor-form .campos-inicio-s .campo #username:focus, section .contenedor-form #contenedor-registrarse .campo #email:focus, section .contenedor-form #contenedor-forgot-psw .campo #email:focus {
+  outline: none;
+  border: 1px solid #b4aaaa;
+}
+
+section .contenedor-form .campos-inicio-s .campo #password, section .contenedor-form #contenedor-registrarse .campo #new-pasw, section .contenedor-form #contenedor-forgot-psw .campo #new-pasw {
+  height: 44px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .contenedor-form .campos-inicio-s .campo #password:focus, section .contenedor-form #contenedor-registrarse .campo #new-pasw:focus, section .contenedor-form #contenedor-forgot-psw .campo #new-pasw:focus {
+  outline: none;
+  border: 1px solid #b4aaaa;
+}
+
 section {
   height: 100vh;
   width: 100%;
@@ -34,7 +102,7 @@ section .contenedor-form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -150px;
+  margin-top: -190px;
   width: 30vw;
 }
 
@@ -51,51 +119,29 @@ section .contenedor-form .campos-inicio-s {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  height: 270px;
+  height: 300px;
 }
 
-section .contenedor-form .campos-inicio-s h2 {
-  font-family: "Poppins", sans-serif;
-  color: #103d77;
+section .contenedor-form .campos-inicio-s .campo .fa-user {
+  top: 7.1px;
+}
+
+section .contenedor-form .campos-inicio-s #btn-registrar {
+  margin-top: -3px;
+}
+
+section .contenedor-form .campos-inicio-s p {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  display: block;
-  border-bottom: 1px solid grey;
-  width: 100%;
-  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #2d7be0;
+  font-size: 12px;
+  margin-top: -7px;
+  margin-bottom: 5px;
 }
 
-section .contenedor-form .campos-inicio-s #username {
-  margin-top: 12px;
-  height: 44px;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  padding-left: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: -10px;
-}
-
-section .contenedor-form .campos-inicio-s #password {
-  height: 44px;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  padding-left: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: -7px;
-}
-
-section .contenedor-form .campos-inicio-s #btn-entrar {
-  width: 100%;
-  height: 40px;
-  background-color: #103d77;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
+section .contenedor-form .campos-inicio-s p:hover {
+  cursor: pointer;
 }
 
 section .contenedor-form .separacion {
@@ -161,20 +207,53 @@ section .contenedor-form .social-media .btn2 {
   background-color: #db4a39;
 }
 
-section .footer {
-  width: 25vw;
+section .contenedor-form #contenedor-registrarse {
+  height: 300px;
+  display: none;
+}
+
+section .contenedor-form #contenedor-registrarse .campo .fa-user {
+  top: 7.1px;
+}
+
+section .contenedor-form #contenedor-forgot-psw {
+  display: none;
+  height: 230px;
+}
+
+section .contenedor-form #contenedor-forgot-psw p {
+  font-family: "Poppins", sans-serif;
+  color: gray;
+}
+
+section .contenedor-form #contenedor-forgot-psw .campo .fa-user {
+  top: 7.1px;
+}
+
+section .footer-is {
+  width: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-section .footer a {
+section .footer-is a {
   text-decoration: none;
   color: #103d77;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
-  margin-top: 125px;
+}
+
+.boton {
+  width: 100%;
+  height: 40px;
+  background-color: #103d77;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 /*# sourceMappingURL=inicio-sesion.component.css.map */

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 
@@ -9,13 +10,13 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
   styleUrls: ['./vermas.component.scss']
 })
 export class VermasComponent implements OnInit {
-  infoProducto:Producto[];
-  constructor(private catalogoservice:CatalogoService) { 
-  
+  infoProducto:Producto;
+  constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute) { 
+    this.infoProducto=new Producto();
   }
 
   ngOnInit(): void {
-    this.getInfoProducto();
+    this.getProduct();
 
     // cambio de muestra de imagenes
     let img1= document.getElementById("img-uno");
@@ -32,17 +33,7 @@ export class VermasComponent implements OnInit {
     let btnSend = document.getElementById("enviarMsg")
     btnSend.addEventListener("click",this.deleteMessage);
   }
-  getInfoProducto():void{
-    this.catalogoservice.getInfoProducto().subscribe(response =>{
-      this.infoProducto=response;
-      console.log(response);
-    })
-    // let stockDisponible = "disponible";
-
-    // if (this.infoProducto.stock!==0) {
-    //    stockDisponible="Disponible"
-    // }
-  }
+  
 
   ////////// INICIO CAMBIOS DE IMAGENES ////////////
   changeImg1(){
@@ -80,5 +71,16 @@ export class VermasComponent implements OnInit {
     let contenedor=document.getElementById("contenedorCartel");
    
     
+  }
+
+  getProduct(){
+    this.activatedroute.params.subscribe(param=> {
+      let id= param.id;
+      this.catalogoservice.getInfoProducto(id).subscribe(response => {
+        this.infoProducto=response;
+        console.log(this.infoProducto);
+      }
+        )
+    })
   }
 }

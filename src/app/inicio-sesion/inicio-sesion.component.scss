@@ -2,7 +2,59 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
+%titulo-h2{
+    font-family: $fte-ppal;
+    color: $color-sec;
+    align-self: flex-start;
+    display: block;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding-bottom: 7px;
+}
+%gral{
+    
+    width: 80%;
+    margin-bottom: 10px;
+}
+%cont-input{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
 
+%i{
+    position: absolute;
+    padding: 13px;
+    font-size: 1.1em;
+    color: grey;
+}
+%campo-user{
+    margin-top:7px;
+    height: 44px;
+    width: 100%;
+    font-family: $fte-ppal;
+    font-size: 15px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    &:focus{
+        outline: none;
+        border:1px solid rgb(180, 170, 170) ;
+    }
+}
+%contrasena{
+    height: 44px;
+     width: 100%;
+    font-family: $fte-ppal;
+    font-size: 15px;
+     padding-left: 40px;
+    box-sizing: border-box;  
+    &:focus{
+    outline: none;
+    border:1px solid rgb(180, 170, 170) ;
+     }
+}
 
 section{
     height: 100vh;
@@ -23,53 +75,52 @@ section{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -150px;
+        margin-top: -190px;
         width: 30vw;
+        
+        
         .campos-inicio-s{
-            
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            width: 80%;
-            height: 270px;
+            @extend %gral;
+            height: 300px;
             h2{
-            font-family: $fte-ppal;
-            color: $color-sec;
-            align-self: flex-start;
-            display: block;
-            border-bottom: 1px solid grey;
-            width: 100%;
-            padding-bottom: 10px;
+            @extend %titulo-h2;
             
             }
-            #username{
-                margin-top: 12px;
-                height: 44px;
-                width: 100%;
-                font-family: $fte-ppal;
-                font-size: 15px;
-                padding-left: 10px;
-                box-sizing: border-box;
-                margin-bottom: -10px;
+            .campo{
+                @extend %cont-input;
+                i{
+                   @extend %i;
+                    
+                }
+                .fa-user{
+                   top: 7.1px;
+                }
+                #username{
+                  @extend %campo-user;                   
+                }
+                #password{
+                @extend %contrasena;
+                }
             }
-            #password{
-                height: 44px;
-                width: 100%;
-                font-family: $fte-ppal;
-                font-size: 15px;
-                padding-left: 10px;
-                box-sizing: border-box;
-                margin-bottom: -7px;
+            
+           
+            #btn-registrar{
+                margin-top: -3px;
             }
-            #btn-entrar{
-                width: 100%;
-                height: 40px;
-                background-color: $color-sec;
-                color: white;
-                font-family:$fte-ppal;
-                font-size: 16px;
-                
+            p{
+                align-self: flex-start;
+                font-family: $fte-ppal;
+                color:$color-ppal;
+                font-size:12px ;
+                margin-top: -7px;
+                margin-bottom: 5px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
         .separacion{
@@ -116,20 +167,85 @@ section{
                 background-color: #db4a39;
             }
         }
+        #contenedor-registrarse{
+            @extend %gral;
+            height: 300px;
+            display: none;
+
+            h2{
+                @extend %titulo-h2;
+            }
+            .campo{
+                @extend %cont-input;
+                i{
+                @extend %i;                    
+                }
+                .fa-user{
+                   top: 7.1px;
+                }
+                #email{
+                    @extend %campo-user;                     
+                }
+                #new-pasw{
+                    @extend %contrasena;
+                }
+            }
+        }
+        #contenedor-forgot-psw{
+            @extend %gral;
+            display: none;
+            height: 230px;
+
+            h2{
+                @extend %titulo-h2;
+            }
+            p{
+                font-family: $fte-ppal;
+                color: gray;
+            }
+            .campo{
+                @extend %cont-input;
+                i{
+                @extend %i;                    
+                }
+                .fa-user{
+                   top: 7.1px;
+                }
+                #email{
+                    @extend %campo-user;                     
+                }
+                #new-pasw{
+                    @extend %contrasena;
+                }
+            }
+        }
 
     }
-    .footer{
-        width:25vw ;
-    
+    .footer-is{
+        width:30vw ;
         display: flex;
-        justify-content: space-around;
+        margin-top: 20px;
+        // justify-content: flex-end;
+        justify-content: space-between;
         a{
             text-decoration: none;
             color: $color-sec;
             font-family: $fte-ppal;
             font-size: 12px;
-            margin-top: 125px;
+            // margin-top: 45px;
+            // margin-left: 60px;
+            // margin-right: 10px;
           
         }
     }
+}
+
+.boton{
+    width: 100%;
+    height: 40px;
+    background-color: $color-sec;
+    color: white;
+    font-family:$fte-ppal;
+    font-size: 16px;
+    
 }

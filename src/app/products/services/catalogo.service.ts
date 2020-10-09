@@ -31,9 +31,9 @@ id:number;
     )
     
   }
-  getInfoProducto():Observable<Producto[]>{
-    this.id=1;
-    return this.http.get(`${this.url}/catalogo/productos/ver/${this.id}`).pipe( map( (response:any) => response.producto as Producto[]));
+  getInfoProducto(id:number):Observable<Producto>{
+    
+    return this.http.get(`${this.url}/catalogo/productos/ver/${id}`).pipe( map( (response:any) => response.producto as Producto));
   }
 
 }

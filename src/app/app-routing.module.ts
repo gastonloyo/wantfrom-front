@@ -7,7 +7,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
 
 const routes: Routes = [
 {path:"home",component:HomeComponent},
-{path: "vermas", component:VermasComponent},
+{path: "vermas/:id", component:VermasComponent},
 {path: "inicio-sesion", component:InicioSesionComponent},
 {path:"search/:termino", component:BuscadorComponent},
 {path:"**", pathMatch:"full", redirectTo:"home"}

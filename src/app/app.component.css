@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=app.component.css.map */
+app-home {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+}
+/*# sourceMappingURL=app.component.css.map */
