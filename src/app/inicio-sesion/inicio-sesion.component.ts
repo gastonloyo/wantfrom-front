@@ -15,11 +15,25 @@ export class InicioSesionComponent implements OnInit {
     //CAMBIAR COLOR ICONOS C/ FOCUS
     let userName=document.getElementById("username");
     userName.addEventListener("focus",this.changeUserIcon)
+    
     let password = document.getElementById("password");
     password.addEventListener("focus",this.changePswIcon);
+    
+    let newPwd=document.getElementById("new-pasw");
+    newPwd.addEventListener("focus",this.changePswIcon);
+    
+    let emailR=document.getElementById("email");
+    emailR.addEventListener("focus",this. changeEnvelopeIcon);
+    
+    let emailFP=document.getElementById("emailPsw");
+    emailFP.addEventListener("focus",this. changeEnvelopeIcon);
+    
     /// volver a la normalidad
     userName.addEventListener("blur",this.originalUserIcon);
     password.addEventListener("blur",this.originalPswIcon);
+    newPwd.addEventListener("blur",this.originalPswIcon);
+    emailR.addEventListener("blur",this.originalEnvelopeIcon);
+    emailFP.addEventListener("blur",this.originalEnvelopeIcon);
     
     //// OLVIDE MI CONTRASENA
     let recuperar= document.getElementById("recuperar");
@@ -27,11 +41,11 @@ export class InicioSesionComponent implements OnInit {
       // ocultar form inicio de sesion
       this.hiddeForm();
       //mostrar recuperar contrasena
-      let forgotPsw=document.getElementById("contenedor-forgot-psw");
-      forgotPsw.style.display="flex";
-      forgotPsw.style.flexDirection="column";
-      forgotPsw.style.justifyContent="space-around";
-      forgotPsw.style.alignItems="center";
+      let uno=document.getElementById("contenedor-forgot-psw");
+      uno.style.display="flex";
+      uno.style.flexDirection="column";
+      uno.style.justifyContent="space-around";
+      uno.style.alignItems="center";
       
     })
 
@@ -41,13 +55,39 @@ export class InicioSesionComponent implements OnInit {
     //ocultar form inicio de sesion
       this.hiddeForm();
       //mostrar form registrarse
-      let forgotPsw=document.getElementById("contenedor-registrarse");
-      forgotPsw.style.display="flex";
-      forgotPsw.style.flexDirection="column";
-      forgotPsw.style.justifyContent="space-around";
-      forgotPsw.style.alignItems="center";
+      let uno=document.getElementById("contenedor-registrarse");
+      uno.style.display="flex";
+      uno.style.flexDirection="column";
+      uno.style.justifyContent="space-around";
+      uno.style.alignItems="center";
         })
-}
+
+    ///VOLVER ATRAS
+    let arrow1=document.getElementById("back1");
+      arrow1.addEventListener("click",this.return) ; 
+      let arrow2=document.getElementById("back2");
+      arrow2.addEventListener("click",this.return) ;
+    
+     ///MENSAJE CTA CREADA
+     let btnCrear=document.getElementById("btn-crear-cta");
+     btnCrear.addEventListener("click",()=>{
+       let contRegistr=document.getElementById("contenedor-registrarse");
+       contRegistr.style.display="none";
+       let msj=document.getElementById("msje-registro");
+       msj.style.display="initial";
+       msj.style.width="70%";
+       let contBlanco=document.getElementById("cont-form");
+       contBlanco.style.marginTop="-80px"
+     })
+
+     //MOSTRAR CONTRASENA 
+    //  let eye1= document.getElementById("mostrar-psw");
+    //  eye1.addEventListener("click",this.mostrarPsw);
+    //  let eye2= document.getElementById("mostrar-new-psw");
+    //  eye2.addEventListener("click",this.mostrarPsw)
+
+
+    }
 
   ///// inicio metodos para el cambio de color de iconos///
   changeUserIcon(){
@@ -57,6 +97,14 @@ export class InicioSesionComponent implements OnInit {
   changePswIcon(){
     let icon = document.getElementById("icono-lock");
     icon.style.color="rgb(45, 123, 224)";
+    let icon2 = document.getElementById("icono-lock-r");
+    icon2.style.color="rgb(45, 123, 224)";
+  }
+  changeEnvelopeIcon(){
+    let icon3=document.getElementById("icono-envelope");
+    icon3.style.color="rgb(45, 123, 224)";
+    let icon4=document.getElementById("icono-env-psw");
+    icon4.style.color="rgb(45, 123, 224)";
   }
   originalUserIcon(){
     let icon = document.getElementById("icono-user");
@@ -65,6 +113,14 @@ export class InicioSesionComponent implements OnInit {
   originalPswIcon(){
     let icon = document.getElementById("icono-lock");
     icon.style.color="grey"
+    let icon2 = document.getElementById("icono-lock-r");
+    icon2.style.color="grey";
+  }
+  originalEnvelopeIcon(){
+    let icon3 = document.getElementById("icono-envelope");
+    icon3.style.color="grey";
+    let icon4 = document.getElementById("icono-env-psw");
+    icon4.style.color="grey"
   }
     ///// FIN metodos para el cambio de color de iconos///
 
@@ -78,4 +134,44 @@ export class InicioSesionComponent implements OnInit {
     tres.style.display="none";
   }
   //FIN ocultar formulario inicio de sesion
+ 
+  ///inicio metodo para ir atras con la flecha
+  return(){
+    //ocultar
+    let contRegistrarse= document.getElementById("contenedor-registrarse");
+    let contForgotPsw=document.getElementById("contenedor-forgot-psw");
+    contRegistrarse.style.display="none";
+    contForgotPsw.style.display="none";
+    //mostrar inicio de sesion
+    let uno=document.getElementById("is-uno");
+    let dos=document.getElementById("is-dos");
+    let tres=document.getElementById("is-tres");
+    uno.style.display="flex";
+    uno.style.flexDirection="column";
+    uno.style.justifyContent="space-around";
+    uno.style.alignItems="center";
+    dos.style.display="flex";
+    dos.style.justifyContent="space-between";
+    dos.style.alignItems="center";
+    tres.style.display="flex";
+    tres.style.flexDirection="column";
+    tres.style.justifyContent="space-between";
+    tres.style.alignItems="center";
+   
+  }
+
+
+   ///FIN metodo para ir atras 
+
+   //////metodo mostarr psw
+
+  //  mostrarPsw(){
+  //   let campoPsw = document.getElementById("password");
+  //   if(campoPsw.type == "password"){
+  //       campoPsw.type = "text";
+  //   }else{
+  //       campoPsw.type = "password";
+  //   }
+  //  }
+
 }

@@ -239,7 +239,7 @@ $color-sec:rgb(16, 61, 119);
             #pregunta{
                 grid-area: mensaje;
                 width: 93%;
-               
+                outline: none;
                 border: 2px solid $color-sec;
                 border-radius: 30px 30px 0 30px;
                 padding: 15px 10px;
@@ -262,7 +262,7 @@ $color-sec:rgb(16, 61, 119);
             button{
                 grid-area: enviar;
                 background-color: white;
-           
+                outline: none;
                 border: 2px solid $color-sec;
                 border-radius: 8px 8px 8px 0;
                 &:hover{
