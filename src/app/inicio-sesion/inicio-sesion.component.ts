@@ -62,12 +62,6 @@ export class InicioSesionComponent implements OnInit {
       uno.style.alignItems="center";
         })
 
-    ///VOLVER ATRAS
-    let arrow1=document.getElementById("back1");
-      arrow1.addEventListener("click",this.return) ; 
-      let arrow2=document.getElementById("back2");
-      arrow2.addEventListener("click",this.return) ;
-    
      ///MENSAJE CTA CREADA
      let btnCrear=document.getElementById("btn-crear-cta");
      btnCrear.addEventListener("click",()=>{
@@ -77,8 +71,16 @@ export class InicioSesionComponent implements OnInit {
        msj.style.display="initial";
        msj.style.width="70%";
        let contBlanco=document.getElementById("cont-form");
-       contBlanco.style.marginTop="-80px"
+       contBlanco.style.marginTop="-80px";
      })
+
+     
+    ///VOLVER ATRAS
+    let arrow1=document.getElementById("back1");
+    arrow1.addEventListener("click",this.return) ; 
+    let arrow2=document.getElementById("back2");
+    arrow2.addEventListener("click",this.return) ;
+  
 
      //MOSTRAR CONTRASENA 
     //  let eye1= document.getElementById("mostrar-psw");

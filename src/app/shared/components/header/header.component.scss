@@ -3,6 +3,10 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
+.oculto{
+    background-color:green;
+}
+
 header{
     display: flex;
     justify-content: space-between;

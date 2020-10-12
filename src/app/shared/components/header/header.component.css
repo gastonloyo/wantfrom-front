@@ -1,3 +1,7 @@
+.oculto {
+  background-color: green;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;

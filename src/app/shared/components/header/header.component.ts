@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { AngularFireStorage } from "@angular/fire/storage";
 
 import {finalize  } from "rxjs/operators";
@@ -16,6 +16,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
  categorias:Categoria[];
+
+
   constructor( private catalogoservice:CatalogoService, private router:Router) {
    
   }
@@ -34,5 +36,7 @@ export class HeaderComponent implements OnInit {
  buscarProducto(termino:string):void {
   this.router.navigate(['/search',termino]);
  }
+
+
 
 }
