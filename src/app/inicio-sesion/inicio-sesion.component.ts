@@ -40,7 +40,7 @@ export class InicioSesionComponent implements OnInit {
     recuperar.addEventListener("click",()=> {
       // ocultar form inicio de sesion
       this.hiddeForm();
-      //mostrar recuperar contrasena
+      //mostrar contenedors recuperar contrasena
       let uno=document.getElementById("contenedor-forgot-psw");
       uno.style.display="flex";
       uno.style.flexDirection="column";
@@ -80,16 +80,22 @@ export class InicioSesionComponent implements OnInit {
     arrow1.addEventListener("click",this.return) ; 
     let arrow2=document.getElementById("back2");
     arrow2.addEventListener("click",this.return) ;
-  
-
-     //MOSTRAR CONTRASENA 
-    //  let eye1= document.getElementById("mostrar-psw");
-    //  eye1.addEventListener("click",this.mostrarPsw);
-    //  let eye2= document.getElementById("mostrar-new-psw");
-    //  eye2.addEventListener("click",this.mostrarPsw)
 
 
     }
+
+  mostrarPsw(){
+      let input = document.getElementById("password");
+     console.log(input);
+
+      if(input.type == 'password'){
+          input.type = 'text';
+      }else{
+          input.type = 'password';
+      }
+   
+     
+  }
 
   ///// inicio metodos para el cambio de color de iconos///
   changeUserIcon(){

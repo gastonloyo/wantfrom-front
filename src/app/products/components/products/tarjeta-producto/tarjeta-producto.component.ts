@@ -12,6 +12,12 @@ export class TarjetaProductoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+  saveToFav(){
+    let corazon=document.getElementById("fav");
+    corazon.style.color="red";
+    corazon.classList.add("fas");
   }
 
 }

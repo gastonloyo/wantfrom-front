@@ -12,7 +12,7 @@ export class CatalogoService {
 url:string;
 id:number;
   constructor(private http:HttpClient) { 
-    this.url="https://deofis-tienda-apirest.herokuapp.com/api";
+    this.url="http://deofistienda-env.eba-zdhxpdjp.sa-east-1.elasticbeanstalk.com/api";
 
   }
   getProductosDestacados():Observable<Producto[]>{

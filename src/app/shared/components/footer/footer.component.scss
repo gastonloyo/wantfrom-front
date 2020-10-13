@@ -4,8 +4,7 @@ $color-sec:rgb(16, 61, 119);
 
 .footer{
     background-color: rgb(218, 216, 216);
-    position: relative;
-    top: 1000px;
+    clear: both;
     font-family: $fte-ppal;
     article{
        .row1{
@@ -174,6 +173,7 @@ $color-sec:rgb(16, 61, 119);
     .copy{
         background-color: $color-sec;
         height: 30px;
+        position: relative;
         p{
             color: white;
             text-align: center;

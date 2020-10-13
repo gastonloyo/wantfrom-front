@@ -1,7 +1,6 @@
 .footer {
   background-color: #dad8d8;
-  position: relative;
-  top: 1000px;
+  clear: both;
   font-family: "Poppins", sans-serif;
 }
 
@@ -239,6 +238,7 @@
 .footer .copy {
   background-color: #103d77;
   height: 30px;
+  position: relative;
 }
 
 .footer .copy p {

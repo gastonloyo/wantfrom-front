@@ -14,16 +14,13 @@ a {
 	text-decoration: none;	
 }
 .contenedor{
-    position: relative;
     width: 22vw;
-    
+    float: left;
+    margin-left: 30px;
+    margin-top: 6vh;
     .contenedor-menu {
         width: 22vw;
         min-width: 300px;
-        position: absolute;
-        
-       top: 6vh;
-        left: 30px;
         font-family: $fte-ppal;
         line-height: 20px;
         .menu{
