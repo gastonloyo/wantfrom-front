@@ -304,3 +304,204 @@ section{
     margin-top: 15px;
 }
 
+@media  screen and (max-width: 500px)  {
+section{
+    .fondo{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100px;
+            height: 30px;
+         margin-top: 60px;
+         z-index: 4;
+        }
+    }
+    .contenedor-form{
+        padding-top: 20px;
+        padding-bottom: 40px;
+        
+        margin-top: -165px;
+        width: 85vw;
+        
+        
+        .campos-inicio-s{
+           
+            height: 250px;
+            h2{
+            margin-bottom: -15px;
+            font-size: 19px;
+            }
+            .campo{
+                @extend %cont-input;
+                
+                .fa-eye{
+                   margin-left: 80%;
+                }
+                #username{
+                  @extend %campo-user; 
+                  //height: 38px;                  
+                }
+                #password{
+                @extend %contrasena;
+                //height: 38px;
+                }
+            }
+            
+           #btn-entrar{
+               margin-top: 5px;
+               margin-bottom: 2px;
+           }
+           
+            p{
+                align-self: flex-start;
+                font-family: $fte-ppal;
+                color:$color-ppal;
+                font-size:12px ;
+                margin-top: -5px;
+                margin-bottom: 5px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .separacion{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            width: 80%;
+            p{
+            color: grey;
+            font-size: 17px;
+            }
+            span{
+                display: block;
+                border-bottom: 1px solid grey;
+                width: 42%;
+                
+            }   
+        }
+        .social-media{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            margin-top: 15px;
+            button{
+                width: 100%;
+                height: 40px;
+                border-radius: 30px;
+                border: none;
+                outline: none;
+                &:hover{
+                    box-shadow: 1px 2px 2px gray;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-family: $fte-ppal;
+                    font-size:15px ;
+                    display: block;
+                    width: 100%;
+                    
+                    i{
+                        margin-right: 10px;
+                    }
+                    
+                }
+
+            }
+            .btn1{
+                background-color: #3b5998;
+            }
+            .btn2{
+                background-color: #db4a39;
+            }
+        }
+        #contenedor-registrarse{
+            @extend %gral;
+            height: 300px;
+            display: none;
+
+            h2{
+                @extend %titulo-h2;
+                display: flex;
+                align-items: center;
+                i{
+                    font-size: 0.7em;
+                    color: grey;
+                    margin-right: 8px;
+                }
+            }
+            .campo{
+                @extend %cont-input;
+                i{
+                @extend %i;                    
+                }
+                .fa-user{
+                   top: 7.1px;
+                }
+                #email{
+                    @extend %campo-user;                     
+                }
+                #new-pasw{
+                    @extend %contrasena;
+                }
+                .fa-eye{
+                    margin-left: 86%;
+                 }
+            }
+        }
+        #msje-registro{
+            font-family: $fte-ppal;
+            color: grey;
+            text-align: center;
+            display: none;
+        }
+        #contenedor-forgot-psw{
+            @extend %gral;
+            display: none;
+            height: 230px;
+
+            h2{
+                @extend %titulo-h2;
+                display: flex;
+                align-items: center;
+                i{
+                    font-size: 0.7em;
+                    color: grey;
+                    margin-right: 8px;
+                }
+            }
+            p{
+                font-family: $fte-ppal;
+                color: gray;
+            }
+            .campo{
+                @extend %cont-input;
+                i{
+                @extend %i;                    
+                }
+                .fa-user{
+                   top: 7.1px;
+                }
+                #emailPsw{
+                    @extend %campo-user;                     
+                }
+                
+            }
+        }
+        
+
+    }
+    .footer-is{
+        width:95% ;
+        a{   
+            font-size: 11px;          
+        }
+    }
+}
+
+}

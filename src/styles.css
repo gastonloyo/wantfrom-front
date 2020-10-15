@@ -1,16 +1,5 @@
 @import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-.contenedorProductos .contenedor-grid .tarjetas .items .botones, .contenedorProductos .contenedor-grid .tarjetas .items a .vermas {
-  background-color: #103d77;
-  font-size: 13px;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 0px;
-  margin-top: 5px;
-  padding: 3px 10px;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -20,80 +9,47 @@ body {
   background-color: rgba(45, 123, 224, 0.192);
 }
 
-.contenedorProductos {
-  width: 70vw;
-  background-color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  margin-right: 2vw;
-  margin-top: 6vh;
-  margin-bottom: 70px;
-  border-radius: 7px;
-  float: right;
-  padding-bottom: 25px;
+app-banner {
+  /* no circle */
+  /* big previous & next buttons */
+  /* icon color */
+  /* hide disabled button */
 }
 
-.contenedorProductos h2 {
-  font-family: "Poppins", sans-serif;
-  color: #103d77;
+app-banner .slider {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   display: block;
-  margin: 25px 0px 10px 17px;
-  text-align: left;
 }
 
-.contenedorProductos .contenedor-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  font-size: 16px;
+app-banner .carousel-cell {
+  width: 100%;
+  /* full width */
+  height: 60vh;
+  /* height of carousel */
+  margin-right: 10px;
 }
 
-.contenedorProductos .contenedor-grid .tarjetas .items {
-  width: 17vw;
-  height: 330px;
-  border-radius: 15px;
-  border: 1px solid rgba(128, 128, 128, 0.363);
-  margin: 15px auto;
-  padding: 15px 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+app-banner .flickity-button {
+  background: rgba(255, 255, 255, 0.212);
 }
 
-.contenedorProductos .contenedor-grid .tarjetas .items i {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  position: relative;
+app-banner .flickity-button:hover {
+  background: none;
 }
 
-.contenedorProductos .contenedor-grid .tarjetas .items h3 {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+app-banner .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
 }
 
-.contenedorProductos .contenedor-grid .tarjetas .items .descrip {
-  font-size: 15px;
-  text-align: center;
-  color: grey;
+app-banner .flickity-button-icon {
+  fill: white;
 }
 
-.contenedorProductos .contenedor-grid .tarjetas .items .precio {
-  font-weight: bold;
-}
-
-.contenedorProductos .contenedor-grid .tarjetas .items a {
-  text-decoration: none;
-  color: white;
+app-banner .flickity-button:disabled {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

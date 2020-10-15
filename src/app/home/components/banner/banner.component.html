@@ -1,4 +1,9 @@
-<div class="banner" id="banner" *ngIf="abierto">
 
-    <i (click)="abierto=false" class="fas fa-times" id="cruz"></i>
+<div class="slider">
+    <i (click)="hideSlide()" class="fas fa-times" id="cruz"></i>
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true , "autoPlay": true}'>
+        <div class="carousel-cell " *ngFor="let image of images">
+            <img src="{{image.img}}" alt="">
+        </div>
+    </div>
 </div>

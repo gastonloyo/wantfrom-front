@@ -1,15 +1,21 @@
-<section class="contenedorProductos"> 
-    <!-- todos-->
-<h2 >Productos Destacados</h2>
+<div>
+<section class="contenedorProductos">
+    <h2>Productos Destacados</h2>
 
- <!-- categorias-->
-<div id="contenedorCategorias" class="tarjetas"></div>
+    <!-- categorias-->
+    <div id="contenedorCategorias"></div>
 
- <!-- prod destacados-->
- <div class="contenedor-grid">
-    <div class="tarjetas" *ngFor="let destacado of productosDestacados">
-        <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
-    
-    </div>
+    <!-- prod destacados-->
+   <div class="contenedor-tarjetas">
+        <button class="button previous" id="previous"> <</button>
+        <div class="carrousel" id="carrousel">
+            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
+                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
+
+            </div>
+        </div>
+        <button class=" button next" id="next"  >></button>
+    </div> 
+
+</section>
 </div>
-

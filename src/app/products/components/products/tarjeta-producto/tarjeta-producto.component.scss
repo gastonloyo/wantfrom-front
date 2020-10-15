@@ -1,0 +1,77 @@
+$color-fondo:rgba(45, 123, 224, 0.192);
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal: rgb(45, 123, 224);
+$color-sec:rgb(16, 61, 119);
+%prop-botones-prod {
+   background-color:$color-sec;
+   font-size: 13px;
+   color: white;
+   font-family: $fte-ppal;
+   border-radius: 5px;
+   border: 0px ;
+   margin-top:5px ;
+   padding: 3px 10px;}
+
+.items{
+    width: 14vw;
+    height: 300px;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.363);
+    margin:15px 10px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 140px ;
+        height: 140px;
+    }
+    i{
+        align-self: flex-end;
+        position: relative;
+    }
+    h3{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .botones{
+     @extend %prop-botones-prod;
+     
+    }
+    .descrip{
+        font-size: 15px;
+        text-align: center;
+        color: grey;
+    }
+    .precio{
+        font-weight: bold;
+    }
+    a{
+     text-decoration: none;
+     color: white;
+     .vermas{
+         @extend %prop-botones-prod;
+     }
+    } 
+}
+
+@media  screen and (max-width: 500px)  {
+
+    .items{
+        width: 70vw;
+        height: 350px;
+        padding: 15px 15px;
+                             
+        h3{
+            font-size: 16px;
+        }
+       
+        .descrip{
+            font-size: 14px; 
+        }
+        
+    }
+
+}

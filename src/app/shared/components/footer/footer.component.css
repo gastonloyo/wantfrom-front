@@ -208,6 +208,10 @@
           box-shadow: 1px 2px 1px rgba(255, 255, 255, 0.534);
 }
 
+.footer article .footer-mobile {
+  display: none;
+}
+
 .footer article .row2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,5 +252,173 @@
   position: absolute;
   bottom: 0px;
   right: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .footer article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer article .row1 {
+    display: initial;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .footer article .row1 .ServCliente {
+    display: none;
+  }
+  .footer article .row1 .Nosotros {
+    display: none;
+  }
+  .footer article .row1 .newsletter {
+    display: none;
+  }
+  .footer article .row1 .Contacto {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
+  }
+  .footer article .row1 .Contacto h4 {
+    display: none;
+  }
+  .footer article .row1 .Contacto p {
+    line-height: 0px;
+    margin-bottom: 0px;
+  }
+  .footer article .row1 .Contacto .campo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 12px;
+    width: 100%;
+    padding-left: 15px;
+  }
+  .footer article .row1 .Contacto .campo i {
+    margin-right: 10px;
+  }
+  .footer article .row1 .Contacto .campo .direccion {
+    line-height: 20px;
+    width: 70%;
+  }
+  .footer article .row1 .Contacto .campo p {
+    line-height: 0px;
+  }
+  .footer article .row2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    padding-bottom: 7px;
+  }
+  .footer article .row2 h4 {
+    font-size: 18px;
+    margin-left: 10px;
+    width: 100px;
+    margin-right: 0px;
+  }
+  .footer article .row2 img {
+    width: 35px;
+    height: 23px;
+  }
+  .footer article .footer-mobile {
+    display: initial;
+  }
+  .footer article .footer-mobile .redes {
+    width: 90%;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer article .footer-mobile .redes .iconos {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .footer article .footer-mobile .redes .iconos a i {
+    font-size: 2em;
+  }
+  .footer article .footer-mobile .redes .iconos a img {
+    width: 32px;
+    height: 32px;
+  }
+  .footer article .footer-mobile .ServCliente-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .footer article .footer-mobile .ServCliente-mobile div {
+    width: 100%;
+  }
+  .footer article .footer-mobile .ServCliente-mobile div a {
+    text-decoration: none;
+    display: block;
+    margin-left: 13px;
+    margin-right: 13px;
+    line-height: 15px;
+  }
+  .footer .copy {
+    height: 40px;
+  }
+  .footer .copy p {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    position: initial;
+    bottom: initial;
+    right: initial;
+    margin-top: 2px;
+  }
 }
 /*# sourceMappingURL=footer.component.css.map */

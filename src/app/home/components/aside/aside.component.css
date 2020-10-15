@@ -99,4 +99,10 @@ ul {
   background: #2d7be0;
   color: #fff;
 }
+
+@media screen and (max-width: 500px) {
+  .contenedor {
+    display: none;
+  }
+}
 /*# sourceMappingURL=aside.component.css.map */

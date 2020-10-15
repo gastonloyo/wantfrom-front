@@ -1,1 +1,79 @@
-/* No CSS *//*# sourceMappingURL=tarjeta-producto.component.css.map */
+.items .botones, .items a .vermas {
+  background-color: #103d77;
+  font-size: 13px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: 5px;
+  padding: 3px 10px;
+}
+
+.items {
+  width: 14vw;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.363);
+  margin: 15px 10px;
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.items img {
+  width: 140px;
+  height: 140px;
+}
+
+.items i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+}
+
+.items h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.items .descrip {
+  font-size: 15px;
+  text-align: center;
+  color: grey;
+}
+
+.items .precio {
+  font-weight: bold;
+}
+
+.items a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .items {
+    width: 70vw;
+    height: 350px;
+    padding: 15px 15px;
+  }
+  .items h3 {
+    font-size: 16px;
+  }
+  .items .descrip {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=tarjeta-producto.component.css.map */

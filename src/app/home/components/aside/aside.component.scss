@@ -109,6 +109,12 @@ ul {
 	color:#fff;
 }
 
+@media  screen and (max-width: 500px)  {
+.contenedor{
+    display: none;
+}
+
+}
 
 
 // @media screen and (max-width: 450px) {

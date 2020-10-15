@@ -1,46 +1,52 @@
+<header>
 
-<header >
-    
     <div class="logo">
         <a [routerLink]="['/home']" title="Home">
-            <img src="../../../assets/imagenes/logo.png" alt="log" id="logo_header" > 
-        </a>    
+            <img src="../../../assets/imagenes/logo.png" alt="log" id="logo_header">
+        </a>
     </div>
-    <nav>
-     <ul class="menu">
-            <li><a href="">Categorías</a>
-                 <ul class="submenu" >
-                    <li *ngFor="let categoria of categorias">{{categoria.nombre}}</li>
-                </ul>
-            </li>
-             <li ><a href="">Ofertas</a></li>
-            
-        </ul>
-    </nav> 
-    <form (submit)=buscarProducto(txtProducto.value)>
-        <div class="buscador">
-            <input class=barraDeBusqueda type="text" placeholder=" Buscar" id="buscador" #txtProducto  >
-            <button type="submit" class="btn-lupa"> <i  class="fas fa-search" id="lupa" ></i></button>
-        
-        </div>
-    </form>
-    <section id="contenedor_iconos">
-        <div class="iconos">
-            <i class="fas fa-shopping-cart opciones"></i>
-            <p>Carrito</p>
+    <div id="fila-header">
+        <nav>
+            <ul class="menu">
+                <li><a href="">Categorías</a>
+                    <ul class="submenu">
+                        <li *ngFor="let categoria of categorias">{{categoria.nombre}}</li>
+                    </ul>
+                </li>
+                <li><a href="">Ofertas</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="d3 menu">
+            <i class="fas fa-bars opciones"></i>
         </div>
 
-        <div class="iconos">
-            <i class="fas fa-bell opciones"></i>
-            <p >Notificaciones</p>
-        </div>
-        
-        <div class="iconos">
-            <a [routerLink]="['/inicio-sesion']"><i class="fas fa-user-circle opciones"></i></a>
-            <p>Mi Perfil</p>
-        </div>
-        
-    </section>
+        <form (submit)=buscarProducto(txtProducto.value)>
+            <div class="buscador">
+                <input class=barraDeBusqueda type="text" placeholder=" Buscar" id="buscador" #txtProducto>
+                <button type="submit" class="btn-lupa"> <i class="fas fa-search" id="lupa"></i></button>
+
+            </div>
+        </form>
+
+        <section id="contenedor_iconos">
+            <div class="iconos carrito">
+                <i class="fas fa-shopping-cart opciones"></i>
+                <p>Carrito</p>
+            </div>
+
+            <div class="iconos notificaciones">
+                <i class="fas fa-bell opciones"></i>
+                <p>Notificaciones</p>
+            </div>
+
+            <div class="iconos miperfil">
+                <a [routerLink]="['/inicio-sesion']"><i class="fas fa-user-circle opciones"></i></a>
+                <p>Mi Perfil</p>
+            </div>
+
+        </section>
+    </div>
 
 </header>
-  

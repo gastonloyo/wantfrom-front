@@ -5,99 +5,53 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
-%prop-botones-prod {
-    background-color:$color-sec;
-    font-size: 13px;
-    color: white;
-    font-family: $fte-ppal;
-    border-radius: 5px;
-    border: 0px ;
-    margin-top:5px ;
-    padding: 3px 10px;
-}
-
 *{
     padding: 0;
     margin: 0;
-    
-    
 }
 
 body{
-    background-color:$color-fondo ;
-   
+    background-color:$color-fondo ;  
 }
 
+app-banner{
+.slider{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
 
-/////// inicio estilos de las grillas de productos ////
-.contenedorProductos{
-    width: 70vw;
-    background-color: #ffffff;
-    font-family: $fte-ppal;
-    margin-right:2vw;
-    margin-top: 6vh;
-    margin-bottom: 70px;
-    border-radius: 7px;
-    float: right;
-    padding-bottom:25px ;
-    h2{ 
-        font-family: $fte-ppal;
-        color: $color-sec;
-        display: block;
-        margin: 25px 0px 10px 17px;
-        text-align: left;
-    }
-    .contenedor-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        font-size:16px;
-    .tarjetas{
-        .items{
-            width: 17vw;
-            height: 330px;
-            border-radius: 15px;
-            border: 1px solid rgba(128, 128, 128, 0.363);
-            margin:15px auto;
-            padding: 15px 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            i{
-                align-self: flex-end;
-                position: relative;
-            }
-            h3{
-                text-align: center;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            .botones{
-             @extend %prop-botones-prod;
-            }
-            .descrip{
-                font-size: 15px;
-                text-align: center;
-                color: grey;
-            }
-            .precio{
-                font-weight: bold;
-            }
-            
-            a{
-             text-decoration: none;
-             color: white;
-             .vermas{
-                 @extend %prop-botones-prod;
-             }
-            } 
-        }
-        }
-    }
 }
-/////// fin estilos de las grillas de productos ////
+
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 60vh; /* height of carousel */
+    margin-right: 10px;
+  }
+
+  ///////////FLECHITAS ////////
+  /* no circle */
+  .flickity-button {
+    background: rgba(255, 255, 255, 0.212);
+    &:hover{
+        background:none;
+    }
+  }
+  /* big previous & next buttons */
+  .flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill:white;
+  }
+  /* hide disabled button */
+  .flickity-button:disabled {
+    display: none;
+  }
 
 
+}
 
- 

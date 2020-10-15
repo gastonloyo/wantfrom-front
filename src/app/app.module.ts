@@ -21,6 +21,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

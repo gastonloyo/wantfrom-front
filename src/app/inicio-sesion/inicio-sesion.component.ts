@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-inicio-sesion',
   templateUrl: './inicio-sesion.component.html',
@@ -86,13 +87,13 @@ export class InicioSesionComponent implements OnInit {
 
   mostrarPsw(){
       let input = document.getElementById("password");
-     console.log(input);
+    console.log("input.getAttribute(id)");
 
-      if(input.type == 'password'){
-          input.type = 'text';
-      }else{
-          input.type = 'password';
-      }
+      // if(input.getAttribute == "password"){
+      //     input.type = "text";
+      // }else{
+      //     input.type = "password";
+      // }
    
      
   }
