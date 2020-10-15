@@ -50,15 +50,14 @@ div .contenedorProductos .contenedor-tarjetas {
 }
 
 div .contenedorProductos .contenedor-tarjetas .button {
-  background: teal;
+  background: rgba(45, 123, 224, 0.192);
   border: 0;
   border-radius: 50%;
-  color: white;
+  color: grey;
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: bold;
   height: 3rem;
-  opacity: 0.25;
   position: absolute;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
@@ -67,12 +66,17 @@ div .contenedorProductos .contenedor-tarjetas .button {
   outline: none;
 }
 
+div .contenedorProductos .contenedor-tarjetas .button:hover {
+  background: #103d77;
+  color: white;
+}
+
 div .contenedorProductos .contenedor-tarjetas .previous {
-  left: 35px;
+  left: 45px;
 }
 
 div .contenedorProductos .contenedor-tarjetas .next {
-  right: 35px;
+  right: 48px;
 }
 
 div .contenedorProductos .contenedor-tarjetas .carrousel {
@@ -83,13 +87,17 @@ div .contenedorProductos .contenedor-tarjetas .carrousel {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 86%;
+  width: 85%;
   overflow: hidden;
 }
 
 div .contenedorProductos .contenedor-tarjetas .carrousel .tarjetas {
   -webkit-transform: translate(0px);
           transform: translate(0px);
+}
+
+.mostrar {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 500px) {

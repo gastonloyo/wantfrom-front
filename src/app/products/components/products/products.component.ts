@@ -46,15 +46,26 @@ export class ProductsComponent implements OnInit {
           if (this.i !== 1) {
             this.i--;
 
-           carouselImages.scrollLeft -= 1055;
+           carouselImages.scrollLeft -= 1045;
           }
         } else {
             this.i++;
-            carouselImages.scrollLeft  += 1055;
+            carouselImages.scrollLeft  += 1045;
           }
       });
   
     });
+  }
+
+  hiddeButtons(){
+    const carouselButtons = document.querySelectorAll('.button');
+    carouselButtons[0].classList.add("mostrar");
+    carouselButtons[1].classList.add("mostrar");
+  }
+  showButtons(){
+    const carouselButtons = document.querySelectorAll('.button');
+    carouselButtons[0].classList.remove("mostrar");
+    carouselButtons[1].classList.remove("mostrar");
   }
 
   

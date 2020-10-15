@@ -7,34 +7,45 @@ $color-sec:rgb(16, 61, 119);
    font-size: 13px;
    color: white;
    font-family: $fte-ppal;
-   border-radius: 5px;
+   border-radius: 0px 0px 15px 15px;
    border: 0px ;
    margin-top:5px ;
-   padding: 3px 10px;}
+   padding: 3px 10px;
+    width: 100%;
+}
 
 .items{
-    width: 14vw;
-    height: 300px;
+    width: 240px;
+    height: 340px;
     border-radius: 15px;
     border: 1px solid rgba(128, 128, 128, 0.363);
     margin:15px 10px;
-    padding: 15px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 140px 55px 50px 30px 45px;
+    justify-items: center;
+    box-sizing: border-box;
+    &:hover{
+        transform: scale(1.05);
+        border: 1px solid $color-sec;
+    }
     img{
         width: 140px ;
         height: 140px;
     }
     i{
-        align-self: flex-end;
+        justify-self: flex-end;
         position: relative;
+        font-size: 1.2em;
+        margin-right: 20px;
+        margin-top: 10px;
     }
     h3{
         text-align: center;
         font-size: 18px;
         font-weight: bold;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .botones{
      @extend %prop-botones-prod;
@@ -44,9 +55,12 @@ $color-sec:rgb(16, 61, 119);
         font-size: 15px;
         text-align: center;
         color: grey;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .precio{
         font-weight: bold;
+        font-size: 20px;
     }
     a{
      text-decoration: none;
