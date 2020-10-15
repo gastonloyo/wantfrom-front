@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Ecommerce';
-  
+  user:boolean;
+  admin:boolean;
 
   constructor(public router: Router){
-    
+    this.user=false;
+    //this.admin=true;
   }
 }

@@ -28,10 +28,15 @@ $color-sec:rgb(16, 61, 119);
     &:hover{
         transform: scale(1.05);
         border: 1px solid $color-sec;
+        cursor: pointer;
     }
+    &:hover > h3{
+       color: $color-sec;  
+   }
     img{
         width: 140px ;
         height: 140px;
+       
     }
     i{
         justify-self: flex-end;

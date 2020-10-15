@@ -1,5 +1,5 @@
 
-    <div class="items" >
+    <div class="items" [routerLink]="['/vermas',producto.id]">
         <i id="fav" class=" iconos far fa-heart" (click)=saveToFav()></i>
         <img src="../../../../../assets/imagenes/celu.jpg" alt=".">
         <h3>{{producto.nombre}}</h3>

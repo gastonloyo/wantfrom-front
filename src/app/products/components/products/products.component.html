@@ -6,7 +6,31 @@
     <div id="contenedorCategorias"></div>
 
     <!-- prod destacados-->
-   <div class="contenedor-tarjetas"(mouseover)="showButtons()" (mouseout)="hiddeButtons()">
+   <div class="contenedor-tarjetas" (mouseover)="showButtonsF()" (mouseout)="hiddeButtonsF()">
+        <button class="button featured previous" id="previous"> <</button>
+        <div class="carousel" id="carousel-featured" >
+            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
+                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
+
+            </div>
+        </div>
+        <button class=" button featured next" id="next"  >></button>
+    </div> 
+
+    <h2>Ofertas</h2>
+    <div class="contenedor-tarjetas" (mouseover)="showButtonsO()" (mouseout)="hiddeButtonsO()">
+        <button class="button ofertas previous" id="previousOfertas"> <</button>
+        <div class="carousel" id="carousel-ofertas" >
+            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
+                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
+
+            </div>
+        </div>
+        <button class=" button ofertas next" id="nextOfertas"  >></button>
+    </div> 
+
+    <!-- <h2>Categorias</h2>
+    <div class="contenedor-tarjetas"(mouseover)="showButtons()" (mouseout)="hiddeButtons()">
         <button class="button previous" id="previous"> <</button>
         <div class="carrousel" id="carrousel" >
             <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
@@ -15,7 +39,9 @@
             </div>
         </div>
         <button class=" button next" id="next"  >></button>
-    </div> 
+    </div>  -->
+
+    
 
 </section>
 </div>

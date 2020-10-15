@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Button } from 'protractor';
 
 import { Producto } from '../../clases/producto';
 import { CatalogoService } from '../../services/catalogo.service';
@@ -12,16 +13,14 @@ import { CatalogoService } from '../../services/catalogo.service';
 export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
-  i :number =1;
-  translateX:number = 0;
+  
   constructor(private catalogoService:CatalogoService) { 
  
   }
   ngOnInit(): void {
     this.getProductosDestacados();
-
-    
-     this.mover();
+     this.rotateCarrousel1();
+     this.rotateCarrousel2();
       
 
 
@@ -33,42 +32,69 @@ export class ProductsComponent implements OnInit {
       );
   }
 
-  mover(){
-    const carouselImages = <HTMLScriptElement><unknown>document.getElementById('carrousel');
-    const carouselButtons = document.querySelectorAll('.button');
-    //const numberOfImages = this.productosDestacados.length;
-   console.log(carouselImages);
+  rotateCarrousel1(){
+    let i = 1;
+    const carouselFeatured = <HTMLScriptElement><unknown>document.getElementById('carousel-featured');
+    const carouselButtons = document.querySelectorAll('.featured');
     carouselButtons.forEach(button => {
       button.addEventListener('click', (e) => {
         let algo = e.target as Element;
-        
         if (algo.id === 'previous') { 
-          if (this.i !== 1) {
-            this.i--;
-
-           carouselImages.scrollLeft -= 1045;
+          if (i !== 1) {
+            i--;
+           carouselFeatured.scrollLeft -= 1045;
           }
         } else {
-            this.i++;
-            carouselImages.scrollLeft  += 1045;
+            i++;
+            carouselFeatured.scrollLeft  += 1045;
           }
       });
-  
+    });
+  }
+  rotateCarrousel2(){
+    let i = 1;
+    const carouselOfertas = <HTMLScriptElement><unknown>document.getElementById('carousel-ofertas');
+    const carouselButtons = document.querySelectorAll('.ofertas');
+    carouselButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        let algo = e.target as Element;
+        if (algo.id === 'previousOfertas') { 
+          if (i !== 1) {
+            i--;
+           carouselOfertas.scrollLeft -= 1045;
+          }
+        } else {
+            i++;
+            carouselOfertas.scrollLeft  += 1045;
+            console.log("NEXT")
+          }
+      });
     });
   }
 
-  hiddeButtons(){
-    const carouselButtons = document.querySelectorAll('.button');
+  /**** Hidde/ show functions ****/
+  hiddeButtonsO(){
+    const carouselButtons = document.querySelectorAll('.ofertas');
+    carouselButtons[0].classList.add("mostrar");
+    carouselButtons[1].classList.add("mostrar");
+  
+  }
+  showButtonsO(){
+    const carouselButtons = document.querySelectorAll('.ofertas');
+    carouselButtons[0].classList.remove("mostrar");
+    carouselButtons[1].classList.remove("mostrar");
+  } 
+  hiddeButtonsF(){
+    const carouselButtons = document.querySelectorAll('.featured');
     carouselButtons[0].classList.add("mostrar");
     carouselButtons[1].classList.add("mostrar");
   }
-  showButtons(){
-    const carouselButtons = document.querySelectorAll('.button');
+  showButtonsF(){
+    const carouselButtons = document.querySelectorAll('.featured');
     carouselButtons[0].classList.remove("mostrar");
     carouselButtons[1].classList.remove("mostrar");
   }
-
-  
+  /**** End of hidde/ show functions ****/
   
 
 

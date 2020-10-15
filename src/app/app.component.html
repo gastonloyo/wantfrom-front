@@ -1,5 +1,3 @@
-<app-header
-*ngIf="router.url !== '/inicio-sesion'"
-></app-header>
+<app-normal-header *ngIf= "!user"></app-normal-header>
 <router-outlet></router-outlet>
 <app-footer *ngIf="router.url !== '/inicio-sesion'"></app-footer>

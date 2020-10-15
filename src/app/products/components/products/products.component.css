@@ -28,6 +28,7 @@ div .contenedorProductos h2 {
   margin: 25px 0px 10px 17px;
   text-align: left;
   font-size: 30px;
+  padding-left: 40px;
 }
 
 div .contenedorProductos .contenedor-tarjetas {
@@ -47,6 +48,8 @@ div .contenedorProductos .contenedor-tarjetas {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  margin-bottom: 70px;
+  margin-top: 10px;
 }
 
 div .contenedorProductos .contenedor-tarjetas .button {
@@ -79,7 +82,7 @@ div .contenedorProductos .contenedor-tarjetas .next {
   right: 48px;
 }
 
-div .contenedorProductos .contenedor-tarjetas .carrousel {
+div .contenedorProductos .contenedor-tarjetas .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +94,7 @@ div .contenedorProductos .contenedor-tarjetas .carrousel {
   overflow: hidden;
 }
 
-div .contenedorProductos .contenedor-tarjetas .carrousel .tarjetas {
+div .contenedorProductos .contenedor-tarjetas .carousel .tarjetas {
   -webkit-transform: translate(0px);
           transform: translate(0px);
 }
@@ -143,20 +146,6 @@ div .contenedorProductos .contenedor-tarjetas .carrousel .tarjetas {
     margin-top: 20px;
     margin-bottom: 7px;
     font-size: 25px;
-    text-align: center;
-  }
-  div .contenedorProductos .contenedor-grid {
-    width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     text-align: center;
   }
 }

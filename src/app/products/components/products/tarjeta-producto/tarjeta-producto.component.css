@@ -31,6 +31,11 @@
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   border: 1px solid #103d77;
+  cursor: pointer;
+}
+
+.items:hover > h3 {
+  color: #103d77;
 }
 
 .items img {

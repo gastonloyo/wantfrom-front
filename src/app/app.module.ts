@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/components/header/header.component';
 import { BannerComponent } from './home/components/banner/banner.component';
 import { AsideComponent } from './home/components/aside/aside.component';
 import { ProductsComponent } from './products/components/products/products.component';
@@ -17,6 +16,9 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { HttpClientModule } from "@angular/common/http";
 import { TarjetaProductoComponent } from './products/components/products/tarjeta-producto/tarjeta-producto.component';
 import { BuscadorComponent } from './home/components/buscador/buscador.component';
+import { NormalHeaderComponent } from './shared/components/headers/normal-header/normal-header.component';
+import { UserHeaderComponent } from './shared/components/headers/user-header/user-header.component';
+import { AdminHeaderComponent } from './shared/components/headers/admin-header/admin-header.component';
 
 
 
@@ -25,7 +27,6 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     BannerComponent,
     AsideComponent,
     FooterComponent,
@@ -35,6 +36,9 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
     InicioSesionComponent,
     TarjetaProductoComponent,
     BuscadorComponent,
+    NormalHeaderComponent,
+    UserHeaderComponent,
+    AdminHeaderComponent,
   
   ],
   imports: [
