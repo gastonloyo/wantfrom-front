@@ -243,7 +243,7 @@ header #fila-header #contenedor_iconos .menu {
 #userOptions {
   position: absolute;
   z-index: 2;
-  right: 10px;
+  right: 25px;
   background-color: grey;
   width: 190px;
   border-radius: 0px 0px 10px 10px;

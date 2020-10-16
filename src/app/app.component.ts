@@ -12,7 +12,7 @@ export class AppComponent {
   admin:boolean;
 
   constructor(public router: Router){
-    this.user=false;
+    this.user=true;
     this.admin=false;
     //this.admin=true;
   }

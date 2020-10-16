@@ -20,6 +20,8 @@ import { NormalHeaderComponent } from './shared/components/headers/normal-header
 import { UserHeaderComponent } from './shared/components/headers/user-header/user-header.component';
 import { AdminHeaderComponent } from './shared/components/headers/admin-header/admin-header.component';
 import { RouterModule } from '@angular/router';
+import { UserProfileComponent } from './profile/user-profile/user-profile.component';
+import { AdminProfileComponent } from './profile/admin-profile/admin-profile.component';
 
 
 
@@ -39,6 +41,8 @@ import { RouterModule } from '@angular/router';
     NormalHeaderComponent,
     UserHeaderComponent,
     AdminHeaderComponent,
+    UserProfileComponent,
+    AdminProfileComponent,
   
   ],
   imports: [
