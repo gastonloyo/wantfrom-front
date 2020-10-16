@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Router } from '@angular/router';
@@ -27,7 +26,7 @@ export class NormalHeaderComponent implements OnInit {
      )
   }
 
-/********DROP DOWN MENUS */
+              /********DROP DOWN MENUS */
 //***categories */
   showCategories(){
     let categoriesList= document.getElementById("categoriesList");

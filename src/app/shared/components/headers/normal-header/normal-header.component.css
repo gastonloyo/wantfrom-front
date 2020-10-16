@@ -22,7 +22,7 @@ header .logo {
 header .logo a img {
   width: 215px;
   height: 72px;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 header #fila-header {
@@ -60,7 +60,7 @@ header #fila-header nav ul .contenedor-categorias .submenu {
   padding-bottom: 15px;
   border-radius: 0px 0px 10px 10px;
   position: absolute;
-  left: 13vw;
+  left: 14vw;
   z-index: 3;
   top: 80px;
 }
@@ -104,7 +104,7 @@ header #fila-header nav ul .contenedor-categorias #container-subcategories {
   height: 220px;
   position: absolute;
   top: 80px;
-  left: 27vw;
+  left: 28vw;
   z-index: 2;
   border-radius: 0px 0px 10px 0px;
   display: none;
@@ -116,7 +116,7 @@ header #fila-header nav .menu {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 15vw;
+  width: 18vw;
 }
 
 header #fila-header nav .menu li a {
@@ -147,7 +147,7 @@ header #fila-header #menu {
 }
 
 header #fila-header .buscador .barraDeBusqueda {
-  width: 36vw;
+  width: 39vw;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 40px;
@@ -158,7 +158,6 @@ header #fila-header .buscador .barraDeBusqueda {
   font-size: 16px;
   padding-left: 15px;
   padding-right: 30px;
-  margin-left: -20px;
 }
 
 header #fila-header .buscador .barraDeBusqueda:focus {
@@ -186,13 +185,13 @@ header #fila-header #contenedor_iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 18vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 12vw;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  margin-right: 20px;
 }
 
 header #fila-header #contenedor_iconos .iconos {
@@ -231,6 +230,10 @@ header #fila-header #contenedor_iconos .iconos p {
   font-size: 10px;
   color: white;
   cursor: pointer;
+}
+
+header #fila-header #contenedor_iconos .notificaciones {
+  display: none;
 }
 
 header #fila-header #contenedor_iconos .menu {

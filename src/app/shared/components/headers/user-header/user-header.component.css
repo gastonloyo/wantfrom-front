@@ -1,1 +1,302 @@
-/* No CSS *//*# sourceMappingURL=user-header.component.css.map */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2d7be0;
+  height: 80px;
+  -webkit-box-shadow: 3px 3px 5px grey;
+          box-shadow: 3px 3px 5px grey;
+  width: 100%;
+}
+
+header .logo {
+  width: 15vw;
+}
+
+header .logo a img {
+  width: 215px;
+  height: 72px;
+  margin-left: 15px;
+}
+
+header #fila-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+header #fila-header nav {
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 30px;
+}
+
+header #fila-header nav ul {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+header #fila-header nav ul .contenedor-categorias .submenu {
+  display: none;
+  width: 210px;
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  left: 13vw;
+  z-index: 3;
+  top: 80px;
+}
+
+header #fila-header nav ul .contenedor-categorias .submenu li {
+  background-color: grey;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  padding: 7px 23px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #fila-header nav ul .contenedor-categorias .submenu li:hover {
+  color: white;
+  background-color: #2d7be0;
+  cursor: default;
+}
+
+header #fila-header nav ul .contenedor-categorias .submenu li:hover > i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  cursor: default;
+}
+
+header #fila-header nav ul .contenedor-categorias #container-subcategories {
+  background: rgba(255, 255, 255, 0.966);
+  width: 30vw;
+  height: 220px;
+  position: absolute;
+  top: 80px;
+  left: 27vw;
+  z-index: 2;
+  border-radius: 0px 0px 10px 0px;
+  display: none;
+}
+
+header #fila-header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 15vw;
+}
+
+header #fila-header nav .menu li a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size .3s;
+  transition: background-size .3s;
+}
+
+header #fila-header nav .menu li a:visited {
+  color: white;
+}
+
+header #fila-header nav .menu li a:hover {
+  background-size: 100% 2px;
+}
+
+header #fila-header nav .menu li a:focus {
+  background-size: 100% 2px;
+}
+
+header #fila-header #menu {
+  display: none;
+}
+
+header #fila-header .buscador .barraDeBusqueda {
+  width: 36vw;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 40px;
+  border-radius: 30px 4px 4px 30px;
+  border: 1px solid #2d7be0;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding-left: 15px;
+  padding-right: 30px;
+  margin-left: -20px;
+}
+
+header #fila-header .buscador .barraDeBusqueda:focus {
+  outline: none;
+  border: 2px solid rgba(43, 41, 41, 0.582);
+  -webkit-box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+          box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+}
+
+header #fila-header .buscador .barraDeBusqueda:hover {
+  cursor: text;
+}
+
+header #fila-header .buscador .btn-lupa {
+  background-color: " ";
+  border: none;
+}
+
+header #fila-header .buscador .btn-lupa .fa-search {
+  margin-left: -2.5vw;
+  color: #5f5d5d;
+}
+
+header #fila-header #contenedor_iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 18vw;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+header #fila-header #contenedor_iconos .iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 12.5vw;
+  margin-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #fila-header #contenedor_iconos .iconos i {
+  color: white;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+header #fila-header #contenedor_iconos .iconos i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+header #fila-header #contenedor_iconos .iconos .fa-user-circle {
+  font-size: 1.9em;
+}
+
+header #fila-header #contenedor_iconos .iconos p {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+header #fila-header #contenedor_iconos .menu {
+  display: none;
+}
+
+#userOptions {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  background-color: grey;
+  width: 200px;
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  list-style: none;
+  display: none;
+  cursor: pointer;
+}
+
+#userOptions a {
+  text-decoration: none;
+}
+
+#userOptions li {
+  background-color: grey;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  padding: 7px 23px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#userOptions li:hover {
+  background-color: #2d7be0;
+  cursor: pointer;
+}
+
+#userOptions li:hover > i {
+  font-size: 1em;
+}
+
+#userOptions li i {
+  font-size: 0.8em;
+  margin-bottom: 3px;
+}
+
+.bg-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.26);
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 0px;
+  display: none;
+}
+/*# sourceMappingURL=user-header.component.css.map */
