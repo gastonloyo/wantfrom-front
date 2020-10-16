@@ -1,3 +1,15 @@
-<app-normal-header *ngIf= "!user"></app-normal-header>
+ <!--header-->
+ 
+ <app-normal-header  *ngIf= "!user  && !admin && router.url !== '/inicio-sesion'" ></app-normal-header>
+
+ <app-user-header *ngIf= "user && !admin && router.url !== '/inicio-sesion'" ></app-user-header>
+ 
+ <app-admin-header *ngIf= "admin && router.url !== '/inicio-sesion'"></app-admin-header>
+
+ <!-------------->
 <router-outlet></router-outlet>
-<app-footer *ngIf="router.url !== '/inicio-sesion'"></app-footer>
+
+<app-footer *ngIf="router.url !== '/inicio-sesion'" ></app-footer>
+
+<!-- *ngIf= "!user"
+*ngIf="router.url !== '/inicio-sesion'" -->

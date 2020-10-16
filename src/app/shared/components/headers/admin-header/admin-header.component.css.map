@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "admin-header.component.scss"
+    ],
+    "names": [],
+    "file": "admin-header.component.css"
+}

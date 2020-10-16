@@ -12,7 +12,8 @@ export class AppComponent {
   admin:boolean;
 
   constructor(public router: Router){
-    this.user=false;
+    this.user=true;
+    this.admin=true;
     //this.admin=true;
   }
 }

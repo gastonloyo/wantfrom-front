@@ -9,7 +9,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: $color-ppal;
-    height: 13vh;
+    height: 80px;
     box-shadow: 3px 3px 5px grey;
     width: 100%;
     .logo{
@@ -28,47 +28,72 @@ header{
     justify-content: space-between;
     align-items:center;
     width: 80%;
+         /////// menu ///////
         nav{
-            /////// menu ///////
             display: block;
             align-self: center;
             height: 30px;
-            ul{
+            ul{ // para todos los ul menu y submenu
                 list-style: none;
                 font-family: $fte-ppal;
                 font-size: 18px;  
-             
-                .submenu{
+                .contenedor-categorias{
+                    .submenu{
                     display: none;
-                    width: 130px;
+                    width: 210px;
+                    background-color:grey;
+                    padding-top: 10px;
+                    padding-bottom: 15px;
+                    border-radius: 0px 0px 10px 10px;        
+                    position: absolute;
+                    left: 13vw;
+                    z-index: 3;
+                    top: 80px;        
+                        li{
+                    background-color:grey;
+                    font-size: 16px;
+                    color: rgb(255, 255, 255);
+                    width: 100%;
+                    padding:7px 23px ;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &:hover{
+                    color:white ;
                     background-color: $color-ppal;
-                    padding: 18px 0px 5px 10px;
-                    
-                    li{background-color:$color-ppal;
-                        font-size: 14px;
-                        color: aliceblue;
-                        &:hover{
-                            color:$color-sec ;
+                    cursor: default;
+                     }
+                    &:hover>i{
+                    transform: rotate(-90deg);
+                    transition-duration: 0.5s;
+                    cursor: default;
+                    }
+                         } 
+                    }
+                     #container-subcategories{
+                     background: rgba(255, 255, 255, 0.966);
+                    width: 30vw;
+                    height: 220px;
+                    position: absolute;
+                    top: 80px;
+                    left: 27vw;
+                    z-index: 2;
+                    border-radius: 0px 0px 10px 0px;
+                    display: none;
                         }
                     }
-                    
                 }
-            }
-            .menu{
+                
+            
+        .menu{
                 display: flex;
                 justify-content: space-around;
                 width: 15vw;
-                
-                
                 li{
-                    &:hover>ul{
-                        display: block;
-                        position: absolute;
-                        z-index: 1;
-                    }
+                    
                     a{
                         text-decoration: none;
-                        
                         background-image: linear-gradient(currentColor, currentColor);
                         background-position: 0% 100%;
                         background-repeat: no-repeat;
@@ -87,11 +112,12 @@ header{
                 }
             }
         }
-        .menu{
+        ///// icono menu hamburguesa///
+        #menu{
             display: none;
         }
+          //// buscador ////
         .buscador{
-            //// buscador /////
             .barraDeBusqueda{
             
                 width:36vw;
@@ -128,13 +154,13 @@ header{
             
         
         }
+         ////iconos////
         #contenedor_iconos{
-                ////iconos////
             display: flex;
             justify-content: space-between;
             width: 18vw;
             align-items: baseline;
-            margin-top: 20px;
+            
             .iconos {
                 display: flex;
                 flex-direction: column;
@@ -148,6 +174,7 @@ header{
                     margin-bottom: 5px;
                     &:hover{
                         transform: scale(1.1);
+                        cursor: pointer;
                     } 
                 }
                 .fa-user-circle{
@@ -157,7 +184,9 @@ header{
                     font-family: $fte-ppal;
                     font-size: 10px;
                     color: white;
+                    cursor: pointer;
                 }
+                
                 
             }
             .menu{
@@ -166,6 +195,58 @@ header{
 
         }
     }
+
+}
+//////////// user Options //////
+#userOptions{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    background-color: grey;
+    width: 190px;
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    list-style: none;
+    display: none;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+    }
+    li{
+        background-color:grey;
+        font-size: 16px;
+        color: white;
+        width: 100%;
+        padding:7px 23px ;
+        box-sizing: border-box;
+        font-family: $fte-ppal;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:hover{
+            background-color: $color-ppal;
+            cursor: pointer;
+        }
+        &:hover >i{
+            font-size: 1em;
+        }
+        i{
+            font-size: 0.8em;
+            margin-bottom: 3px;
+        }
+     
+    }
+}
+.bg-menu{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.26);
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 0px;
+    display: none;
 }
 
 

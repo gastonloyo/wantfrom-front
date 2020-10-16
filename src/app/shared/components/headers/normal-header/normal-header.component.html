@@ -8,17 +8,24 @@
     <div id="fila-header">
         <nav>
             <ul class="menu">
-                <li><a href="">Categorías</a>
-                    <ul class="submenu">
-                        <li *ngFor="let categoria of categorias">{{categoria.nombre}}</li>
-                    </ul>
+                <li (mouseover)="showCategories()" ><a href="">Categorías</a>
+
+                        <div class="contenedor-categorias"  (mouseout)="hiddeSubAndCategories()">
+                            <ul class="submenu " id="categoriesList" >
+                                <li class="items-categories" *ngFor="let categoria of categorias"  (mouseenter)="showSubcategories()">{{categoria.nombre}}<i class="fas fa-angle-down"></i></li>
+                            </ul>
+                            <div id="container-subcategories"(mouseenter)="showSubcategories()">
+
+                            </div>
+                        </div>
+                     
                 </li>
                 <li><a href="">Ofertas</a></li>
 
             </ul>
         </nav>
 
-        <div class="d3 menu">
+        <div id="menu">
             <i class="fas fa-bars opciones"></i>
         </div>
 
@@ -41,12 +48,19 @@
                 <p>Notificaciones</p>
             </div>
 
-            <div class="iconos miperfil">
-                <a [routerLink]="['/inicio-sesion']"><i class="fas fa-user-circle opciones"></i></a>
+            <div class="iconos miperfil" (mouseover)="showUserMenu()">
+                <i class="fas fa-user-circle opciones"></i>
                 <p>Mi Perfil</p>
+               
             </div>
 
         </section>
     </div>
 
 </header>
+<!-- User options y bg -->
+<ul id="userOptions" (mouseover)="showUserMenu()" (mouseout)="hiddeUserMenu()">
+    <a [routerLink]="['/inicio-sesion']"> <li><i class="fas fa-sign-in-alt"></i>Iniciar Sesión </li></a> 
+    <li><i class="fas fa-user-plus"></i>Registrarse</li>
+</ul>
+<div class="bg-menu" id="bg-menu" ></div>

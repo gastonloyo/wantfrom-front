@@ -9,7 +9,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #2d7be0;
-  height: 13vh;
+  height: 80px;
   -webkit-box-shadow: 3px 3px 5px grey;
           box-shadow: 3px 3px 5px grey;
   width: 100%;
@@ -52,21 +52,62 @@ header #fila-header nav ul {
   font-size: 18px;
 }
 
-header #fila-header nav ul .submenu {
+header #fila-header nav ul .contenedor-categorias .submenu {
   display: none;
-  width: 130px;
-  background-color: #2d7be0;
-  padding: 18px 0px 5px 10px;
+  width: 210px;
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  left: 13vw;
+  z-index: 3;
+  top: 80px;
 }
 
-header #fila-header nav ul .submenu li {
-  background-color: #2d7be0;
-  font-size: 14px;
-  color: aliceblue;
+header #fila-header nav ul .contenedor-categorias .submenu li {
+  background-color: grey;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  padding: 7px 23px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header #fila-header nav ul .submenu li:hover {
-  color: #103d77;
+header #fila-header nav ul .contenedor-categorias .submenu li:hover {
+  color: white;
+  background-color: #2d7be0;
+  cursor: default;
+}
+
+header #fila-header nav ul .contenedor-categorias .submenu li:hover > i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  cursor: default;
+}
+
+header #fila-header nav ul .contenedor-categorias #container-subcategories {
+  background: rgba(255, 255, 255, 0.966);
+  width: 30vw;
+  height: 220px;
+  position: absolute;
+  top: 80px;
+  left: 27vw;
+  z-index: 2;
+  border-radius: 0px 0px 10px 0px;
+  display: none;
 }
 
 header #fila-header nav .menu {
@@ -76,12 +117,6 @@ header #fila-header nav .menu {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 15vw;
-}
-
-header #fila-header nav .menu li:hover > ul {
-  display: block;
-  position: absolute;
-  z-index: 1;
 }
 
 header #fila-header nav .menu li a {
@@ -107,7 +142,7 @@ header #fila-header nav .menu li a:focus {
   background-size: 100% 2px;
 }
 
-header #fila-header .menu {
+header #fila-header #menu {
   display: none;
 }
 
@@ -158,7 +193,6 @@ header #fila-header #contenedor_iconos {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  margin-top: 20px;
 }
 
 header #fila-header #contenedor_iconos .iconos {
@@ -185,6 +219,7 @@ header #fila-header #contenedor_iconos .iconos i {
 header #fila-header #contenedor_iconos .iconos i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  cursor: pointer;
 }
 
 header #fila-header #contenedor_iconos .iconos .fa-user-circle {
@@ -195,9 +230,73 @@ header #fila-header #contenedor_iconos .iconos p {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   color: white;
+  cursor: pointer;
 }
 
 header #fila-header #contenedor_iconos .menu {
+  display: none;
+}
+
+#userOptions {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  background-color: grey;
+  width: 190px;
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  list-style: none;
+  display: none;
+  cursor: pointer;
+}
+
+#userOptions a {
+  text-decoration: none;
+}
+
+#userOptions li {
+  background-color: grey;
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  padding: 7px 23px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#userOptions li:hover {
+  background-color: #2d7be0;
+  cursor: pointer;
+}
+
+#userOptions li:hover > i {
+  font-size: 1em;
+}
+
+#userOptions li i {
+  font-size: 0.8em;
+  margin-bottom: 3px;
+}
+
+.bg-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.26);
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 0px;
   display: none;
 }
 

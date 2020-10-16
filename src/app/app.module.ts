@@ -19,7 +19,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
 import { NormalHeaderComponent } from './shared/components/headers/normal-header/normal-header.component';
 import { UserHeaderComponent } from './shared/components/headers/user-header/user-header.component';
 import { AdminHeaderComponent } from './shared/components/headers/admin-header/admin-header.component';
-
+import { RouterModule } from '@angular/router';
 
 
 
@@ -47,6 +47,7 @@ import { AdminHeaderComponent } from './shared/components/headers/admin-header/a
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
