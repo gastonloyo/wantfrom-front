@@ -29,17 +29,17 @@
         <button class=" button ofertas next" id="nextOfertas"  >></button>
     </div> 
 
-    <!-- <h2>Categorias</h2>
+    <h2>Categorias</h2>
     <div class="contenedor-tarjetas"(mouseover)="showButtons()" (mouseout)="hiddeButtons()">
         <button class="button previous" id="previous"> <</button>
         <div class="carrousel" id="carrousel" >
-            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
+            <div class="tarjetas-categorias"  *ngFor="let categoria of categorias">
+                <p>{{categoria.nombre}}</p>
 
             </div>
         </div>
         <button class=" button next" id="next"  >></button>
-    </div>  -->
+    </div> 
 
     
 

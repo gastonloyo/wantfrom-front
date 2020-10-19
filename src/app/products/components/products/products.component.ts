@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Button } from 'protractor';
-
+import { Categoria } from 'src/app/products/clases/categoria';
 import { Producto } from '../../clases/producto';
 import { CatalogoService } from '../../services/catalogo.service';
 
@@ -13,6 +13,7 @@ import { CatalogoService } from '../../services/catalogo.service';
 export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
+  categorias:Categoria[];
   
   constructor(private catalogoService:CatalogoService) { 
  
@@ -21,8 +22,7 @@ export class ProductsComponent implements OnInit {
     this.getProductosDestacados();
      this.rotateCarrousel1();
      this.rotateCarrousel2();
-      
-
+     this.getListaCategorias();
 
   }
   getProductosDestacados():void{
@@ -71,6 +71,14 @@ export class ProductsComponent implements OnInit {
       });
     });
   }
+
+    /***** get Categories *****/
+    getListaCategorias():void{
+      this.catalogoService.getListaCategorias().subscribe( response =>{
+       this.categorias=response;
+       console.log(response) }
+       )
+    }
 
   /**** Hidde/ show functions ****/
   hiddeButtonsO(){

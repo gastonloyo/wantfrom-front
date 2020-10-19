@@ -11,5 +11,28 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  showLateralMenu(){
+    let lateralmenu=document.getElementById("lateralMenu");
+    lateralmenu.style.width="200px";
+    let menu = document.getElementById("lateral-container");
+    menu.style.display="block";
+    this.bgOpenMenu()
+  }
+  hiddeLateralMenu(){
+    let lateralmenu=document.getElementById("lateralMenu");
+    lateralmenu.style.width="30px";
+    let menu = document.getElementById("lateral-container");
+    menu.style.display="none";
+    this.hiddeBgMenu()
+  }
+  /******* Background Menu */
+bgOpenMenu(){
+  let bgCategories= document.getElementById("bg-menu");
+  bgCategories.style.display="block";
+}
+hiddeBgMenu(){
+  let bgCategories= document.getElementById("bg-menu");
+  bgCategories.style.display="none";
+}
 
 }
