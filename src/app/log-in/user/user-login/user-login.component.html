@@ -1,0 +1,67 @@
+<section>
+    <div class="fondo">
+        <a [routerLink]="['/home']" title="Home">
+            <img src="../../assets/imagenes/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="contenedor-form" id="cont-form">
+        <!--inicio form iniciar sesion-->
+        <div class="campos-inicio-s" id="is-uno">
+            <h2>Inicio de Sesión</h2>
+            <div class="campo primer">
+                <input type="text" id="username" placeholder="Nombre de usuario">
+                <i class="fas fa-user" id="icono-user"></i>
+            </div>
+
+            <div class="campo">
+                <input type="password" id="password" placeholder="Contraseña">
+                <i class="fas fa-lock" id="icono-lock"></i>
+                <i class="far fa-eye" (click)="mostrarPsw()"></i>
+            </div>
+
+            <p id="recuperar">¿Olvidaste tu contraseña?</p>
+            <input type="submit" value="Entrar" id="btn-entrar" class="boton">
+            <input type="submit" value="Registrarme" id="btn-registrar" class="boton"  [routerLink]="['/user-sign-up']" >
+
+        </div>
+        <div class="separacion" id="is-dos">
+            <span class="raya"></span>
+            <p>o</p>
+            <span class="raya"></span>
+        </div>
+        <div class="social-media" id="is-tres">
+            <button class="btn1">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Iniciá sesión con Facebook</a>
+            </button>
+
+            <button class="btn2">
+                <a href="#" target="_blank"><i class="fab fa-google"></i> Iniciá sesión con Google</a>
+            </button>
+        </div>
+        <!--FIN form iniciar sesion-->
+     
+
+        <!--inicio form Olvide contrasena-->
+        <div id="contenedor-forgot-psw">
+            <h2> <i class="fas fa-arrow-circle-left" id="back"></i>Recuperar contraseña</h2>
+            <p>Te enviaremos un mail a tu cuenta .</p>
+            <div class="campo">
+                <input type="email" id="emailPsw" placeholder="Correo electrónico">
+                <i class="fas fa-envelope" id="icono-env-psw"></i>
+            </div>
+
+            <input type="submit" value="Enviar mail" id="btn-recover-psw" class="boton">
+
+        </div>
+        <!--FIN form Olvide contrasena-->
+
+
+    </div>
+    <div class="footer-is">
+
+        <a href="">Privacidad</a>
+        <a href=""> Terminos y condiciones</a>
+        <a href=""> Ecommerce 2020</a>
+    </div>
+
+</section>

@@ -26,6 +26,7 @@
   justify-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 
 .items:hover {
@@ -91,4 +92,4 @@
     font-size: 14px;
   }
 }
-/*# sourceMappingURL=tarjeta-producto-carousel.component.css.map */
+/*# sourceMappingURL=card-grid.component.css.map */

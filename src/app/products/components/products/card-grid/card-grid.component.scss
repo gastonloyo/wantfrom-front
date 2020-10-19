@@ -26,6 +26,7 @@ $color-sec:rgb(16, 61, 119);
     grid-template-rows: 20px 140px 55px 50px 30px 45px;
     justify-items: center;
     box-sizing: border-box;
+    outline: none;
     &:hover{
         transform: scale(1.05);
         border: 1px solid $color-sec;

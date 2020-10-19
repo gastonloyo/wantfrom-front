@@ -5,11 +5,11 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 
 
 @Component({
-  selector: 'app-vermas',
-  templateUrl: './vermas.component.html',
-  styleUrls: ['./vermas.component.scss']
+  selector: 'app-view-more',
+  templateUrl: './view-more.component.html',
+  styleUrls: ['./view-more.component.scss']
 })
-export class VermasComponent implements OnInit {
+export class ViewMoreComponent implements OnInit {
   infoProducto:Producto;
   constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute) { 
     this.infoProducto=new Producto();
@@ -33,8 +33,8 @@ export class VermasComponent implements OnInit {
     let btnSend = document.getElementById("enviarMsg")
     btnSend.addEventListener("click",this.deleteMessage);
   }
-  
 
+  
   ////////// INICIO CAMBIOS DE IMAGENES ////////////
   changeImg1(){
     let imgPpal= document.getElementById("img-ppal");
@@ -83,4 +83,5 @@ export class VermasComponent implements OnInit {
         )
     })
   }
+
 }

@@ -11,10 +11,8 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { HomeComponent } from './home/home.component';
-import { VermasComponent } from './products/components/products/vermas/vermas.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { HttpClientModule } from "@angular/common/http";
-import { TarjetaProductoComponent } from './products/components/products/tarjeta-producto/tarjeta-producto.component';
 import { BuscadorComponent } from './home/components/buscador/buscador.component';
 import { NormalHeaderComponent } from './shared/components/headers/normal-header/normal-header.component';
 import { UserHeaderComponent } from './shared/components/headers/user-header/user-header.component';
@@ -22,7 +20,12 @@ import { AdminHeaderComponent } from './shared/components/headers/admin-header/a
 import { RouterModule } from '@angular/router';
 import { UserProfileComponent } from './profile/user-profile/user-profile.component';
 import { AdminProfileComponent } from './profile/admin-profile/admin-profile.component';
-import { TarjetaProductoCarouselComponent } from './products/components/products/tarjeta-producto-carousel/tarjeta-producto-carousel.component';
+import { ViewMoreComponent } from './products/components/products/view-more/view-more.component';
+import { CardCarouselComponent } from './products/components/products/card-carousel/card-carousel.component';
+import { CardGridComponent } from './products/components/products/card-grid/card-grid.component';
+import { AdminLoginComponent } from './log-in/admin/admin-login/admin-login.component';
+import { UserLoginComponent } from './log-in/user/user-login/user-login.component';
+import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.component';
 
 
 
@@ -35,16 +38,19 @@ import { TarjetaProductoCarouselComponent } from './products/components/products
     FooterComponent,
     ProductsComponent,
     HomeComponent,
-    VermasComponent,
     InicioSesionComponent,
-    TarjetaProductoComponent,
     BuscadorComponent,
     NormalHeaderComponent,
     UserHeaderComponent,
     AdminHeaderComponent,
     UserProfileComponent,
     AdminProfileComponent,
-    TarjetaProductoCarouselComponent,
+    ViewMoreComponent,
+    CardCarouselComponent,
+    CardGridComponent,
+    AdminLoginComponent,
+    UserLoginComponent,
+    UserSignUpComponent,
   
   ],
   imports: [

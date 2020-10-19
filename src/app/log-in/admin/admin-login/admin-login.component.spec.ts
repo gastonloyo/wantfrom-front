@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TarjetaProductoComponent } from './tarjeta-producto.component';
+import { AdminLoginComponent } from './admin-login.component';
 
-describe('TarjetaProductoComponent', () => {
-  let component: TarjetaProductoComponent;
-  let fixture: ComponentFixture<TarjetaProductoComponent>;
+describe('AdminLoginComponent', () => {
+  let component: AdminLoginComponent;
+  let fixture: ComponentFixture<AdminLoginComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TarjetaProductoComponent ]
+      declarations: [ AdminLoginComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TarjetaProductoComponent);
+    fixture = TestBed.createComponent(AdminLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

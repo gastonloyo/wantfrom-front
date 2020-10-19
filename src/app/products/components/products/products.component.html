@@ -10,8 +10,7 @@
         <button class="button featured previous" id="previous"> <</button>
         <div class="carousel" id="carousel-featured" >
             <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
-
+                <app-card-carousel [producto]="destacado"></app-card-carousel>
             </div>
         </div>
         <button class=" button featured next" id="next"  >></button>
@@ -22,8 +21,7 @@
         <button class="button ofertas previous" id="previousOfertas"> <</button>
         <div class="carousel" id="carousel-ofertas" >
             <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-tarjeta-producto [producto]="destacado"></app-tarjeta-producto>
-
+                <app-card-carousel [producto]="destacado"></app-card-carousel>
             </div>
         </div>
         <button class=" button ofertas next" id="nextOfertas"  >></button>

@@ -48,7 +48,7 @@
                 <p>Notificaciones</p>
             </div>
 
-            <div class="iconos miperfil" (mouseover)="showUserMenu()">
+            <div class="iconos miperfil" (mouseover)="showUserMenu()" [routerLink]="['/userLogIn']">
                 <i class="fas fa-user-circle opciones"></i>
                 <p>Mi Perfil</p>
                
@@ -60,7 +60,7 @@
 </header>
 <!-- User options y bg -->
 <ul id="userOptions" (mouseover)="showUserMenu()" (mouseout)="hiddeUserMenu()">
-    <a [routerLink]="['/inicio-sesion']"> <li><i class="fas fa-sign-in-alt"></i>Iniciar Sesión </li></a> 
-    <li><i class="fas fa-user-plus"></i>Registrarse</li>
+    <a [routerLink]="['/userLogIn']"> <li><i class="fas fa-sign-in-alt"></i>Iniciar Sesión </li></a> 
+    <a [routerLink]="['/user-sign-up']" ><li ><i class="fas fa-user-plus"></i>Registrarse</li></a>
 </ul>
 <div class="bg-menu" id="bg-menu" ></div>
