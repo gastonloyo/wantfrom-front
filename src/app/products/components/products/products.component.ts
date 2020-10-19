@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Button } from 'protractor';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Producto } from '../../clases/producto';
 import { CatalogoService } from '../../services/catalogo.service';
@@ -14,9 +13,10 @@ export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
   categorias:Categoria[];
+ 
   
   constructor(private catalogoService:CatalogoService) { 
- 
+
   }
   ngOnInit(): void {
     this.getProductosDestacados();
@@ -101,6 +101,18 @@ export class ProductsComponent implements OnInit {
     const carouselButtons = document.querySelectorAll('.featured');
     carouselButtons[0].classList.remove("mostrar");
     carouselButtons[1].classList.remove("mostrar");
+  }
+  hiddeButtonsC(){
+    const carouselButton1 = document.getElementById('previousCategories');
+    carouselButton1.classList.add("mostrar");
+    const carouselButton2 = document.getElementById('nextCategories');
+    carouselButton2.classList.add("mostrar");
+  }
+  showButtonsC(){
+    const carouselButton1 = document.getElementById('previousCategories');
+    carouselButton1.classList.remove("mostrar");
+    const carouselButton2 = document.getElementById('nextCategories');
+    carouselButton2.classList.remove("mostrar");
   }
   /**** End of hidde/ show functions ****/
   

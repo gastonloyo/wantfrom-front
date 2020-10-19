@@ -30,15 +30,16 @@
     </div> 
 
     <h2>Categorias</h2>
-    <div class="contenedor-tarjetas"(mouseover)="showButtons()" (mouseout)="hiddeButtons()">
-        <button class="button previous" id="previous"> <</button>
-        <div class="carrousel" id="carrousel" >
-            <div class="tarjetas-categorias"  *ngFor="let categoria of categorias">
+    <div class="contenedor-tarjetas categories"(mouseover)="showButtonsC()" (mouseout)="hiddeButtonsC()">
+        <button class="button  previous" id="previousCategories"> <</button>
+        <div class="carousel" id="carousel" >
+            <div class="tarjetas-categorias"  *ngFor="let categoria of categorias"  >
+                <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6" alt="" >
                 <p>{{categoria.nombre}}</p>
 
             </div>
         </div>
-        <button class=" button next" id="next"  >></button>
+        <button class=" button next" id="nextCategories"  >></button>
     </div> 
 
     
