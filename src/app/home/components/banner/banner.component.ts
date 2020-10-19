@@ -19,6 +19,14 @@ export class BannerComponent implements OnInit {
     {
       name:'imagen 3',
       img:'../../../../assets/imagenes/publi3.jpg',
+    },
+    {
+      name:'imagen 3',
+      img:'../../../../assets/imagenes/publi3.jpg',
+    },
+    {
+      name:'imagen 3',
+      img:'../../../../assets/imagenes/publi3.jpg',
     }
   ]
   constructor() {

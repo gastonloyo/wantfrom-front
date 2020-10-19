@@ -22,6 +22,7 @@ import { AdminHeaderComponent } from './shared/components/headers/admin-header/a
 import { RouterModule } from '@angular/router';
 import { UserProfileComponent } from './profile/user-profile/user-profile.component';
 import { AdminProfileComponent } from './profile/admin-profile/admin-profile.component';
+import { TarjetaProductoCarouselComponent } from './products/components/products/tarjeta-producto-carousel/tarjeta-producto-carousel.component';
 
 
 
@@ -43,6 +44,7 @@ import { AdminProfileComponent } from './profile/admin-profile/admin-profile.com
     AdminHeaderComponent,
     UserProfileComponent,
     AdminProfileComponent,
+    TarjetaProductoCarouselComponent,
   
   ],
   imports: [
