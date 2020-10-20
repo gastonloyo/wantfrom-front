@@ -11,7 +11,6 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { HomeComponent } from './home/home.component';
-import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { HttpClientModule } from "@angular/common/http";
 import { BuscadorComponent } from './home/components/buscador/buscador.component';
 import { NormalHeaderComponent } from './shared/components/headers/normal-header/normal-header.component';
@@ -38,7 +37,6 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
     FooterComponent,
     ProductsComponent,
     HomeComponent,
-    InicioSesionComponent,
     BuscadorComponent,
     NormalHeaderComponent,
     UserHeaderComponent,
