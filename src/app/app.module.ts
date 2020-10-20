@@ -11,7 +11,6 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { HomeComponent } from './home/home.component';
-import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { HttpClientModule } from "@angular/common/http";
 import { BuscadorComponent } from './home/components/buscador/buscador.component';
 import { NormalHeaderComponent } from './shared/components/headers/normal-header/normal-header.component';
@@ -26,6 +25,7 @@ import { CardGridComponent } from './products/components/products/card-grid/card
 import { AdminLoginComponent } from './log-in/admin/admin-login/admin-login.component';
 import { UserLoginComponent } from './log-in/user/user-login/user-login.component';
 import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.component';
+import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart/shopping-cart.component';
 
 
 
@@ -38,7 +38,6 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
     FooterComponent,
     ProductsComponent,
     HomeComponent,
-    InicioSesionComponent,
     BuscadorComponent,
     NormalHeaderComponent,
     UserHeaderComponent,
@@ -51,6 +50,7 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
     AdminLoginComponent,
     UserLoginComponent,
     UserSignUpComponent,
+    ShoppingCartComponent,
   
   ],
   imports: [

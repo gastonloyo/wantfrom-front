@@ -18,4 +18,5 @@ export class Producto {
     color: string;
     talle: string;
     peso: string;
+   
 }
