@@ -7,6 +7,7 @@ import { BuscadorComponent } from './home/components/buscador/buscador.component
 import { UserProfileComponent } from './profile/user-profile/user-profile.component';
 import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.component';
 import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.component';
 
 const routes: Routes = [
 {path:"home",component:HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
 {path:"user-profile",component:UserProfileComponent},
 {path:"user-sign-up",component:UserSignUpComponent},
 {path:"shopping-cart",component:ShoppingCartComponent},
+{path:"checkout",component:CheckoutComponent},
 {path:"**", pathMatch:"full", redirectTo:"home"}
 ];
 

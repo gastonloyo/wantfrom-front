@@ -26,6 +26,8 @@ import { AdminLoginComponent } from './log-in/admin/admin-login/admin-login.comp
 import { UserLoginComponent } from './log-in/user/user-login/user-login.component';
 import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.component';
 import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.component';
+
 
 
 
@@ -51,6 +53,7 @@ import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-
     UserLoginComponent,
     UserSignUpComponent,
     ShoppingCartComponent,
+    CheckoutComponent,
   
   ],
   imports: [
