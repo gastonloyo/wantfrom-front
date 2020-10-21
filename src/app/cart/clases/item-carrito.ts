@@ -1,4 +1,4 @@
-import { Producto } from './producto';
+import { Producto } from '../../products/clases/producto';
 
 export class ItemCarrito{
     producto:Producto;

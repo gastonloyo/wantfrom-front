@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
+import { CartService } from 'src/app/cart/services/cart.service';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 
@@ -11,7 +13,7 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 })
 export class ViewMoreComponent implements OnInit {
   infoProducto:Producto;
-  constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute) { 
+  constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute,private _cartService:CartService) { 
     this.infoProducto=new Producto();
   }
 
@@ -83,5 +85,13 @@ export class ViewMoreComponent implements OnInit {
         )
     })
   }
+///////// Agregar al carrito /////////
+  addCart(producto:Producto){
+    let item:ItemCarrito=new ItemCarrito();
+    item.cantidad=1;
+    item.producto=producto;
+    console.log(item.producto);
+    this._cartService.changeCart(item);
+ }
 
 }

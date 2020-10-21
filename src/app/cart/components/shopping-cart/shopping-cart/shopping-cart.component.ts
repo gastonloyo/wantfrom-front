@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/products/clases/producto';
 import { Observable } from 'rxjs';
 import { CartService } from '../../../services/cart.service';
-import { Carrito } from 'src/app/products/clases/carrito';
-import { ItemCarrito } from 'src/app/products/clases/item-carrito';
+import { Carrito } from 'src/app/cart/clases/carrito';
+import { ItemCarrito } from '../../../clases/item-carrito';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -25,14 +25,14 @@ export class ShoppingCartComponent implements OnInit {
       {
         this.items = x;
         this.totalQuantity = x.length;
-        //this.totalPrice = x.reduce((sum, current) => sum + (current.precio * 1), 0);
          this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0);
       }
     })
   }
 
-  // public remove(producto:Producto)
-  // {
-  //   this._cartService.removeElementCart(producto);
-  // }
+  public remove(item:ItemCarrito){
+  
+    // let item:ItemCarrito=new ItemCarrito();
+    this._cartService.removeElementCart(item);
+  }
 }

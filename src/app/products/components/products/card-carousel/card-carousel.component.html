@@ -1,11 +1,11 @@
 
-    <div class="items" [routerLink]="['/viewmore',producto.id]">
-        <i id="fav" class=" iconos far fa-heart" (click)=saveToFav()></i>
-        <img src="../../../../../assets/imagenes/celu.jpg" alt=".">
-        <h3>{{producto.nombre}}</h3>
-        <p class="descrip">{{producto.descripcion}}</p>
-        <p class="precio">${{producto.precio}}</p>
+     <div class="items" >
+      <i id="fav" class=" iconos far fa-heart" (click)=saveToFav()></i>
+      <img src="../../../../../assets/imagenes/celu.jpg" alt="." [routerLink]="['/viewmore',producto.id]">
+      <h3 [routerLink]="['/viewmore',producto.id]">{{producto.nombre}}</h3>
+      <p class="descrip" [routerLink]="['/viewmore',producto.id]">{{producto.descripcion}}</p>
+      <p class="precio" [routerLink]="['/viewmore',producto.id]">${{producto.precio}}</p>
 
-        <button class="botones">Agregar al Carrito</button>
-      <!-- <a [routerLink]="['/vermas',producto.id]" ><button class="botones vermas"  >Ver más...</button> </a> -->
-    </div>
+      <button class="botones" (click)="addCart(producto)">Agregar al Carrito</button>
+    <!-- <a [routerLink]="['/vermas',producto.id]" ><button class="botones vermas"  >Ver más...</button> </a> -->
+  </div>

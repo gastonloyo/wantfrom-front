@@ -1,7 +1,7 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart/services/cart.service';
-import { ItemCarrito } from 'src/app/products/clases/item-carrito';
+import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 

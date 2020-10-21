@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Carrito } from 'src/app/products/clases/carrito';
-import { ItemCarrito } from 'src/app/products/clases/item-carrito';
+import { Carrito } from 'src/app/cart/clases/carrito';
+import { ItemCarrito } from '../clases/item-carrito';
 import { Producto } from 'src/app/products/clases/producto';
 
 @Injectable({
