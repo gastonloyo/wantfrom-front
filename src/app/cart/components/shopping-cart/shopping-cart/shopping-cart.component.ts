@@ -31,8 +31,12 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   public remove(item:ItemCarrito){
-  
     // let item:ItemCarrito=new ItemCarrito();
     this._cartService.removeElementCart(item);
   }
+
+ closeIcon(){
+  let icono=document.getElementById("close");
+  icono.style.color="red"
+ }
 }
