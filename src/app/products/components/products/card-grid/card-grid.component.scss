@@ -2,17 +2,7 @@ $color-fondo:rgba(45, 123, 224, 0.192);
 $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
-%prop-botones-prod {
-   background-color:$color-sec;
-   font-size: 13px;
-   color: white;
-   font-family: $fte-ppal;
-   border-radius: 0px 0px 15px 15px;
-   border: 0px ;
-   margin-top:5px ;
-   padding: 3px 10px;
-    width: 100%;
-}
+
 
 .items{
     width: 240px;
@@ -35,17 +25,17 @@ $color-sec:rgb(16, 61, 119);
     &:hover > h3{
        color: $color-sec;  
    }
+   i{
+    justify-self: flex-end;
+    position: relative;
+    font-size: 1.2em;
+    margin-right: 20px;
+    margin-top: 10px;
+    }
     img{
         width: 140px ;
         height: 140px;
-       
-    }
-    i{
-        justify-self: flex-end;
-        position: relative;
-        font-size: 1.2em;
-        margin-right: 20px;
-        margin-top: 10px;
+        outline: none;       
     }
     h3{
         text-align: center;
@@ -55,7 +45,15 @@ $color-sec:rgb(16, 61, 119);
         padding-right: 5px;
     }
     .botones{
-     @extend %prop-botones-prod;
+        background-color:$color-sec;
+        font-size: 13px;
+        color: white;
+        font-family: $fte-ppal;
+        border-radius: 0px 0px 15px 15px;
+        border: 0px ;
+        margin-top:5px ;
+        padding: 3px 10px;
+         width: 100%;
      
     }
     .descrip{
@@ -69,13 +67,7 @@ $color-sec:rgb(16, 61, 119);
         font-weight: bold;
         font-size: 20px;
     }
-    a{
-     text-decoration: none;
-     color: white;
-     .vermas{
-         @extend %prop-botones-prod;
-     }
-    } 
+  
 }
 
 @media  screen and (max-width: 500px)  {

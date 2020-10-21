@@ -1,11 +1,7 @@
 <div>
 <section class="contenedorProductos">
+     <!-- prod destacados-->
     <h2>Productos Destacados</h2>
-
-    <!-- categorias-->
-    <div id="contenedorCategorias"></div>
-
-    <!-- prod destacados-->
    <div class="contenedor-tarjetas" (mouseover)="showButtonsF()" (mouseout)="hiddeButtonsF()">
         <button class="button featured previous" id="previous"> <</button>
         <div class="carousel" id="carousel-featured" >
@@ -15,7 +11,8 @@
         </div>
         <button class=" button featured next" id="next"  >></button>
     </div> 
-
+ <!-- FIN productos destacados -->
+  <!-- Ofertas-->
     <h2>Ofertas</h2>
     <div class="contenedor-tarjetas" (mouseover)="showButtonsO()" (mouseout)="hiddeButtonsO()">
         <button class="button ofertas previous" id="previousOfertas"> <</button>
@@ -26,7 +23,9 @@
         </div>
         <button class=" button ofertas next" id="nextOfertas"  >></button>
     </div> 
+ <!--FIN ofertas-->
 
+  <!-- Categorias-->
     <h2>Categorias</h2>
     <div class="contenedor-tarjetas categories"(mouseover)="showButtonsC()" (mouseout)="hiddeButtonsC()">
         <button class="button  previous" id="previousCategories"> <</button>
@@ -39,7 +38,7 @@
         </div>
         <button class=" button next" id="nextCategories"  >></button>
     </div> 
-
+ <!-- FIN categorias-->
     
 
 </section>
