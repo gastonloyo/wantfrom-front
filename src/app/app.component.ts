@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor(public router: Router){
     this.user=false;
-    this.admin=false;
+    this.admin=true;
     //this.admin=true;
   }
 }

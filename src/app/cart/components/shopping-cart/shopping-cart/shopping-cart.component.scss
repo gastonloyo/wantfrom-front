@@ -10,7 +10,7 @@ section{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 30px;
     height: fit-content;
     min-height: 75vh;
@@ -84,11 +84,13 @@ section{
                         .fa-minus-circle{
                             &:hover{
                                 font-size: 0.85;
+                                cursor: pointer;
                             }
                         }
                         .fa-plus-circle{
                             &:hover{
                                 font-size: 0.85;
+                                cursor: pointer;
                             }
                         }
                         .item-quantity{
@@ -110,6 +112,7 @@ section{
                    &:hover{
                        font-size: 0.9em;
                        color: red;
+                       cursor: pointer;
                    }
                 }
             }
@@ -136,21 +139,29 @@ section{
             margin-top: 14px;
             display: block;
             padding: 0px 25px 0px 25px;
+            &:hover{
+                cursor: default;
+            }
         }
         #subtotal-summary,#total-summary{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 5px 25px;
+            &:hover{
+                cursor: default;
+            }
         }
         #subtotal-summary{
             color: grey;
             font-size: 15px;
+            
         }
         #total-summary{
             font-weight: bolder;
             font-size: 19px;
             background-color:rgba(221, 210, 210, 0.692);
+           
         }
         .coupon{
             border: 2px solid $color-sec;
@@ -173,6 +184,18 @@ section{
                 font-weight: bolder;
                 color: $color-sec;
             }
+            &:hover{
+                cursor: pointer;
+                background-color: $color-sec;
+            }
+            &:hover>i{
+                color: white;
+            }
+            &:hover>span{
+                color: white;
+                font-weight: normal;
+            }
+
             
         }
 
@@ -191,6 +214,7 @@ section{
         align-self: flex-end;
         &:hover{
             font-size: 16px;
+            cursor: pointer;
         }
     }
 }

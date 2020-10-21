@@ -20,10 +20,10 @@ export class CartService {
     //Obtenemos el valor actual
     let listCart = this.cart.getValue();
     //Si no es el primer item del carrito
-    if(listCart)
-    {
+    if(listCart) {
       //Buscamos si ya cargamos ese item en el carrito
       let objIndex = listCart.findIndex((obj => obj.producto.id == newData.producto.id));
+
       //Si ya cargamos uno aumentamos su cantidad
       if(objIndex != -1)
       {
@@ -40,9 +40,16 @@ export class CartService {
       listCart.push(newData);
     }
     this.cart.next(listCart); //Enviamos el valor a todos los Observers que estan escuchando nuestro Observable
+  
+  
+  
+  
+  
+  
   }
 
-   //**Con esta función removemos un elemento del carrito y volvemos a envíar la lista de esos elementos para que se propague entre los observer
+
+   //REMOVER UN PROD DEL CARRITO y volvemos a envíar la lista de esos elementos para que se propague entre los observer
   public removeElementCart(newData:ItemCarrito){
     //Obtenemos el valor actual de carrito
     let listCart = this.cart.getValue();

@@ -15,8 +15,10 @@ export class ShoppingCartComponent implements OnInit {
    totalPrice:number = 0;
    totalQuantity:number = 0;
   carrito:Carrito;
+  
   constructor(private _cartService:CartService) {
-    this.carrito=new Carrito()
+    this.carrito=new Carrito();
+    
    }
 
   ngOnInit(): void {
@@ -26,14 +28,25 @@ export class ShoppingCartComponent implements OnInit {
         this.items = x;
         this.totalQuantity = x.length;
          this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0);
+        
       }
     })
+  
+  
   }
 
   public remove(item:ItemCarrito){
-    // let item:ItemCarrito=new ItemCarrito();
     this._cartService.removeElementCart(item);
   }
+
+  // public removeOne(item:ItemCarrito){
+  //   let producto:Producto=new Producto();
+  //   producto=item.producto;
+   
+  //   this._cartService.removeElementCart(producto);
+  // }
+
+  
 
  closeIcon(){
   let icono=document.getElementById("close");

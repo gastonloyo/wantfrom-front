@@ -38,16 +38,16 @@
         </form>
 
         <section id="contenedor_iconos">
-            <div class="iconos carrito">
-                <i class="fas fa-shopping-cart opciones"></i>
-                <p>Carrito</p>
-            </div>
-
             <div class="iconos notificaciones">
                 <i class="fas fa-bell opciones"></i>
                 <p>Notificaciones</p>
             </div>
-
+            
+            <div class="iconos carrito"  [routerLink]="['/shopping-cart']">
+                <i class="fas fa-shopping-cart opciones"></i>
+                <p>Carrito</p>
+            </div>
+            
             <div class="iconos miperfil" (mouseover)="showUserMenu()">
                 <i class="fas fa-user-circle opciones"></i>
                 <p>Mi Perfil</p>

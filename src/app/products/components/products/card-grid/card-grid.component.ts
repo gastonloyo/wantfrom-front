@@ -31,6 +31,11 @@ addCart(producto:Producto){
   item.producto=producto;
   console.log(item.producto);
   this._cartService.changeCart(item);
+
+  
+  localStorage.setItem("name",  item.producto.nombre );
+  // localStorage.setItem("price u", item.producto.precio);
+  // localStorage.setItem("quantity", item.cantidad);
 }
 
 }

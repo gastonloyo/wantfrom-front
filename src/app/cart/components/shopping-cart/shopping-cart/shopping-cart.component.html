@@ -22,7 +22,7 @@
             <div class="modify-quantity">
               <i class="fas fa-minus-circle"></i>
               <span class="item-quantity"> {{item.cantidad}}</span>
-              <i class="fas fa-plus-circle"></i>
+              <i class="fas fa-plus-circle" (click)="addCart(producto)"></i>
             </div>
           </div>
           <div class="subtotal">
