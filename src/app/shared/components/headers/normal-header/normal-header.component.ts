@@ -2,6 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Router } from '@angular/router';
+import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
+import { Carrito } from 'src/app/cart/clases/carrito';
+import { CartService } from 'src/app/cart/services/cart.service';
 
 @Component({
   selector: 'app-normal-header',
@@ -10,12 +13,28 @@ import { Router } from '@angular/router';
 })
 export class NormalHeaderComponent implements OnInit {
   categorias:Categoria[];
-  constructor (private catalogoservice:CatalogoService, private router:Router) {
+
+  //para el numero del carrito
+  items: Array<ItemCarrito>;
+  totalPrice:number = 0;
+  totalQuantity:number = 0;
+  carrito:Carrito;
+  
+  constructor (private catalogoservice:CatalogoService, private router:Router,private _cartService:CartService) {
 
    }
 
   ngOnInit(): void {
-    this.getListaCategorias()
+    this.getListaCategorias();
+
+    //para el numero del carrito
+   this._cartService.currentDataCart$.subscribe(x=>{
+    if(x) {
+      this.items = x;
+      this.totalQuantity = x.length;
+       this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
+    }
+})
   }
 
   /***** get Categories *****/

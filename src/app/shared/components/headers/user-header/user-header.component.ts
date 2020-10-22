@@ -34,7 +34,6 @@ export class UserHeaderComponent implements OnInit {
       this.totalQuantity = x.length;
        this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
     }
-
 })
   }
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/products/clases/producto';
 import { Observable } from 'rxjs';
-import { CartService } from '../../../services/cart.service';
+import { CartService } from '../../services/cart.service';
 import { Carrito } from 'src/app/cart/clases/carrito';
-import { ItemCarrito } from '../../../clases/item-carrito';
+import { ItemCarrito } from '../../clases/item-carrito';
 
 @Component({
   selector: 'app-shopping-cart',
