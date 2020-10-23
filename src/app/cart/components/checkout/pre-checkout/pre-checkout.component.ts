@@ -7,21 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreCheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
-  
+
   }
 
-  localStorage(){
-    let name= document.getElementById("name");
-    console.log(name)
-    let lastname= document.getElementById("lastname");
-    let email= document.getElementById("email");
-    let cellphone= document.getElementById("cellphone");
-    let dni= document.getElementById("dni");
+  saveOnlocalStorage(){
+    // let name= document.getElementById("name").nodeValue;
+    // let lastname= document.getElementById("lastname").nodeValue;
+    // let email= document.getElementById("email").nodeValue;
+    // let cellphone= document.getElementById("cellphone").nodeValue;
+    // let dni= document.getElementById("dni").nodeValue;
+    let name="analia";
+    let lastname="juarez"
     ///lo guardo
-    localStorage.setItem("nombre", name.nodeValue); 
+    localStorage.setItem("nombre", name);
+    localStorage.setItem("apellido", lastname);
+    // localStorage.setItem("email", email);
+    // localStorage.setItem("teléfono", cellphone);
 
   }
 

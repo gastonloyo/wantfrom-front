@@ -12,16 +12,19 @@ import { ItemCarrito } from '../../clases/item-carrito';
 })
 export class ShoppingCartComponent implements OnInit {
    items: Array<ItemCarrito>;
-   totalPrice:number = 0;
-   totalQuantity:number = 0;
+   totalPrice:number ;
+   totalQuantity:number;
   carrito:Carrito;
-  
+
   constructor(private _cartService:CartService) {
     this.carrito=new Carrito();
-    
+    this.items=[]
    }
 
   ngOnInit(): void {
+    this.items=JSON.parse(localStorage.getItem("Mi Carrito"));
+    console.log(this.items)
+
     this._cartService.currentDataCart$.subscribe(x=>{
       if(x)
       {
@@ -32,21 +35,22 @@ export class ShoppingCartComponent implements OnInit {
       }
     })
   
-  
+ 
   }
 
+  ///inicio carrito de compras eliminar , sumar 
   public remove(item:ItemCarrito){
     this._cartService.removeElementCart(item);
   }
+  public  removeOne(item:ItemCarrito){
+    this._cartService.removeOneElementCart(item)
+  }
+  public addOne(item:ItemCarrito){
+    this._cartService.addOneElementCart(item)
+  }
 
-  // public removeOne(item:ItemCarrito){
-  //   let producto:Producto=new Producto();
-  //   producto=item.producto;
-   
-  //   this._cartService.removeElementCart(producto);
-  // }
+//// fin carrito de compras eliminar sumar 
 
-  
 
  closeIcon(){
   let icono=document.getElementById("close");

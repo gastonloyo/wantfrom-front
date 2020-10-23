@@ -2,14 +2,17 @@
   <!-- listado de productos DERECHA -->
   <div class="container-left">
     <h2>Mi carrito</h2>
-    <div class="products-list">
+    <div class="msg-empty-cart" *ngIf="(items.length)===0">
+      <p>Tu carrito está vacio</p>
+    </div>
+    <div class="products-list" *ngIf="(items.length) > 0">
       <ul class="shopping-cart-items">
         <li class="clearfix" *ngFor="let item of items">
           <img src="../../../../../assets/imagenes/celu.jpg" alt="item compra" />
           <div class="info">
             <span class="item-name">{{item.producto.nombre}}</span>
             <div class="row-info">
-              <span>Color: Blanco</span>
+              <span>Color: {{item.producto.color}}</span>
               <span></span>
             </div>
           </div>
@@ -20,9 +23,9 @@
           <div class="quantity">
             <span>Cantidad:</span>
             <div class="modify-quantity">
-              <i class="fas fa-minus-circle"></i>
+              <i class="fas fa-minus-circle" (click)="removeOne(item)"></i>
               <span class="item-quantity"> {{item.cantidad}}</span>
-              <i class="fas fa-plus-circle" (click)="addCart(producto)"></i>
+              <i class="fas fa-plus-circle" (click)="addOne(item)"></i>
             </div>
           </div>
           <div class="subtotal">
@@ -37,7 +40,7 @@
   </div>
 
   <!-- resumen de compra IZQUIERDA -->
-  <div class="container-right">
+  <div class="container-right"  *ngIf="(items.length) > 0"  >
     <div class="summary">
       <h2>Resumen de compra</h2>
       <div id="subtotal-summary"><span>Subtotal:</span> <span> ${{totalPrice}}</span> </div>

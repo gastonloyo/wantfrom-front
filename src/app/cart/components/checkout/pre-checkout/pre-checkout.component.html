@@ -2,6 +2,7 @@
     <div class="container">
         <p class="title">Con el fin de poder enviarle actualizaciones con respecto a su compra, y para finalizar la operación, debe
             completar los siguientes datos:</p>
+        
        <div class="row1">
             <div class="name">
             <label for="name">Nombre</label>
@@ -27,6 +28,7 @@
             <input type="number" class="form-newuser" placeholder="DNI" required id="dni">
         </div>
         <p class="leyenda">*Todos los campos son obligatorios.</p>
-        <button   [routerLink]="['/checkout']" (click)="localStorage()">CONTINUAR</button>
+        <button type="submit"   [routerLink]="['/checkout']" (click)="saveOnlocalStorage()">CONTINUAR</button>
     </div>
 </section>
+

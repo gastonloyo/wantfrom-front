@@ -25,6 +25,18 @@ section{
         margin-top: 10px;
         display: block;
     }
+    .msg-empty-cart{
+        background-color: rgba(255, 255, 255, 0.335);
+        padding: 20px 30px;
+        margin-top: 40px;
+        border-radius: 20px;
+        p{
+            font-family: $fte-ppal;
+            color: $color-ppal;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
     .products-list{
         ul{ width: 100%;
             li{

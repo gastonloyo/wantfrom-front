@@ -3,6 +3,12 @@ $fte-ppal: 'Poppins', sans-serif;
 $color-ppal: rgb(45, 123, 224);
 $color-sec:rgb(16, 61, 119);
 
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
+
+    appearance: none;
+    margin: 0;
+}
 section{
     display: flex;
     justify-content: center;

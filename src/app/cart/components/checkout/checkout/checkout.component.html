@@ -13,11 +13,11 @@
                 <fieldset>
                     <legend>Forma de entrega</legend>
                     <div class="deliver box">
-                        <input type="radio" name="deliver" id="deliver">
+                        <input type="radio" name="deliver" id="deliver" (change)="showInputAdress()">
                         <span><i class="fas fa-truck"></i> </span>
                         <label for="deliver">Envío </label>
                     </div>
-                    <div class="deliveryAdress ">
+                    <div class="deliveryAdress " id="newAdress12">
                         <p>Ingrese su dirección de entrega</p>
                         <div class="inputAdress">
                         <input type="text" required id="deliveryAdress" placeholder="Calle">
@@ -33,12 +33,12 @@
                         </select> -->
                     </div>
                     <div class="pick-up box">
-                        <input type="radio" name="entrega" id="entrega">
+                        <input type="radio" name="deliver" id="entrega" (change)="showAdress()">
                         
                             <i class="fas fa-store"></i>
                             <label for="entrega">Retirá en nuestro local</label>
                     </div>
-                    <div class="adress1">
+                    <div class="adress1" id="ourAdress">
                         <span>Av Emilio Olmos 20 - local 53, CP5000. Córdoba, Argentina</span>
                     </div>
                 </fieldset>
@@ -47,12 +47,12 @@
                 <fieldset>
                     <legend>Método de Pago</legend>
                     <div class="paypal-box">
-                        <input type="radio" name="paypal" id="paypal">
+                        <input type="radio" name="pago" id="paypal">
                         <label for="paypal"><img src="../../../../../assets/imagenes/paypal.png" alt=""></label>
                     </div>
-                    <div class="cash-box">
+                    <div class="cash-box" id="cash-box">
                         <div>
-                        <input type="radio" name="cash" id="cash">
+                        <input type="radio" name="pago" id="cash">
                         
                             <label for="cash"><img src="../../../../../assets/imagenes/cash.png" alt=""></label>
                         </div>
