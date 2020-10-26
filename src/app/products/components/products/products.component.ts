@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Producto } from '../../clases/producto';
 import { CatalogoService } from '../../services/catalogo.service';
-
+//  import * as M from '../../../../assets/materialize/js/materialize.min.js'
 
 @Component({
   selector: 'app-products',
@@ -13,12 +13,20 @@ export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
   categorias:Categoria[];
- 
+//  options={}
   
   constructor(private catalogoService:CatalogoService) { 
 
   }
   ngOnInit(): void {
+    // // var elems = document.querySelectorAll('.carousel');
+    // // var instances = M.Carousel.init(elems, this.options);
+    // document.addEventListener('DOMContentLoaded',()=>{
+    //   const itemsCarousel= document.querySelectorAll(".carousel");
+    //   M.Carousel.init(itemsCarousel, {
+    //     duration:150
+    //   })
+    // })
     this.getProductosDestacados();
      this.rotateCarrousel1();
      this.rotateCarrousel2();
