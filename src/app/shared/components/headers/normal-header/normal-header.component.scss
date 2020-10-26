@@ -12,6 +12,9 @@ header{
     height: 80px;
     box-shadow: 3px 3px 5px grey;
     width: 100%;
+    position: sticky;
+    top:0;
+    z-index: 5;
     .logo{
         width: 15vw;
         a{

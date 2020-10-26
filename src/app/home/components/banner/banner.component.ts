@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-banner',
@@ -29,8 +30,11 @@ export class BannerComponent implements OnInit {
       img:'../../../../assets/imagenes/publi3.jpg',
     }
   ]
-  constructor() {
-    
+  constructor(private _caruselconfig:NgbCarouselConfig) {
+    _caruselconfig.interval=3000;
+    _caruselconfig.pauseOnHover= true;
+    _caruselconfig.showNavigationArrows= true
+    _caruselconfig.wrap=true
    }
 
   ngOnInit(): void {

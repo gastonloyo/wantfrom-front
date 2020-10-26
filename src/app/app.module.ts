@@ -28,6 +28,7 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
 import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.component';
 import { PreCheckoutComponent } from './cart/components/checkout/pre-checkout/pre-checkout.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -63,7 +64,8 @@ import { PreCheckoutComponent } from './cart/components/checkout/pre-checkout/pr
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
