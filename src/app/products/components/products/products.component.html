@@ -1,46 +1,46 @@
 <div>
-<section class="contenedorProductos">
-    <h2>Productos Destacados</h2>
+    <section class="contenedorProductos">
+        <h2>Productos Destacados</h2>
 
-    <!-- categorias-->
-    <div id="contenedorCategorias"></div>
+        <!-- categorias-->
+        <div id="contenedorCategorias"></div>
 
-    <!-- prod destacados-->
-   <div class="contenedor-tarjetas" (mouseover)="showButtonsF()" (mouseout)="hiddeButtonsF()">
-        <button class="button featured previous" id="previous"> <</button>
-        <div class="carousel" id="carousel-featured" >
-            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-card-carousel [producto]="destacado"></app-card-carousel>
+        <!-- prod destacados-->
+        <div class="contenedor-tarjetas" (mouseover)="showButtonsF()" (mouseout)="hiddeButtonsF()">
+            <button class="button featured previous" id="previous"> <</button>
+            <div class="carousel" id="carousel-featured">
+                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+                </div>
             </div>
+            <button class=" button featured next" id="next">></button>
         </div>
-        <button class=" button featured next" id="next"  >></button>
-    </div> 
 
-    <h2>Ofertas</h2>
-    <div class="contenedor-tarjetas" (mouseover)="showButtonsO()" (mouseout)="hiddeButtonsO()">
-        <button class="button ofertas previous" id="previousOfertas"> <</button>
-        <div class="carousel" id="carousel-ofertas" >
-            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-card-carousel [producto]="destacado"></app-card-carousel>
+        <h2>Ofertas</h2>
+        <div class="contenedor-tarjetas" (mouseover)="showButtonsO()" (mouseout)="hiddeButtonsO()">
+            <button class="button ofertas previous" id="previousOfertas"> <</button>
+            <div class="carousel" id="carousel-ofertas">
+                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+                </div>
             </div>
+            <button class=" button ofertas next" id="nextOfertas">></button>
         </div>
-        <button class=" button ofertas next" id="nextOfertas"  >></button>
-    </div> 
 
-    <h2>Categorias</h2>
-    <div class="contenedor-tarjetas categories"(mouseover)="showButtonsC()" (mouseout)="hiddeButtonsC()">
-        <button class="button  previous" id="previousCategories"> <</button>
-        <div class="carousel" id="carousel" >
-            <div class="tarjetas-categorias"  *ngFor="let categoria of categorias"  >
-                <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6" alt="" >
-                <p>{{categoria.nombre}}</p>
+        <h2>Categorias</h2>
+        <div class="contenedor-tarjetas categories" (mouseover)="showButtonsC()" (mouseout)="hiddeButtonsC()">
+            <button class="button  previous" id="previousCategories"> </button>
+            <div class="carousel" id="carousel">
+                <div class="tarjetas-categorias" *ngFor="let categoria of categorias">
+                    <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6" alt="">
+                    <p>{{categoria.nombre}}</p>
 
+                </div>
             </div>
+            <button class=" button next" id="nextCategories">></button>
         </div>
-        <button class=" button next" id="nextCategories"  >></button>
-    </div> 
 
-    
 
-</section>
+
+    </section>
 </div>
