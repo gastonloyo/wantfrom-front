@@ -25,25 +25,43 @@ export class NormalHeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    //to keep seeing the scroll and adjust the header opacity
+    window.addEventListener("scroll",this.headerEffect)
+ 
+    // get category list 
     this.getListaCategorias();
 
-    //para el numero del carrito
+    //cart counter
    this._cartService.currentDataCart$.subscribe(x=>{
     if(x) {
       this.items = x;
       this.totalQuantity = x.length;
        this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
     }
-})
+      })
   }
 
-  /***** get Categories *****/
+   /***** GET CATEGORIES *****/
   getListaCategorias():void{
     this.catalogoservice.getListaCategorias().subscribe( response =>{
      this.categorias=response;
      console.log(response) }
      )
   }
+    /////end get categories///
+
+  /// HEADER SCROLL EFFECT 
+  headerEffect(){
+    let scrollTop= document.documentElement.scrollTop;
+    let header= document.getElementById("header");
+    let positionheader=3;
+    if(scrollTop>positionheader){
+      header.style.opacity="0.92"
+    } else{
+      header.style.opacity="1"
+    }
+  }
+/// end header scroll effect///
 
               /********DROP DOWN MENUS */
 //***categories */

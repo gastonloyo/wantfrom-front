@@ -16,16 +16,36 @@ export class AdminHeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.getListaCategorias()
+ //to keep seeing the scroll and adjust the header opacity
+ window.addEventListener("scroll",this.headerEffect)
+ 
+ // get category list 
+ this.getListaCategorias();
+
   }
 
-   /***** get Categories *****/
-   getListaCategorias():void{
+
+   /***** GET CATEGORIES *****/
+  getListaCategorias():void{
     this.catalogoservice.getListaCategorias().subscribe( response =>{
      this.categorias=response;
      console.log(response) }
      )
   }
+    /////end get categories///
+
+  /// HEADER SCROLL EFFECT 
+  headerEffect(){
+    let scrollTop= document.documentElement.scrollTop;
+    let header= document.getElementById("header");
+    let positionheader=3;
+    if(scrollTop>positionheader){
+      header.style.opacity="0.92"
+    } else{
+      header.style.opacity="1"
+    }
+  }
+/// end header scroll effect///
 
   
               /********DROP DOWN MENUS */
