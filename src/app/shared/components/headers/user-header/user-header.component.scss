@@ -72,8 +72,8 @@ header{
                         border-radius: 0px 0px 10px 10px;        
                         position: absolute;
                         left: 13vw;
-                        z-index: 3;
-                        top: 80px;        
+                        z-index: 4;  
+                        top: 115px;    
                             li{
                         background-color:grey;
                         font-size: 16px;
@@ -99,11 +99,11 @@ header{
                         #container-subcategories{
                         background: rgba(255, 255, 255, 0.966);
                         width: 30vw;
-                        height: 220px;
+                        height: fit-content;
                         position: absolute;
-                        top: 80px;
+                        top: 115px;
                         left: 27vw;
-                        z-index: 2;
+                        z-index: 3;
                         border-radius: 0px 0px 10px 0px;
                         display: none;
                             }
@@ -227,7 +227,7 @@ header{
 //////////// user Options //////
 #userOptions{
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     right: 10px;
     background-color: grey;
     width: 200px;
@@ -237,6 +237,9 @@ header{
     list-style: none;
     display: none;
     cursor: pointer;
+
+   
+
     a{
         text-decoration: none;
     }
@@ -271,7 +274,7 @@ header{
     height: 100vh;
     background-color: rgba(128, 128, 128, 0.26);
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 80px;
     left: 0px;
     display: none;
