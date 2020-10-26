@@ -47,4 +47,12 @@ export class BannerComponent implements OnInit {
     
   }
  
+
+
+hideBanner(){
+  
+  let banner = document.getElementById("banner");
+  banner.style.display="none";
+}
+
 }

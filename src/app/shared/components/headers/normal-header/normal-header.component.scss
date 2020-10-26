@@ -6,200 +6,225 @@ $color-sec:rgb(16, 61, 119);
 
 header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     background-color: $color-ppal;
-    height: 80px;
+    height: 115px;
     box-shadow: 3px 3px 5px grey;
     width: 100%;
     position: sticky;
     top:0;
     z-index: 5;
-    .logo{
-        width: 15vw;
+    .contacto{
+        display: flex;
+        justify-content: flex-end;
+        width: 97%;
+        border-bottom:1px solid rgba(221, 212, 212, 0.623);
+        padding-top:10px;
+        padding-bottom: 5px;
         a{
-            img{
-               width: 215px;
-               height: 72px;
-               margin-left: 25px;
-            } 
+            text-decoration: none;
+        
+            i{
+                color: rgb(221, 212, 212);
+                font-size: 1.2em;
+                margin-left: 20px;
+            }         
         }
     }
-    #fila-header{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    width: 80%;
-         /////// menu ///////
-        nav{
-            display: block;
-            align-self: center;
-            height: 30px;
-            ul{ // para todos los ul menu y submenu
-                list-style: none;
-                font-family: $fte-ppal;
-                font-size: 18px;  
-                .contenedor-categorias{
-                    .submenu{
-                    display: none;
-                    width: 210px;
-                    background-color:grey;
-                    padding-top: 10px;
-                    padding-bottom: 15px;
-                    border-radius: 0px 0px 10px 10px;        
-                    position: absolute;
-                    left: 14vw;
-                    z-index: 3;
-                    top: 80px;        
-                    li{
-                        background-color:grey;
-                         font-size: 16px;
-                        color: rgb(255, 255, 255);
-                        width: 100%;
-                        padding:7px 23px ;
-                        box-sizing: border-box;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                         &:hover{
-                            color:white ;
-                            background-color: $color-ppal;
-                            cursor: default;
-                            }
-                         &:hover>i{
-                            transform: rotate(-90deg);
-                            transition-duration: 0.5s;
-                            cursor: default;
-                            }
-                    } 
-                    }
-                     #container-subcategories{
-                     background: rgba(255, 255, 255, 0.966);
-                    width: 30vw;
-                    height: 103px;
-                    position: absolute;
-                    top: 80px;
-                    left: 28vw;
-                    z-index: 2;
-                    border-radius: 0px 0px 10px 0px;
-                    display: none;
-                        }
-                    }
-                }
-            .menu{
-                    display: flex;
-                    justify-content: space-around;
-                    width: 18vw;
-                    li{
-                        
-                        a{
-                            text-decoration: none;
-                            background-image: linear-gradient(currentColor, currentColor);
-                            background-position: 0% 100%;
-                            background-repeat: no-repeat;
-                            background-size: 0% 2px;
-                            transition: background-size .3s;
-                            &:visited{
-                                color: white;
-                            }
-                            &:hover{
-                                background-size: 100% 2px;
-                            }
-                            &:focus{
-                                background-size: 100% 2px;
-                            }
-                        }        
-                    }
-                }
-        }
-        ///// icono menu hamburguesa///
-        #menu{
-            display: none;
-        }
-          //// buscador ////
-        .buscador{
-            .barraDeBusqueda{
-            
-                width:39vw;
-                box-sizing: content-box;
-                height: 40px;
-                border-radius: 30px 4px 4px 30px; 
-                border: 1px solid $color-ppal;
-                color: black;
-                font-family: $fte-ppal;
-                font-size: 16px;
-                padding-left: 15px;
-                padding-right: 30px;
-                
-                
-                &:focus{
-                    outline: none;
-                    border: 2px solid rgba(43, 41, 41, 0.582);
-                    box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
-                }
-                &:hover{
-                
-                    cursor: text;
+    
+    .menu-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .logo{
+            width: 15vw;
+            a{
+                img{
+                width: 215px;
+                height: 72px;
+                margin-left: 25px;
                 } 
             }
-            .btn-lupa{
-                background-color:" ";
-                border: none;
-                .fa-search {
-                    margin-left: -2.5vw;
-                    color: rgb(95, 93, 93);
-                }
-            }
-            
-        
         }
-         ////iconos////
-        #contenedor_iconos{
-            display: flex;
-            justify-content: space-around;
-            width: 12vw;
-            align-items: baseline;
-            margin-right: 20px;
-            
-            .iconos {
-                display: flex;
-                flex-direction: column;
-                width: 12.5vw;
-                 margin-right: 20px;
-                align-items: center;   
-                outline: none; 
-
-                i{
-                    color: white;
-                    font-size: 1.4em;
-                    margin-bottom: 5px;
-                    &:hover{
-                        transform: scale(1.1);
-                        cursor: pointer;
-                    } 
-                }
-                .fa-user-circle{
-                    font-size: 1.9em;
-                }
-                p{
+        #fila-header{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 80%;
+            /////// menu ///////
+            nav{
+                display: block;
+                align-self: center;
+                height: 30px;
+                ul{ // para todos los ul menu y submenu
+                    list-style: none;
                     font-family: $fte-ppal;
-                    font-size: 10px;
-                    color: white;
-                    cursor: pointer;
-                }
-                
-                
+                    font-size: 18px;  
+                    .contenedor-categorias{
+                        .submenu{
+                        display: none;
+                        width: 210px;
+                        background-color:grey;
+                        padding-top: 10px;
+                        padding-bottom: 15px;
+                        border-radius: 0px 0px 10px 10px;        
+                        position: absolute;
+                        left: 14vw;
+                        z-index: 3;
+                        top: 80px;        
+                        li{
+                            background-color:grey;
+                            font-size: 16px;
+                            color: rgb(255, 255, 255);
+                            width: 100%;
+                            padding:7px 23px ;
+                            box-sizing: border-box;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &:hover{
+                                color:white ;
+                                background-color: $color-ppal;
+                                cursor: default;
+                                }
+                            &:hover>i{
+                                transform: rotate(-90deg);
+                                transition-duration: 0.5s;
+                                cursor: default;
+                                }
+                        } 
+                        }
+                        #container-subcategories{
+                        background: rgba(255, 255, 255, 0.966);
+                        width: 30vw;
+                        height: 103px;
+                        position: absolute;
+                        top: 80px;
+                        left: 28vw;
+                        z-index: 2;
+                        border-radius: 0px 0px 10px 0px;
+                        display: none;
+                            }
+                        }
+                    }
+                .menu{
+                        display: flex;
+                        justify-content: space-around;
+                        width: 18vw;
+                        li{
+                            
+                            a{
+                                text-decoration: none;
+                                background-image: linear-gradient(currentColor, currentColor);
+                                background-position: 0% 100%;
+                                background-repeat: no-repeat;
+                                background-size: 0% 2px;
+                                transition: background-size .3s;
+                                &:visited{
+                                    color: white;
+                                }
+                                &:hover{
+                                    background-size: 100% 2px;
+                                }
+                                &:focus{
+                                    background-size: 100% 2px;
+                                }
+                            }        
+                        }
+                    }
             }
-            .notificaciones{
+            ///// icono menu hamburguesa///
+            #menu{
                 display: none;
             }
-            .menu{
-                display: none; 
+            //// buscador ////
+            .buscador{
+                .barraDeBusqueda{
+                
+                    width:39vw;
+                    box-sizing: content-box;
+                    height: 40px;
+                    border-radius: 30px 4px 4px 30px; 
+                    border: 1px solid $color-ppal;
+                    color: black;
+                    font-family: $fte-ppal;
+                    font-size: 16px;
+                    padding-left: 15px;
+                    padding-right: 30px;
+                    
+                    
+                    &:focus{
+                        outline: none;
+                        border: 2px solid rgba(43, 41, 41, 0.582);
+                        box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+                    }
+                    &:hover{
+                    
+                        cursor: text;
+                    } 
+                }
+                .btn-lupa{
+                    background-color:" ";
+                    border: none;
+                    .fa-search {
+                        margin-left: -2.5vw;
+                        color: rgb(95, 93, 93);
+                    }
+                }
+                
+            
             }
+            ////iconos////
+            #contenedor_iconos{
+                display: flex;
+                justify-content: space-around;
+                width: 12vw;
+                align-items: baseline;
+                margin-right: 20px;
+                
+                .iconos {
+                    display: flex;
+                    flex-direction: column;
+                    width: 12.5vw;
+                    margin-right: 20px;
+                    align-items: center;   
+                    outline: none; 
+                    align-self: baseline;
+                    margin-top: 13px;
 
+                    i{
+                        color: white;
+                        font-size: 1.4em;
+                        margin-bottom: 5px;
+                        &:hover{
+                            transform: scale(1.1);
+                            cursor: pointer;
+                        } 
+                    }
+                    .fa-user-circle{
+                        font-size: 1.9em;
+                    }
+                    p{
+                        font-family: $fte-ppal;
+                        font-size: 10px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                    
+                    
+                }
+                .notificaciones{
+                    display: none;
+                }
+                .menu{
+                    display: none; 
+                }
+
+            }
         }
     }
-
 }
 //////////// user Options //////
 #userOptions{
