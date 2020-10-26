@@ -15,6 +15,9 @@ header{
     position: sticky;
     top:0;
     z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
     .contacto{
         display: flex;
         justify-content: flex-end;
@@ -57,11 +60,12 @@ header{
             nav{
                 display: block;
                 align-self: center;
-                height: 30px;
+                height: fit-content;
                 ul{ // para todos los ul menu y submenu
                     list-style: none;
                     font-family: $fte-ppal;
-                    font-size: 18px;  
+                    font-size: 16px;
+                    margin-bottom: 0; 
                     .contenedor-categorias{
                         .submenu{
                         display: none;
