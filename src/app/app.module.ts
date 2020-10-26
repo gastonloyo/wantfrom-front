@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './home/components/banner/banner.component';
@@ -55,6 +56,7 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    ReactiveFormsModule,
     AngularFireStorageModule,
     HttpClientModule,
     RouterModule

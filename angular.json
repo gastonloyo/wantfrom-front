@@ -31,7 +31,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-            "node_modules/jquery/dist/jquery.min.js"  
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -98,9 +98,7 @@
               "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"
             ],
             "scripts": [
-              
               "../node_modules/jquery/dist/jquery.js"
-
             ]
           }
         },
@@ -130,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Ecommerce"
+    }
+  },
+  "defaultProject": "Ecommerce",
+  "cli": {
+    "analytics": false
+  }
 }
