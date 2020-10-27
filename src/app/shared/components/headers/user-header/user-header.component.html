@@ -19,22 +19,8 @@
         <div id="fila-header">
             <nav>
                 <ul class="menu">
-                    <li (mouseover)="showCategories()"><a href="">Categorías</a>
-
-                        <div class="contenedor-categorias" (mouseout)="hiddeSubAndCategories()">
-                            <ul class="submenu " id="categoriesList">
-                                <li class="items-categories" *ngFor="let categoria of categorias"
-                                    (mouseenter)="showSubcategories()">{{categoria.nombre}}<i
-                                        class="fas fa-angle-down"></i></li>
-                            </ul>
-                            <div id="container-subcategories" (mouseenter)="showSubcategories()">
-
-                            </div>
-                        </div>
-
-                    </li>
+                    <li (mouseover)="showCategories()"><a href="">Categorías</a> </li>
                     <li><a href="">Ofertas</a></li>
-
                 </ul>
             </nav>
 
@@ -81,4 +67,15 @@
     <li>Favoritos <i class="fas fa-heart"></i></li>
     <li>Salir <i class="fas fa-sign-out-alt"></i></li>
 </ul>
+<!-- bg menu abierto -->
 <div class="bg-menu" id="bg-menu"></div>
+<!-- cont categorias -->
+<div class="contenedor-categorias"  (mouseover)="showCategories()" (mouseout)="hiddeSubAndCategories()">
+    <ul class="submenu " id="categoriesList">
+        <li class="items-categories" *ngFor="let categoria of categorias">{{categoria.nombre}}
+            <i class="fas fa-angle-down"></i></li>
+    </ul>
+    <div id="container-subcategories">
+
+    </div>
+</div>

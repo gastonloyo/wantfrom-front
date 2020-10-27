@@ -177,13 +177,14 @@ $color-sec:rgb(16, 61, 119);
         background-color: $color-sec;
         height: 30px;
         position: relative;
-        p{
+        a{
+            text-decoration: none;
             color: white;
             text-align: center;
             font-size: 13px;
             position: absolute;
-            bottom: 0px;
-            right: 5px;
+            bottom: 3px;
+            right: 35px;
             
         }
     }

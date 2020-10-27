@@ -26,7 +26,7 @@ export class UserHeaderComponent implements OnInit {
 
   ngOnInit(): void {
         //to keep seeing the scroll and adjust the header opacity
-        window.addEventListener("scroll",this.headerEffect)
+        // window.addEventListener("scroll",this.headerEffect)
  
         // get category list 
         this.getListaCategorias();
@@ -51,25 +51,7 @@ export class UserHeaderComponent implements OnInit {
   }
   /////end get categories///
 
-  /// HEADER SCROLL EFFECT 
-  headerEffect(){
-    let scrollTop= document.documentElement.scrollTop;
-    let header= document.getElementById("header");
-    let redes=document.getElementById("redes-header");
-    let positionheader=1;
-    if(scrollTop>positionheader){
-      header.style.opacity="0.92";
-      header.style.height="80px"
-      redes.style.display="none"
-
-    } else{
-      header.style.opacity="1";
-      header.style.height="115px"
-      redes.style.display="flex";
-      redes.style.justifyContent= "flex-end";
-    }
-  }
-/// end header scroll effect///
+//   
 
       /********DROP DOWN MENUS */
 //***categories */
@@ -80,15 +62,15 @@ export class UserHeaderComponent implements OnInit {
     this.bgOpenMenu();    
   }
  
-showSubcategories(){
- let containerSubcategories = document.getElementById("container-subcategories");
- containerSubcategories.style.display="initial";
- let categoriesList= document.getElementById("categoriesList");
- categoriesList.style.borderBottomRightRadius="0px";
-}
+// showSubcategories(){
+// //  let containerSubcategories = document.getElementById("container-subcategories");
+// //  containerSubcategories.style.display="initial";
+// //  let categoriesList= document.getElementById("categoriesList");
+// //  categoriesList.style.borderBottomRightRadius="0px";
+// }
 hiddeSubAndCategories(){
-  let containerSubcategories = document.getElementById("container-subcategories");
- containerSubcategories.style.display="none";
+//   let containerSubcategories = document.getElementById("container-subcategories");
+//  containerSubcategories.style.display="none";
  let categoriesList= document.getElementById("categoriesList");
  categoriesList.style.display="none";
   this.hiddeBgMenu();
@@ -120,4 +102,24 @@ hiddeBgMenu(){
   buscarProducto(termino:string):void {
     this.router.navigate(['/search',termino]);
    }
+
+   /// HEADER SCROLL EFFECT 
+//   headerEffect(){
+//     let scrollTop= document.documentElement.scrollTop;
+//     let header= document.getElementById("header");
+//     let redes=document.getElementById("redes-header");
+//     let positionheader=1;
+//     if(scrollTop>positionheader){
+//       header.style.opacity="0.92";
+//       header.style.height="80px"
+//       redes.style.display="none"
+
+//     } else{
+//       header.style.opacity="1";
+//       header.style.height="115px"
+//       redes.style.display="flex";
+//       redes.style.justifyContent= "flex-end";
+//     }
+//   }
+// /// end header scroll effect///
   }

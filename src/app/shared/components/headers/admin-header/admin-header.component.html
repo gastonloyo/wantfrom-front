@@ -1,5 +1,16 @@
 <header id="header">
-
+    <div class="contacto" id="redes-header">
+        <a href="#" title="Facebook" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" title="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" title="Linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="menu-header">
     <div class="logo"  id="redes-header">
         <a [routerLink]="['/home']" title="Home">
             <img src="../../../assets/imagenes/logo.png" alt="log" id="logo_header">
@@ -8,18 +19,7 @@
     <div id="fila-header">
         <nav>
             <ul class="menu">
-                <li (mouseover)="showCategories()" ><a href="">Categorías</a>
-
-                        <div class="contenedor-categorias"  (mouseout)="hiddeSubAndCategories()">
-                            <ul class="submenu " id="categoriesList" >
-                                <li class="items-categories" *ngFor="let categoria of categorias"  (mouseenter)="showSubcategories()">{{categoria.nombre}}<i class="fas fa-angle-down"></i></li>
-                            </ul>
-                            <div id="container-subcategories"(mouseenter)="showSubcategories()">
-
-                            </div>
-                        </div>
-                     
-                </li>
+                <li (mouseover)="showCategories()" ><a href="">Categorías</a> </li>
                 <li><a href="">Ofertas</a></li>
 
             </ul>
@@ -56,7 +56,7 @@
 
         </section>
     </div>
-
+</div>
 </header>
 <!-- User options y bg -->
 <ul id="userOptions" (mouseover)="showUserMenu()" (mouseout)="hiddeUserMenu()">
@@ -66,3 +66,14 @@
     <li>Salir <i class="fas fa-sign-out-alt"></i></li>
 </ul>
 <div class="bg-menu" id="bg-menu" ></div>
+
+
+
+<div class="contenedor-categorias"  (mouseover)="showCategories()"  (mouseout)="hiddeSubAndCategories()">
+    <ul class="submenu " id="categoriesList" >
+        <li class="items-categories" *ngFor="let categoria of categorias" >{{categoria.nombre}}<i class="fas fa-angle-down"></i></li>
+    </ul>
+    <div id="container-subcategories">
+
+    </div>
+</div>

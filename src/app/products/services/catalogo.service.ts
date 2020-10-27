@@ -12,7 +12,8 @@ export class CatalogoService {
 url:string;
 id:number;
   constructor(private http:HttpClient) { 
-    this.url="https://api.deofisdev.online/api";
+     this.url="https://api.deofisdev.online/api";
+    // this.url="https://deofis-tienda-apirest.herokuapp.com/api";
 
   }
   getProductosDestacados():Observable<Producto[]>{
