@@ -4,24 +4,26 @@
             <img src="../../assets/imagenes/logo.png" alt="logo">
         </a>
     </div>
-    <div class="contenedor-form" id="cont-form">
+    <form class="contenedor-form" id="cont-form" autocomplete="off" [formGroup]="formLogin" (ngSubmit)="iniciarSesion()">
         <!--inicio form iniciar sesion-->
         <div class="campos-inicio-s" id="is-uno">
             <h2>Inicio de Sesión</h2>
             <div class="campo primer">
-                <input type="text" id="username" placeholder="Nombre de usuario">
+                <input type="text" id="username" placeholder="Email" formControlName="email" [class.is-invalid]="emailInvalido">
                 <i class="fas fa-user" id="icono-user"></i>
             </div>
+            <span *ngIf="emailInvalido" class="text-rojo"><small>Ingrese su email</small></span>
 
             <div class="campo">
-                <input type="password" id="password" placeholder="Contraseña">
+                <input type="password" id="password" placeholder="Contraseña" formControlName="password" [class.is-invalid]="passwordInvalida">
                 <i class="fas fa-lock" id="icono-lock"></i>
                 <i class="far fa-eye" (click)="mostrarPsw()"></i>
             </div>
+            <span *ngIf="passwordInvalida" class="text-rojo"><small>Ingrese su contraseña</small></span>
 
             <p id="recuperar">¿Olvidaste tu contraseña?</p>
-            <input type="submit" value="Entrar" id="btn-entrar" class="boton">
-            <input type="submit" value="Registrarme" id="btn-registrar" class="boton"  [routerLink]="['/user-sign-up']" >
+            <button type="submit" id="btn-entrar" class="boton">Entrar</button>
+            <button type="button" id="btn-registrar" class="boton" [routerLink]="['/user-sign-up']">Registrarme</button>
 
         </div>
         <div class="separacion" id="is-dos">
@@ -31,18 +33,18 @@
         </div>
         <div class="social-media" id="is-tres">
             <button class="btn1">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Iniciá sesión con Facebook</a>
+                <a [href]="FACEBOOK_AUTH_URL"><i class="fab fa-facebook-f"></i> Iniciá sesión con Facebook</a>
             </button>
 
             <button class="btn2">
-                <a href="#" target="_blank"><i class="fab fa-google"></i> Iniciá sesión con Google</a>
+                <a [href]="GOOGLE_AUTH_URL"><i class="fab fa-google"></i> Iniciá sesión con Google</a>
             </button>
         </div>
         <!--FIN form iniciar sesion-->
-     
+
 
         <!--inicio form Olvide contrasena-->
-        <div id="contenedor-forgot-psw">
+        <form id="contenedor-forgot-psw">
             <h2> <i class="fas fa-arrow-circle-left" id="back"></i>Recuperar contraseña</h2>
             <p>Te enviaremos un mail a tu cuenta .</p>
             <div class="campo">
@@ -52,11 +54,11 @@
 
             <input type="submit" value="Enviar mail" id="btn-recover-psw" class="boton">
 
-        </div>
+        </form>
         <!--FIN form Olvide contrasena-->
 
 
-    </div>
+    </form>
     <div class="footer-is">
 
         <a href="">Privacidad</a>

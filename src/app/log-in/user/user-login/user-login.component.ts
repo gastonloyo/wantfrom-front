@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { IniciarSesionRequest } from '../../clases/login-request';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL } from '../../../config/config';
 
 @Component({
   selector: 'app-user-login',
@@ -7,9 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
 
-  constructor() { }
+  GOOGLE_AUTH_URL = GOOGLE_AUTH_URL;
+  FACEBOOK_AUTH_URL = FACEBOOK_AUTH_URL;
+
+  formLogin: FormGroup;
+  usuario: IniciarSesionRequest;
+
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
+    this.usuario = new IniciarSesionRequest();
+  }
 
   ngOnInit(): void {
+
+    this.crearForm();
+
      //CAMBIAR COLOR ICONOS C/ FOCUS
      let userName=document.getElementById("username");
      userName.addEventListener("focus",this.changeUserIcon)
@@ -47,6 +64,47 @@ export class UserLoginComponent implements OnInit {
      arrow1.addEventListener("click",this.return) ;  
  
   }
+
+  crearForm(): void {
+    this.formLogin = this.fb.group({
+      email: ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
+      password: ["", Validators.required]
+    });
+  }
+
+  /**
+   * Inicia una petición a la API para iniciar sesión, si las credenciales son válidas, nos devuelve los datos de 
+   * inicio de sesión: JWT, email y rol del usuario, refresh token para iniciar sesion automaticamente y timestamp 
+   * de expiración del JWT.
+   */
+  iniciarSesion(): void {
+    if (this.formLogin.invalid) {
+      return Object.values(this.formLogin.controls)
+      .forEach(control => control.markAsTouched());
+    }
+
+    this.usuario.email = this.formLogin.controls.email.value;
+    this.usuario.password = this.formLogin.controls.password.value;
+
+    this.authService.login(this.usuario).subscribe(response => {
+      console.log(response);
+      this.toastr.success('¡Sesión Iniciada!')
+      this.router.navigate(['home'])
+    }, err => {
+      this.toastr.warning('Bad Credentials');
+      console.log(err);
+    });
+  }
+
+  // Getters para campos invalidos
+  get emailInvalido() {
+    return this.formLogin.get('email').invalid && this.formLogin.get('email').touched;
+  }
+
+  get passwordInvalida() {
+    return this.formLogin.get('password').invalid && this.formLogin.get('password').touched;
+  }
+
   mostrarPsw(){
     let input = document.getElementById("password");
   console.log("input.getAttribute(id)");
