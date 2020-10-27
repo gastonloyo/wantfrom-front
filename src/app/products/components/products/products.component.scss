@@ -1,182 +1,261 @@
 //  @import '../../../../assets/materialize/css/materialize.min.css';
 
-$color-fondo:rgba(45, 123, 224, 0.192);
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
-%prop-botones-prod {
-   background-color:$color-sec;
-   font-size: 13px;
-   color: white;
-   font-family: $fte-ppal;
-   border-radius: 5px;
-   border: 0px ;
-   margin-top:5px ;
-   padding: 3px 10px;
-}
-
-
-   
-      .contenedorProductos{
-          width: 100%;
-          background-color: #ffffff;
-          font-family: $fte-ppal;
-          margin-top: 6vh;
-          margin-bottom: 70px;
-          border-radius: 7px;
-          padding-bottom:25px ;
-         
-          h2{ 
-              font-family: $fte-ppal;
-              color: $color-sec;
-              display: block;
-              margin: 25px 0px 10px 17px;
-              text-align: left;
-              font-size: 30px;
-              padding-left: 40px;
-          }
-          .contenedor-tarjetas{
-              margin-left: auto;
-              margin-right: auto;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: row;
-              position: relative;
-              margin-bottom: 70px;
-              margin-top: 10px;
-              .button{
-                background: $color-fondo;
-                border: 0;
-                border-radius: 50%;
-                color:grey;
-                cursor: pointer;
-                font-size: 1.5rem;
-                font-weight: bold;
-                height: 3rem;
-                position: absolute;
-                transition: opacity 0.25s;
-                width: 3rem;
-                z-index: 1;
-                outline: none;
-                &:hover{
-                background: $color-sec;
-                color: white;
-                }
-               
-              }
-              
-              .previous {
-                left: 45px;
-                
-              }
-              .next {
-                right: 48px;
-              }
-              .carousel-uno{
-                display:flex;
-              flex-direction: row;
-              width: 85%;
-              overflow: hidden;
-              justify-content: space-between;
-              .tarjetas{
-                margin-left: 10px;
-                margin-right: 10px;
-                transform: translate(0px);
-               
-              }      
-              
-              }
-          }
-      }
-      
- .mostrar{
-  visibility: hidden;
- }  
-
-//// categories 
-
-.container-categories{
+.cont-destacados{
+  display: flex;
+  flex-direction: column;
+  width: 94%;
   margin-left: auto;
   margin-right: auto;
-  width: 85%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  
-  .card-c{
-    
-    align-self: center;
-    justify-self: center;
-   
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 80% 20%;
-   align-items: center;
-   justify-items: center;
-   width: 22vw;
-    margin-bottom: 10px;
-   
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-    &:hover>img{
-      opacity: 0.7;
+  h2{
+    font-family: $fte-ppal;
+    color: $color-sec;
+    margin-top: 30px;
+  }
+  .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    .flecha{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position:absolute;
+      border: none;
+      // background-color: $color-menues;
+      font-size: 40px;
+      height: 12%;
+
+      top: calc(50%-6%);
+      line-height: 40px;
+      width: 50px;
+      color: $color-ter;
+      cursor: pointer;
+      z-index: 2;
+      transition: .2s ease all;
+      outline: none;
+      &:hover{
+        transform: scale(1.1);
+        // background: linear-gradient(to left,$color-ter);
+      }
     }
-    &:hover>h3{
-      background-color: $color-sec;
+    .flecha-derecha{
+      right: -15px;
+      border-radius: 40px 0px 0px 40px;
+      background: linear-gradient(to left,white 1%,$color-menues);
+      i{
+        margin-right: -8px;
+        margin-top: -1px;
+      }
+
     }
-    img{
+    .flecha-izquierda{
+      left: -15px;
+      border-radius: 0px 40px 40px 0px;
+      background: linear-gradient(to right,white 1%,$color-menues);
+      i{
+        margin-left: -8px;
+        margin-top: -1px;
+      }
+
+    }
+    .contenedor-carousel{
       width: 100%;
-      height: 180px;
-      border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
+      padding: 5px 0px 20px 10px;
+      scroll-behavior:smooth ;// establece comportamiento del scroll
+      .carousel{
+        display: flex;
+        flex-wrap: nowrap;
+        .tarjetas{
+          transition: .3s ease all;
+          min-width: 20%;
+          &.hover{
+            transform: scale(1.1);
+            transform-origin:center ;
+
+          }
+        }
+      }
     }
-    
-    h3{
-     background-color: $color-ppal;
-     color: white;
-     width: 100%;
-     padding: 10px 10px;
-     font-size: 15px;
-     text-align: center;
-     border-radius: 0px 0px 20px 0px;
+
+  }
+  .indicadores{
+    display: flex;
+
+    button{
+      background-color: $color-ppal;
+      height: 3px;
+      width: 10px;
+      cursor: pointer;
+      border: none;
+      &:hover{
+        background-color: red;
+      }
+      &.activo{
+        background-color: red;
+      }
+
+    }
+  }
+}
+
+.cont-ofertas{
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  h2{
+    font-family: $fte-ppal;
+    color: $color-sec;
+    margin-top: 30px;
+  }
+  .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    .flecha{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position:absolute;
+      border: none;
+      // background-color: $color-menues;
+      font-size: 40px;
+      height: 12%;
+
+      top: calc(50%-6%);
+      line-height: 40px;
+      width: 50px;
+      color: $color-ter;
+      cursor: pointer;
+      z-index: 2;
+      transition: .2s ease all;
+      outline: none;
+      &:hover{
+        transform: scale(1.1);
+        // background: linear-gradient(to left,$color-ter);
+      }
+    }
+    .flecha-derecha{
+      right: -15px;
+      border-radius: 40px 0px 0px 40px;
+      background: linear-gradient(to left,white 1%,$color-menues);
+      i{
+        margin-right: -8px;
+        margin-top: -1px;
+      }
+
+    }
+    .flecha-izquierda{
+      left: -15px;
+      border-radius: 0px 40px 40px 0px;
+      background: linear-gradient(to right,white 1%,$color-menues);
+      i{
+        margin-left: -8px;
+        margin-top: -1px;
+      }
+
+    }
+    .contenedor-carousel{
+      width: 100%;
+    overflow: hidden;
+      padding: 5px 0px 20px 10px;
+      scroll-behavior:smooth ;// establece comportamiento del scroll
+      .carousel{
+        display: flex;
+        flex-wrap: nowrap;
+        .tarjetas{
+          transition: .3s ease all;
+          min-width: 20%;
+          &.hover{
+            transform: scale(1.1);
+            transform-origin:center ;
+
+          }
+        }
+      }
+    }
+
+  }
+  .indicadores-ofertas{
+    display: flex;
+
+    button{
+      background-color: $color-ppal;
+      height: 3px;
+      width: 10px;
+      cursor: pointer;
+      border: none;
+      &:hover{
+        background-color: red;
+      }
+      &.activo{
+        background-color: red;
+      }
+
     }
   }
 }
 
 
- 
-      
-      
-      @media  screen and (max-width: 500px)  {
-          div{
-              display: flex;
-              justify-content: center;
-              flex-direction: center;
-              align-items: center;
-          .contenedorProductos{
-              width: 90vw;
-              margin-right:0px;
-              margin-left:0px;
-              margin-bottom: 10px;
-              padding-bottom:25px ;
-              margin-top: 2vh;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              position: relative;
-             
-              h2{ 
-                  margin: 0px;
-                  margin-top: 20px;
-                  margin-bottom: 7px;
-                  font-size: 25px;
-                  text-align: center;
-              }
-              
-          }
-         }
-       }
-      
+
+// //// categories
+
+// .container-categories{
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 85%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr;
+
+//   .card-c{
+
+//     align-self: center;
+//     justify-self: center;
+
+//    display: grid;
+//    grid-template-columns: 1fr;
+//    grid-template-rows: 80% 20%;
+//    align-items: center;
+//    justify-items: center;
+//    width: 22vw;
+//     margin-bottom: 10px;
+
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     box-sizing: border-box;
+//     &:hover>img{
+//       opacity: 0.7;
+//     }
+//     &:hover>h3{
+//       background-color: $color-sec;
+//     }
+//     img{
+//       width: 100%;
+//       height: 180px;
+//       border-radius: 20px 20px 0px 0px;
+//     }
+
+//     h3{
+//      background-color: $color-ppal;
+//      color: white;
+//      width: 100%;
+//      padding: 10px 10px;
+//      font-size: 15px;
+//      text-align: center;
+//      border-radius: 0px 0px 20px 0px;
+//     }
+//   }
+// }
+
+
+

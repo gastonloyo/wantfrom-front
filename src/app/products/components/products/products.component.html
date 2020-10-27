@@ -1,61 +1,60 @@
-
 <section class="contenedorProductos">
-     <!-- prod destacados-->
+  
+<article class="cont-destacados">
     <h2>Productos Destacados</h2>
-   <div class="contenedor-tarjetas" (mouseover)="showButtonsF()" (mouseout)="hiddeButtonsF()">
-        <button class="button featured previous" id="previous"> <</button>
-        <div class="carousel-uno" id="carousel-featured" >
-            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-card-carousel [producto]="destacado"></app-card-carousel>
+    <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda-fila1" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel" id="contenedor-carouselDestacados">
+            <div class="carousel">
+                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+                </div>
             </div>
         </div>
-        <button class=" button featured next" id="next"  >></button>
-    </div> 
- <!-- FIN productos destacados -->
-  <!-- Ofertas-->
+
+        <button role="button" id="flecha-derecha-fila1" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+    <div class="indicadores">
+      
+    </div>
+</article>
+
+<article class="cont-ofertas">
     <h2>Ofertas</h2>
-    <div class="contenedor-tarjetas" (mouseover)="showButtonsO()" (mouseout)="hiddeButtonsO()">
-        <button class="button ofertas previous" id="previousOfertas"> <</button>
-        <div class="carousel-uno" id="carousel-ofertas" >
-            <div class="tarjetas"  *ngFor="let destacado of productosDestacados">
-                <app-card-carousel [producto]="destacado"></app-card-carousel>
+    <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda-fila2" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel" id="contenedor-carouselOfertas">
+            <div class="carousel">
+                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+                </div>
             </div>
         </div>
-        <button class=" button ofertas next" id="nextOfertas"  >></button>
-    </div> 
- <!--FIN ofertas-->
- 
- <!-- banner beneficios-->
- <app-benefits-row></app-benefits-row>
-<!--FIN banner beneficios-->
-  <!-- Categorias-->
-    <h2 class="titulo-categoria" style="text-align: center;margin-top: 60px; margin: 40px;">Elegí por categoria</h2>
-    <div class="container-categories" >
+        
+        <button role="button" id="flecha-derecha-fila2" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+    <div class="indicadores-ofertas">
+      
+    </div>
+</article>
+    <!-- banner beneficios-->
+    <app-benefits-row></app-benefits-row>
+    <!--FIN banner beneficios-->
+    
+    <!-- Categorias-->
+    <!-- <h2 class="titulo-categoria" style="text-align: center;margin-top: 60px; margin: 40px;">Elegí por categoria</h2>
+    <div class="container-categories">
 
-            <div class="card-c"  *ngFor="let categoria of categorias"  >
-              <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6" alt="">
-                <h3>{{categoria.nombre}}</h3>
-                </div>
-    </div> 
-
-
-    <!-- MATERIALIZE -->
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col s12" >
-                <h1 class="center-align titulo"> Elegí por categoria</h1>
-                <div class="carousel center-align" >
-                    <div class=" carousel-item" *ngFor="let categoria of categorias">
-                        <h4>{{categoria.nombre}}</h4>
-                        <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6" alt="">
-                    </div>
-                </div>
-            </div>  
+        <div class="card-c" *ngFor="let categoria of categorias">
+            <img src="https://us.123rf.com/450wm/jacekkita/jacekkita1706/jacekkita170600023/80348293-cozinha-e-electrodom%C3%A9sticos-microondas-m%C3%A1quina-de-lavar-roupa-frigor%C3%ADfico-fog%C3%A3o-a-g%C3%A1s-m%C3%A1quina-de-lavar-lou%C3%A7a-ferro.jpg?ver=6"
+                alt="">
+            <h3>{{categoria.nombre}}</h3>
         </div>
     </div> -->
 
-  
- <!-- FIN categorias-->
-    
+
+
 
 </section>
