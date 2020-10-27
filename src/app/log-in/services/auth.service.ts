@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { SignupRequest } from '../clases/signup.request';
 import { IniciarSesionRequest } from '../clases/login-request';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
+import { AuthResponse } from '../clases/auth-response';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class AuthService {
     userEmail: this.getEmailUser()
   };
 
+  
   /**
    * Estos event emmiters nos serviran para notificar a todos los subscriptores que se realizaron cambios
    * cada vez que alguien se loguee, o desloguee.
@@ -37,7 +39,7 @@ export class AuthService {
   }
 
   /**
-   * Servicio que se encarga de iniciar sesión en la App, y guardar los datos de inicio de sesión en Local Storage.
+   * Servicio que se encarga de iniciar sesión en la App, y guardar los datos de inicio de sesión en local storage.
    * @param usuario IniciarSesionRequest con los datos credenciales del usuario para iniciar sesión.
    */
   login(usuario: IniciarSesionRequest): Observable<any> {
@@ -57,10 +59,28 @@ export class AuthService {
     );
   }
 
+  /**
+   * Servicio que cierra sesión. Elimina los datos del local storage del navegador, y llama a la API que completa el
+   * cierre de sesión (elimina el refresh token).
+   */
   logout(): void {
     this.http.post(`${this.urlEndpoint}/logout`, this.refreshTokenPayload);
 
     localStorage.clear();
+  }
+
+  refreshToken() {
+    const refreshTokenPayload = {
+      refreshToken: this.getRefreshToken(),
+      userEmail: this.getEmailUser()
+    };
+
+    return this.http.post<AuthResponse>(`${this.urlEndpoint}/refresh/token`, refreshTokenPayload).pipe(
+      tap(response => {
+        localStorage.setItem('authToken', response.authToken);
+        localStorage.setItem('expiraEn', response.expiraEn);  
+      })
+    );
   }
 
   getJwt(): string {

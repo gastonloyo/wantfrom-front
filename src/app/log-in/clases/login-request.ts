@@ -1,4 +1,4 @@
 export class IniciarSesionRequest {
     email: string;
-    passworD: string;
+    password: string;
 }
