@@ -27,7 +27,7 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.crearForms();
+    this.crearForm();
 
      //CAMBIAR COLOR ICONOS C/ FOCUS
      let userName=document.getElementById("username");
@@ -67,14 +67,10 @@ export class UserLoginComponent implements OnInit {
  
   }
 
-  crearForms(): void {
+  crearForm(): void {
     this.formLogin = this.fb.group({
       email: ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       password: ["", Validators.required]
-    });
-
-    this.formOlvidePass = this.fb.group({
-      email: ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]]
     });
   }
 
@@ -102,22 +98,13 @@ export class UserLoginComponent implements OnInit {
     });
   }
 
-  enviarRecuperarPassword(): void {
-    console.log(this.formOlvidePass.value);
-  }
-
-  // Getters para campos invalidos formulario login
+  // Getters para campos invalidos
   get emailInvalido() {
     return this.formLogin.get('email').invalid && this.formLogin.get('email').touched;
   }
 
   get passwordInvalida() {
     return this.formLogin.get('password').invalid && this.formLogin.get('password').touched;
-  }
-
-  // Getters para campos invalidos formulario olvide pass
-  get emailInvalidoPass() {
-    return this.formOlvidePass.get('email').invalid && this.formOlvidePass.get('email').touched;
   }
 
   mostrarPsw(){
