@@ -1,12 +1,10 @@
 <!--header-->
 
-<app-normal-header *ngIf="!user 
-        && !admin 
-        && router.url !== '/userLogIn'
-        && router.url !== '/user-sign-up'">
+<app-normal-header *ngIf="router.url !== '/userLogIn'
+                        && router.url !== '/user-sign-up'">
 </app-normal-header>
 
-<app-user-header *ngIf="user 
+<!-- <app-user-header *ngIf="user 
         && !admin 
         && router.url !== '/userLogIn' 
         && router.url !== '/user-sign-up'">
@@ -15,7 +13,7 @@
 <app-admin-header *ngIf="admin 
         && router.url !== '/userLogIn' 
         && router.url !== '/user-sign-up'">
-</app-admin-header>
+</app-admin-header> -->
 
 <!-------------->
 <router-outlet></router-outlet>

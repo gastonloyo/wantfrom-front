@@ -77,7 +77,7 @@ import { BenefitsRowComponent } from './benefits-row/benefits-row/benefits-row.c
     AngularFireStorageModule,
     HttpClientModule,
     RouterModule,
-    NgModule,
+    NgbModule,
     ToastrModule.forRoot()
   ],
   providers: [{

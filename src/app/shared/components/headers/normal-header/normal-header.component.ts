@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
 import { Carrito } from 'src/app/cart/clases/carrito';
 import { CartService } from 'src/app/cart/services/cart.service';
+import { AuthService } from '../../../../log-in/services/auth.service';
 
 @Component({
   selector: 'app-normal-header',
@@ -19,12 +20,21 @@ export class NormalHeaderComponent implements OnInit {
   totalPrice:number = 0;
   totalQuantity:number = 0;
   carrito:Carrito;
-  
-  constructor (private catalogoservice:CatalogoService, private router:Router,private _cartService:CartService) {
 
-   }
+  // Para perfil de usuario
+  estaLogueado: boolean;
+  
+  constructor (private catalogoservice:CatalogoService,
+              private router:Router,
+              private _cartService:CartService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
+
+    // Perfil
+    this.authService.loggedIn.subscribe(resp => this.estaLogueado = resp);
+    this.estaLogueado = this.authService.isLoggedIn();
+
     //to keep seeing the scroll and adjust the header opacity
     // window.addEventListener("scroll",this.headerEffect)
  
@@ -123,4 +133,7 @@ hiddeBgMenu(){
   //   }
   // }
    
+  hasRole(role: string): boolean {
+    return this.authService.hasRole(role);
+  }
 }

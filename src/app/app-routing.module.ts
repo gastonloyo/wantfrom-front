@@ -11,6 +11,8 @@ import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.
 import { PreCheckoutComponent } from './cart/components/checkout/pre-checkout/pre-checkout.component';
 import { Oauth2RedirectHandlerComponent } from './log-in/oauth2/oauth2-redirect-handler/oauth2-redirect-handler.component';
 import { PruebaComponent } from './prueba/prueba/prueba.component';
+import { AuthGuard } from './log-in/guards/auth.guard';
+import { RoleGuard } from './log-in/guards/role.guard';
 
 const routes: Routes = [
 {path:"home",component:HomeComponent},
@@ -23,7 +25,7 @@ const routes: Routes = [
 {path:"shopping-cart",component:ShoppingCartComponent},
 {path:"checkout",component:CheckoutComponent},
 {path:"pre-checkout", component:PreCheckoutComponent},
-{path:'test', component: PruebaComponent},
+{path:'test', component: PruebaComponent, canActivate: [AuthGuard, RoleGuard], data: {role: 'ROLE_ADMIN'}},
 {path:"**", pathMatch:"full", redirectTo:"home"}
 ];
 
