@@ -28,6 +28,20 @@ section {
   display: block;
 }
 
+.container-left .msg-empty-cart {
+  background-color: rgba(255, 255, 255, 0.335);
+  padding: 20px 30px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.container-left .msg-empty-cart p {
+  font-family: "Poppins", sans-serif;
+  color: #2d7be0;
+  font-size: 15px;
+  text-align: center;
+}
+
 .container-left .products-list ul {
   width: 100%;
 }

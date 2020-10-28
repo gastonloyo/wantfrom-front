@@ -1,5 +1,6 @@
 
 $fte-ppal: 'Poppins', sans-serif;
+$fte-sec: 'Open Sans', sans-serif;
 $color-ppal:#fff;
  $color-sec: rgb(87, 83, 83);
  $color-ter: rgb(172, 165, 165);
@@ -30,11 +31,12 @@ $color-ppal:#fff;
             p{
                 font-size: 15px;
                 color: rgb(102, 100, 100);
-                line-height: 27px;
+                line-height: 20px;
+                font-family: $fte-sec;
             }
             .campo{
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 margin-bottom: 7px;
                 i{
                     margin-right: 15px;
@@ -119,6 +121,7 @@ $color-ppal:#fff;
                 color:rgb(192, 184, 184) ;
                 margin-bottom: 30px;
                 margin-top: 15px;
+                font-family: $fte-sec;
             }
             .form{
             display: flex;
@@ -174,6 +177,7 @@ $color-ppal:#fff;
            img{
                width: 44px;
                height:28px;
+               margin-right: 20px;
            }
        }
   

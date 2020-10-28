@@ -1,0 +1,76 @@
+.benefits-row {
+  background-color: #e6e0e0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.benefits-row .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 23%;
+  background-color: #e6e0e0;
+  border: 0px;
+}
+
+.benefits-row .card:first-of-type {
+  width: 20%;
+}
+
+.benefits-row .card i {
+  font-size: 3em;
+  color: grey;
+  margin-right: 20px;
+}
+
+.benefits-row .card .description {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: fit-content;
+  padding-right: -50;
+}
+
+.benefits-row .card .description .title {
+  color: grey;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  line-height: 18px;
+}
+
+.benefits-row .card .description .subtitle {
+  color: #a8a4a4;
+  line-height: 15px;
+}
+/*# sourceMappingURL=benefits-row.component.css.map */

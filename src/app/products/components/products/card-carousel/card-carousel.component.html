@@ -4,11 +4,9 @@
       <div class="img-fondo"><img src="../../../../../assets/imagenes/celu.jpg" alt="." [routerLink]="['/viewmore',producto.id]"></div>
       <h3 [routerLink]="['/viewmore',producto.id]">{{producto.nombre}}</h3>
       <div class="cont-precios">
-      <span>${{producto.precio - 600}}</span> 
+      <!-- <span>${{producto.precio - 600}}</span>  -->
       <p class="precio" [routerLink]="['/viewmore',producto.id]">${{producto.precio}}</p>
     </div>
       <button class="botones" (click)="addCart(producto)">Agregar al Carrito</button>
     <!-- <a [routerLink]="['/vermas',producto.id]" ><button class="botones vermas"  >Ver más...</button> </a> -->
   </div>
-<!-- 
-  ${{producto.precio - 200}} -->
