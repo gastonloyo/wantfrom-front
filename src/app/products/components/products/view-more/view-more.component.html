@@ -1,17 +1,20 @@
-<div id="contenedor-vermas">   
+<div id="contenedor-vermas">  
+    <div class="routes">
+        <p><a  [routerLink]="['/home']" title="Home">Inicio </a> > <a href=""> {{infoProducto.categoria.nombre}}</a> > <a href=""> Subcategoria </a> > <a href="">{{infoProducto.nombre}} </a></p>
+    </div> 
     <section>
         <article class="contenedor-uno">
             <div id="izquierda">
                 <div id="img-sec">
-                  
                     <div id="img-uno"></div>
                     <div id="img-dos"></div>
                     <div id="img-tres"></div>
                     <div id="img-cuatro"></div>
+                    <div id="img-cinco"></div>
+                    <div id="img-seis"></div>
                 </div> 
                 <div id="img-ppal">
-                    
-                
+                 
                 </div> 
             </div>
             <div id="derecha">
@@ -25,24 +28,59 @@
                 </div>
                 <div id="caja-precio">
                     <h3>${{infoProducto.precio}}</h3>
-                    <div class="medios-de-pago" >
-                        <h4>Medios de Pago</h4>
-                        <img src="../../../../assets/imagenes/visa.png" alt="">
-                        <img src="../../../../assets/imagenes/master.png" alt="">
-                        <img src="../../../../assets/imagenes/naranja.png" alt="">
-                        <img src="../../../../assets/imagenes/mercadopago.jpg" alt="">
-                    </div>
+                    <div class="oferta">
+                    <span>${{infoProducto.precio + 1900}}</span>
+                    <p>20% 0FF</p>
+                </div>
                 </div>
                 <div id="caja-carrito">
-                    <div>
-                        <input type="number" value="1" id="cantidad">
+                    <div class="color-quantity">
+                        <div class="modify-quantity">
+                            <i class="fas fa-minus-circle" (click)="removeOne(item)"></i>
+                            <span class="item-quantity"> 1</span>
+                            <i class="fas fa-plus-circle" (click)="addOne(item)"></i>
+                          </div>
                         <select id="color">
                             <option >-Color-</option>
                             <option value="negro">{{infoProducto.color}}</option>
                             
                         </select>
+                        <select id="color">
+                            <option >-Otro-</option>
+                            <option value="negro">{{infoProducto.color}}</option>
+                            
+                        </select>
                     </div>
-                    <button  (click)="addCart(infoProducto)" id="btn-carrito" >Agregar al Carrito</button>
+                    <div class="talles">
+                        <div class="xs">
+                            <input type="radio" name="size" id="xs">
+                            <label for="xs">XS</label>
+                        </div>
+                        <div class="s">
+                            <input type="radio" name="size" id="s">
+                            <label for="s">S</label>
+                        </div>
+                        <div class="m">
+                            <input type="radio" name="size" id="m">
+                            <label for="m">M</label>
+                        </div>
+                        <div class="l">
+                            <input type="radio" name="size" id="l">
+                            <label for="l">L</label>
+                        </div>
+                        <div class="xl">
+                            <input type="radio" name="size" id="xl">
+                            <label for="xl">XL</label>
+                        </div>
+                        <div class="xxl">
+                            <input type="radio" name="size" id="xxl">
+                            <label for="xxl">XXL</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Costo de envío se informará al realizar la operación.</p>
+                    <button  (click)="addCart(infoProducto)" class="btn"id="btn-carrito" >Agregar al Carrito</button>
+                    <button  (click)="addCart(infoProducto)"class="btn" id="btn-comprar" >Comprar ahora</button>
                    
                 </div>
                 
@@ -52,8 +90,8 @@
             <div id="datos">
                 <p>Marca:     {{infoProducto.marca.nombre}}</p>
                 <p>Modelo:</p>
-                <p>Año:     {{infoProducto.fechaCreacion}}</p>
-                <p>Stock:</p>
+               
+                <p>Disponible: <span *ngIf="stock">Si</span> <span *ngIf="!stock">No</span> </p>
 
             </div>
             <div id="descripcion-producto" >
@@ -63,7 +101,7 @@
         </article>
 
         <article class="contenedor-tres" id="contenedor-tres">
-            <p>¿Tenés alguna pregunta?</p>
+            <p id="titulo-a">¿Tenés alguna pregunta?</p>
             
            <textarea  name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
             <div id="contenedorCartel">

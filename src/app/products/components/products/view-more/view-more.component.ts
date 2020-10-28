@@ -5,7 +5,6 @@ import { CartService } from 'src/app/cart/services/cart.service';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 
-
 @Component({
   selector: 'app-view-more',
   templateUrl: './view-more.component.html',
@@ -13,6 +12,7 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 })
 export class ViewMoreComponent implements OnInit {
   infoProducto:Producto;
+  stock:boolean=true
   constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute,private _cartService:CartService) { 
     this.infoProducto=new Producto();
   }
@@ -34,6 +34,11 @@ export class ViewMoreComponent implements OnInit {
     //// boton enviar pregunta
     let btnSend = document.getElementById("enviarMsg")
     btnSend.addEventListener("click",this.deleteMessage);
+  
+    /////EFECTO TITULO 
+    window.addEventListener("scroll",this.showTitleEffect)
+
+
   }
 
   
@@ -69,7 +74,7 @@ export class ViewMoreComponent implements OnInit {
 
     // cabio de cartel 
     let cartel=document.getElementById("cartel");
-    cartel.innerHTML="Gracias!Te responderemos a la brevedad.";
+    cartel.innerHTML="Gracias! Te responderemos a la brevedad.";
     let contenedor=document.getElementById("contenedorCartel");
    
     
@@ -85,6 +90,14 @@ export class ViewMoreComponent implements OnInit {
         )
     })
   }
+///// CANTIDAD////
+public  removeOne(item:ItemCarrito){
+  this._cartService.removeOneElementCart(item)
+}
+public addOne(item:ItemCarrito){
+  this._cartService.addOneElementCart(item)
+}
+
 ///////// Agregar al carrito /////////
   addCart(producto:Producto){
     let item:ItemCarrito=new ItemCarrito();
@@ -93,5 +106,18 @@ export class ViewMoreComponent implements OnInit {
     console.log(item.producto);
     this._cartService.changeCart(item);
  }
+
+
+ /////EFECTO TITULO 
+ showTitleEffect() {
+  let animado= document.getElementById("titulo-a");
+  let scrollTop= document.documentElement.scrollTop;
+  let alturaAnimado= animado.offsetTop;
+    if(alturaAnimado-550<scrollTop){
+      animado.style.opacity="1";
+      animado.classList.add("animacion-titulo")
+    }
+  
+}
 
 }
