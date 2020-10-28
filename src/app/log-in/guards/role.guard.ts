@@ -26,7 +26,7 @@ export class RoleGuard implements CanActivate {
       }
 
       alert('No tenés acceso a este recurso');
-      this.router.navigate(['/userLogIn']);
+      this.router.navigate(['/home']);
       return false;
   }
   

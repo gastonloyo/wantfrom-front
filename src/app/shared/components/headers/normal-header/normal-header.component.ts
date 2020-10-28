@@ -13,6 +13,7 @@ import { AuthService } from '../../../../log-in/services/auth.service';
   styleUrls: ['./normal-header.component.scss']
 })
 export class NormalHeaderComponent implements OnInit {
+
   categorias:Categoria[];
 
   //para el numero del carrito
@@ -31,9 +32,7 @@ export class NormalHeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // Perfil
-    this.authService.loggedIn.subscribe(resp => this.estaLogueado = resp);
-    this.estaLogueado = this.authService.isLoggedIn();
+    this.verificarSesion();
 
     //to keep seeing the scroll and adjust the header opacity
     // window.addEventListener("scroll",this.headerEffect)
@@ -132,8 +131,32 @@ hiddeBgMenu(){
   //     subcategories.style.top="115px"
   //   }
   // }
-   
+  
+  /**
+   * Se encarga de recibir los cambios en la sesión. La primera vez que carga el componente
+   * recibe el estado actual de la sesión, pero esta subscripto a un EventEmitter que notifica
+   * a todos los subscriptores cada vez que se realiza un cambio de estado en la sesión del
+   * usuario.
+   */
+  verificarSesion(): void {
+    this.authService.loggedIn.subscribe(resp => this.estaLogueado = resp);
+    this.estaLogueado = this.authService.isLoggedIn();
+  }
+
+  /**
+   * Valida que el usuario posea el rol para poder visualizar el recurso solicitado.
+   * @param role string rol requerido para mostrar el recurso.
+   */
   hasRole(role: string): boolean {
     return this.authService.hasRole(role);
+  }
+
+  /**
+   * Cerrar sesión y eliminar datos de la misma.
+   */
+  logout(): void {
+    this.authService.logout();
+    
+    this.router.navigate(['/home']);
   }
 }

@@ -13,11 +13,6 @@ import { AuthResponse } from '../clases/auth-response';
 export class AuthService {
 
   urlEndpoint: string;
-  refreshTokenPayload = {
-    refreshToken: this.getRefreshToken(),
-    userEmail: this.getEmailUser()
-  };
-
   
   /**
    * Estos event emmiters nos serviran para notificar a todos los subscriptores que se realizaron cambios
@@ -64,12 +59,28 @@ export class AuthService {
    * cierre de sesión (elimina el refresh token).
    */
   logout(): void {
-    this.http.post(`${this.urlEndpoint}/logout`, this.refreshTokenPayload);
+    const refreshTokenPayload = {
+      refreshToken: this.getRefreshToken(),
+      userEmail: this.getEmailUser()
+    };
 
+    this.http.post(`${this.urlEndpoint}/logout`, refreshTokenPayload, {responseType: 'text'})
+                .subscribe(response => console.log(response));
+
+    this.loggedIn.emit(false);
+    this.useremail.emit('');
     localStorage.clear();
   }
 
-  refreshToken() {
+  /**
+   * Servicio que, en caso de que la sesión de un usuario haya expirado y realice otra
+   * petición al servidor, genere un nuevo JWT para continuar y extender su sesión.
+   * @return Observable<AuthResponse> retorna un flujo de datos con el nuevo objeto Auth Response,
+   * con los datos: nuevo JWT, nuevo tiempo de expiración.
+   * NOTA: Al refrescar el token, el resto de datos cargados en local storage (rol, userEmail...) 
+   * quedan exactamente igual, por ende, no es necesario actualizar estos datos.
+   */
+  refreshToken(): Observable<AuthResponse> {
     const refreshTokenPayload = {
       refreshToken: this.getRefreshToken(),
       userEmail: this.getEmailUser()
@@ -83,22 +94,44 @@ export class AuthService {
     );
   }
 
+  /**
+   * Devuelve el JsonWebToken guardado en local storage. Si no existe, devuelve null.
+   * @return string con el JWT.
+   */
   getJwt(): string {
     return localStorage.getItem('authToken');
   }
 
+  /**
+   * Devuelve el refresh token en local storage que sirve para extender la sesión del usuario actual.
+   * @return string con refresh token.
+   */
   getRefreshToken(): string {
     return localStorage.getItem('refreshToken');
   }
 
+  /**
+   * Devuelve el email del usuario actual guardado en local storage.
+   * @return string user email.
+   */
   getEmailUser(): string {
     return localStorage.getItem('userEmail');
   }
 
+  /**
+   * Verifica que exista un JWT guardado, y por ende, que exista una sesión actual.
+   * @return boolean true --> logueado, false --> no logueado.
+   */
   isLoggedIn(): boolean {
     return this.getJwt() != null;
   }
 
+  /**
+   * Valida que el rol pasado por parámetro sea el mismo que posee el usuario con
+   * sesión actual.
+   * @param role string con el rol a verificar.
+   * @return boolean true --> el rol es el mismo, false --> no es el mismo.
+   */
   hasRole(role: string) {
     return localStorage.getItem('rol') == role;
   }

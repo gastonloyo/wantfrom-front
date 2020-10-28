@@ -37,7 +37,7 @@
             </form>
 
             <section id="contenedor_iconos">
-                <div class="iconos notificaciones">
+                <div *ngIf="estaLogueado" class="iconos notificaciones">
                     <i class="fas fa-bell opciones"></i>
                     <p>Notificaciones</p>
                 </div>
@@ -45,6 +45,11 @@
                 <div *ngIf="hasRole('ROLE_USER') || !estaLogueado" class="iconos carrito" [routerLink]="['/shopping-cart']">
                     <i class="fas fa-shopping-cart opciones"></i>
                     <p>Carrito {{totalQuantity}}</p>
+                </div>
+
+                <div *ngIf="estaLogueado && hasRole('ROLE_ADMIN')" class="iconos carrito" [routerLink]="['/shopping-cart']">
+                    <i class="fas fa-window-restore"></i>
+                    <p>Ventas</p>
                 </div>
 
                 <div class="iconos miperfil" (mouseover)="showUserMenu()" [routerLink]="['/userLogIn']">
@@ -74,7 +79,7 @@
     </a>
     <li>Compras<i class="fas fa-shopping-bag"></i></li>
     <li>Favoritos <i class="fas fa-heart"></i></li>
-    <li>Salir <i class="fas fa-sign-out-alt"></i></li>
+    <li (click)="logout()">Salir <i class="fas fa-sign-out-alt"></i></li>
 </ul>
 <!-- Admin user -->
 <ul *ngIf="estaLogueado && hasRole('ROLE_ADMIN')" id="userOptions" (mouseover)="showUserMenu()" (mouseout)="hiddeUserMenu()">
@@ -83,7 +88,7 @@
     </a>
     <li>Productos </li>
     <li>Administración <i class="fas fa-cog"></i></li>
-    <li>Salir <i class="fas fa-sign-out-alt"></i></li>
+    <li (click)="logout()">Salir <i class="fas fa-sign-out-alt"></i></li>
 </ul>
 <div class="bg-menu" id="bg-menu"></div>
 <div class="contenedor-categorias" (mouseover)="showCategories()" (mouseout)="hiddeSubAndCategories()" id="container-subcategories">
