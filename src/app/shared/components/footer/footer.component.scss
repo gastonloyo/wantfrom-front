@@ -1,6 +1,9 @@
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
 .footer{
     background-color: rgb(218, 216, 216);
@@ -174,16 +177,17 @@ $color-sec:rgb(16, 61, 119);
   
     }
     .copy{
-        background-color: $color-sec;
+        background-color: black;
         height: 30px;
         position: relative;
-        p{
+        a{
+            text-decoration: none;
             color: white;
             text-align: center;
             font-size: 13px;
             position: absolute;
-            bottom: 0px;
-            right: 5px;
+            bottom: 3px;
+            right: 35px;
             
         }
     }

@@ -24,6 +24,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   font-size: 16px;
 }
 

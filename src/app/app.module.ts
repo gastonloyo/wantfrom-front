@@ -32,6 +32,11 @@ import { UserLoginComponent } from './log-in/user/user-login/user-login.componen
 import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.component';
 import { Oauth2RedirectHandlerComponent } from './log-in/oauth2/oauth2-redirect-handler/oauth2-redirect-handler.component';
 import { PruebaComponent } from './prueba/prueba/prueba.component';
+import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.component';
+import { PreCheckoutComponent } from './cart/components/checkout/pre-checkout/pre-checkout.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BenefitsRowComponent } from './benefits-row/benefits-row/benefits-row.component';
 
 
 
@@ -58,7 +63,10 @@ import { PruebaComponent } from './prueba/prueba/prueba.component';
     UserSignUpComponent,
     Oauth2RedirectHandlerComponent,
     PruebaComponent,
-  
+    BenefitsRowComponent,
+    PreCheckoutComponent,
+    CheckoutComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
@@ -69,12 +77,13 @@ import { PruebaComponent } from './prueba/prueba/prueba.component';
     AngularFireStorageModule,
     HttpClientModule,
     RouterModule,
+    NgModule,
     ToastrModule.forRoot()
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true
   }],
   bootstrap: [AppComponent],
-  
+ 
 })
 export class AppModule { }

@@ -36,6 +36,7 @@ $color-sec:rgb(16, 61, 119);
           .contenedor-grid{
               display: grid;
               grid-template-columns: 1fr 1fr 1fr;
+              justify-items: center;
               font-size:16px;
           }
       }

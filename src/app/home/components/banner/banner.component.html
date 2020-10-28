@@ -1,9 +1,16 @@
 
-<div class="slider">
-    <i (click)="hideSlide()" class="fas fa-times" id="cruz"></i>
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true , "autoPlay": true}'>
-        <div class="carousel-cell " *ngFor="let image of images">
-            <img src="{{image.img}}" alt="">
-        </div>
-    </div>
-</div>
+<ngb-carousel *ngIf="images" id="banner">
+    
+    <ng-template ngbSlide  *ngFor="let image of images">
+        <i class="fas fa-times" style="position: absolute;right:20px; top: 20px;z-index: 2; color: rgba(255, 255, 255, 0.514);" (click)= "hideBanner()" ></i>
+      <div class="picsum-img-wrapper" style="height: 70vh;">
+        <img src="{{image.img}}" alt="banner" style="width: 100vw;">
+      </div>
+      <div class="carousel-caption">
+        <h3></h3>
+       
+        <p></p>
+      </div>
+    </ng-template>
+       
+  </ngb-carousel>

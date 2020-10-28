@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Producto } from '../../clases/producto';
 import { CatalogoService } from '../../services/catalogo.service';
-
+//  import * as M from '../../../../assets/materialize/js/materialize.min.js'
 
 @Component({
   selector: 'app-products',
@@ -13,17 +13,56 @@ export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
   categorias:Categoria[];
- 
-  
+//  options={}
+tarjeta= document.querySelectorAll(".tarjetas")
+cantidadPaginas= Math.ceil(this.tarjeta.length /5);
   constructor(private catalogoService:CatalogoService) { 
 
   }
   ngOnInit(): void {
+    /// ****  *** CARUSEL PRODUCTOS DESTACADOS *** ****  ///
+    const fila=document.getElementById("contenedor-carouselDestacados");
+    const flecha1= document.getElementById("flecha-izquierda-fila1");
+     const flecha2= document.getElementById("flecha-derecha-fila1");
+     flecha2.addEventListener("click",()=>{
+       fila.scrollLeft += fila.offsetWidth;
+     })
+     flecha1.addEventListener("click",()=>{
+      fila.scrollLeft -= fila.offsetWidth;
+    })
+/// ****  *** CARUSEL OFERTAS *** ****  ///
+const fila2=document.getElementById("contenedor-carouselOfertas");
+    const flecha3= document.getElementById("flecha-izquierda-fila2");
+     const flecha4= document.getElementById("flecha-derecha-fila2");
+     flecha4.addEventListener("click",()=>{
+       fila2.scrollLeft += fila2.offsetWidth;
+     })
+     flecha3.addEventListener("click",()=>{
+      fila2.scrollLeft -= fila2.offsetWidth;
+    })
+  
     this.getProductosDestacados();
-     this.rotateCarrousel1();
-     this.rotateCarrousel2();
+   
      this.getListaCategorias();
+     this.paginacion()
+  }
+///// PAGINACION ARREGLAR 
+  paginacion(){
+    const fila=document.getElementById("contenedor-carouselDestacados");
+    for (let i = 0; i < this.cantidadPaginas; i++) {
+     const indicador = document.createElement("button");
 
+     if(i===0){
+       indicador.classList.add("activo");
+     }
+     document.querySelector(".indicadores").appendChild(indicador);
+     indicador.addEventListener("click",(e)=> {
+     fila.scrollLeft= i* fila.offsetWidth;
+     document.querySelector(".indicadores .activo").classList.remove("activo");
+    //  e.target.classList.add("activo)
+     })
+      
+    }
   }
   getProductosDestacados():void{
     this.catalogoService.getProductosDestacados().subscribe(response => {
@@ -32,45 +71,7 @@ export class ProductsComponent implements OnInit {
       );
   }
 
-  rotateCarrousel1(){
-    let i = 1;
-    const carouselFeatured = <HTMLScriptElement><unknown>document.getElementById('carousel-featured');
-    const carouselButtons = document.querySelectorAll('.featured');
-    carouselButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        let algo = e.target as Element;
-        if (algo.id === 'previous') { 
-          if (i !== 1) {
-            i--;
-           carouselFeatured.scrollLeft -= 1045;
-          }
-        } else {
-            i++;
-            carouselFeatured.scrollLeft  += 1045;
-          }
-      });
-    });
-  }
-  rotateCarrousel2(){
-    let i = 1;
-    const carouselOfertas = <HTMLScriptElement><unknown>document.getElementById('carousel-ofertas');
-    const carouselButtons = document.querySelectorAll('.ofertas');
-    carouselButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        let algo = e.target as Element;
-        if (algo.id === 'previousOfertas') { 
-          if (i !== 1) {
-            i--;
-           carouselOfertas.scrollLeft -= 1045;
-          }
-        } else {
-            i++;
-            carouselOfertas.scrollLeft  += 1045;
-            console.log("NEXT")
-          }
-      });
-    });
-  }
+
 
     /***** get Categories *****/
     getListaCategorias():void{
