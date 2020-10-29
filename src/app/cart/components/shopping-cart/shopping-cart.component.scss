@@ -1,7 +1,10 @@
-$color-fondo:rgba(45, 123, 224, 0.192);
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
 
 section{
@@ -13,13 +16,15 @@ section{
     padding-top: 40px;
     padding-bottom: 30px;
     height: fit-content;
-    min-height: 75vh;
+    min-height: 82vh;
+
 }
 
 .container-left{
     width: 65%;
     h2{
         font-family: $fte-ppal;
+        text-transform: uppercase;
         border-bottom: 1px solid rgb(190, 187, 187);
         margin-bottom: 5px;
         margin-top: 10px;
@@ -31,8 +36,8 @@ section{
         margin-top: 40px;
         border-radius: 20px;
         p{
-            font-family: $fte-ppal;
-            color: $color-ppal;
+            font-family: $fte-sec;
+            color: $color-ter;
             font-size: 15px;
             text-align: center;
         }
@@ -44,14 +49,15 @@ section{
                 grid-template-columns: 8% 50% 13% 13% 13% 3%;
                 align-items: center;
                 background-color: white;
-                border-radius: 20px;
+                // border-radius: 15px;
                 padding: 10px 10px;
                 margin-top: 20px;
                 margin-bottom: 5px;
-                box-shadow: 1px 2px 1px rgb(170, 168, 168);
+                box-shadow: 1px 3px 5px rgb(170, 168, 168);
                &:hover{
-                box-shadow: 2px 3px 3px rgb(170, 168, 168);
-               }
+                box-shadow: 2px 4px 6px $color-sec;
+               cursor: default;
+            }
                 img{
                     width: 50px;
                     height: 56px;
@@ -63,7 +69,7 @@ section{
                 margin-left: 20px;
                 .row-info{
                     span{
-                        color: grey;
+                        color: $color-sec;
                         font-size: 12px;
                     }
                     }
@@ -133,17 +139,20 @@ section{
 }
 .container-right{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 28%;
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 45px;
+    box-shadow: 2px 4px 4px $color-sec;
     .summary{
-        font-family: $fte-ppal;
+        font-family: $fte-sec;
         display: flex;
         flex-direction: column;
         h2{
+            font-family: $fte-ppal;
+            text-transform: uppercase;
             color: $color-sec;
             font-size: 20px;
             border-bottom: 1px solid rgb(190, 187, 187);
@@ -165,14 +174,14 @@ section{
             }
         }
         #subtotal-summary{
-            color: grey;
-            font-size: 15px;
+            color: $color-ter;
+            font-size: 16px;
             
         }
         #total-summary{
             font-weight: bolder;
             font-size: 19px;
-            background-color:rgba(221, 210, 210, 0.692);
+            background-color:$color-menues;
            
         }
         .coupon{
@@ -214,21 +223,22 @@ section{
 
     }
     button{
-        background-color:$color-sec;
-        font-size: 15px;
+        background-color:rgb(34, 33, 33);
+        font-size: 16px;
         color: white;
         font-family: $fte-ppal;
-        border-radius: 0px 0px 20px 20px;
+        border-radius: 0px 0px 15px 15px;
         border: 0px ;
         margin-top:5px ;
         box-sizing: border-box;
         width: 100%;
-        padding: 3px 25px;
+        padding: 4px 25px;
         align-self: flex-end;
         outline: none;
         &:hover{
             font-size: 16px;
             cursor: pointer;
+            background-color:$color-sec;
         }
     }
 }

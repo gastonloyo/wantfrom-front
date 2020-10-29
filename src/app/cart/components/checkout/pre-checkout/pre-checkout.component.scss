@@ -1,7 +1,10 @@
-$color-fondo:rgba(45, 123, 224, 0.192);
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
@@ -14,28 +17,33 @@ section{
     justify-content: center;
     height: fit-content;
     min-height: 90vh;
+    box-sizing: border-box;
     padding-top: 80px;
+    background: linear-gradient(to bottom,$color-menues,white);
     .container{
-        background-color: #fff;
-        border-radius: 20px;
+        background-color: $color-ppal;
+        border-radius: 15px;
+        margin-top: -20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 50%;
         height: 400px;
+        padding: 0;
         font-family: $fte-ppal;
         box-sizing: border-box;
-        box-shadow: 1px 2px 5px grey;
+        box-shadow: 1px 2px 5px $color-sec;
         .title{
             width: 100%;
             text-align: center;
-            background-color: $color-ppal;
-            border-radius: 20px 20px 0px 0px;
+            background-color: rgb(34, 33, 33);
+           border-radius: 15px 15px 0px 0px;
             display: block;
             padding: 20px 20px 15px 20px;
             color: white;
             box-sizing: border-box;
+            font-family: $fte-sec;
         }
         .row1{
             display: flex;
@@ -77,33 +85,35 @@ section{
         }
         .dni{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            width: 32%;
+            width: 38%;
         }
         .leyenda{
             color: $color-sec;
             font-size: 13px;
             align-self: flex-end;
-            margin-bottom: -42px;
+            margin-bottom: -37px;
             margin-right: 5px;
 
         }
         button{
-            background-color:$color-sec;
+            background-color:rgb(34, 33, 33);
+            font-size: 16px;
             font-size: 16px;
             color: white;
             font-family: $fte-ppal;
-            border-radius: 20px;
+            text-transform: uppercase;
+           
             border: 0px ;
             box-sizing: border-box;
             padding: 7px 35px;
             align-self: center;
             width: 100%;
-            border-radius: 0px 0px 20px 20px;
+            border-radius: 0px 0px 15px 15px;
             &:hover{
                 cursor: pointer;
-                background-color: $color-ppal;
+                background-color: $color-sec;
                 
             }
         }
@@ -111,14 +121,18 @@ section{
 }
 
 .form-newuser{
-    border: 2px solid $color-sec;
-    border-radius: 7px 7px 7px 0;
-    font-family: $fte-ppal;
+    border: 1px solid $color-sec;
+    font-family: $fte-sec;
     padding: 2px 10px;
     width: 60%;
+    outline: none;
+    &:hover{
+        border: 2px solid $color-sec;
+    }
 
 }
 label{
     font-weight: bold;
     color: $color-sec;
+    font-family: $fte-sec;
 }
