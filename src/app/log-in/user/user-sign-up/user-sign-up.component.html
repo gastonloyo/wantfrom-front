@@ -1,7 +1,7 @@
 <section>
     <div class="fondo">
         <a [routerLink]="['/home']" title="Home">
-            <img src="../../assets/imagenes/logo.png" alt="logo">
+            <img src="../../assets/imagenes/logo-blanco.png" alt="logo">
         </a>
     </div>
     <div class="contenedor-form" id="cont-form">
@@ -14,25 +14,31 @@
             <div class="campo">
                 <input type="password" id="new-pasw" placeholder="Contraseña">
                 <i class="fas fa-lock" id="lock1"></i>
-                <i class="far fa-eye" ></i>
+                <i class="far fa-eye"  id="show1"  (click)="mostrarPsw1()"></i>
+                <i class="far fa-eye-slash" id="hide1" (click)="mostrarPsw1()"></i>
             </div>
             <div class="campo">
                 <input type="password" id="new-pasw-repeat" placeholder="Repetir contraseña">
                 <i class="fas fa-lock" id="lock2"></i>
-                <i class="far fa-eye" ></i>
+                <i class="far fa-eye"id="show2"  (click)="mostrarPsw2()"></i>
+                <i class="far fa-eye-slash" id="hide2" (click)="mostrarPsw2()"></i>
             </div>
             <input type="submit" value="Crear cuenta" id="btn-sign-up" class="boton">
 
         </div>
 
         <!--inicio mensaje cta creada-->
-        <p id="msje-registro">Gracias! Te hemos enviado un correo para realizar una breve verificación de identidad.</p>
+        <div id="msje-registro">
+        <p >Gracias! Te hemos enviado un correo para realizar una breve verificación de identidad.</p>
+        <span>Empecemos por configurar tu perfil:</span>
+        <input type="text" id="name" placeholder="Nombre">
+        <input type="text" id="lastname" placeholder="Apellido">
+        <input type="submit" value="Continuar" id="btn-sign-up" class="boton">
+    </div>
         <!--FIN mensaje cta creada-->
     </div>
     <div class="footer-is">
 
-        <a href="">Privacidad</a>
-        <a href=""> Terminos y condiciones</a>
-        <a href=""> Ecommerce 2020</a>
+        <a href="https://www.wantfrom.es/"> Powered by Wantfrom</a>
     </div>
 </section>

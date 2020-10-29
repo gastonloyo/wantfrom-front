@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { strict } from 'assert';
 
 @Component({
   selector: 'app-user-login',
@@ -10,23 +11,7 @@ export class UserLoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //  //CAMBIAR COLOR ICONOS C/ FOCUS
-    //  let userName=document.getElementById("username");
-    //  userName.addEventListener("focus",this.changeUserIcon)
-     
-    //  let password = document.getElementById("password");
-    //  password.addEventListener("focus",this.changePswIcon);
-     
     
-     
-    //  let emailFP=document.getElementById("emailPsw");
-    //  emailFP.addEventListener("focus",this. changeEnvelopeIcon);
-     
-    //  /// volver a la normalidad
-    //  userName.addEventListener("blur",this.originalUserIcon);
-    //  password.addEventListener("blur",this.originalPswIcon);
-    //  emailFP.addEventListener("blur",this.originalEnvelopeIcon);
-     
      //// OLVIDE MI CONTRASENA
      let recuperar= document.getElementById("recuperar");
      recuperar.addEventListener("click",()=> {
@@ -40,59 +25,30 @@ export class UserLoginComponent implements OnInit {
        uno.style.alignItems="center";
        
      })
- 
-           
+  
      ///VOLVER ATRAS
      let arrow1=document.getElementById("back");
      arrow1.addEventListener("click",this.return) ;  
  
   }
   mostrarPsw(){
-    let input = document.getElementById("password");
-  console.log("input.getAttribute(id)");
+    let input = document.getElementById("password")as HTMLInputElement ;   
+    if(input.type == "password"){
+        input.type = "text";
+      let icon= document.getElementById("show")
+      icon.style.visibility="hidden";
+      let iconHide=document.getElementById("hide");
+      iconHide.style.visibility="visible"
+    }else{
+        input.type = "password";
+        let icon= document.getElementById("show")
+        icon.style.visibility="visible";
+        let iconHide=document.getElementById("hide");
+        iconHide.style.visibility="hidden"
+    }
 
-    // if(input.getAttribute == "password"){
-    //     input.type = "text";
-    // }else{
-    //     input.type = "password";
-    // }
  
-   
-}
-
-// ///// inicio metodos para el cambio de color de iconos///
-// changeUserIcon(){
-//   let icon = document.getElementById("icono-user");
-//   icon.style.color="rgb(45, 123, 224)";
-// }
-// changePswIcon(){
-//   let icon = document.getElementById("icono-lock");
-//   icon.style.color="rgb(45, 123, 224)";
-//   let icon2 = document.getElementById("icono-lock-r");
-//   icon2.style.color="rgb(45, 123, 224)";
-// }
-// changeEnvelopeIcon(){
-//   let icon4=document.getElementById("icono-env-psw");
-//   icon4.style.color="rgb(45, 123, 224)";
-// }
-// originalUserIcon(){
-//   let icon = document.getElementById("icono-user");
-//   icon.style.color="grey"
-// }
-// originalPswIcon(){
-//   let icon = document.getElementById("icono-lock");
-//   icon.style.color="grey"
-//   let icon2 = document.getElementById("icono-lock-r");
-//   icon2.style.color="grey";
-// }
-// originalEnvelopeIcon(){
-//   let icon3 = document.getElementById("icono-envelope");
-//   icon3.style.color="grey";
-//   let icon4 = document.getElementById("icono-env-psw");
-//   icon4.style.color="grey"
-// }
-  ///// FIN metodos para el cambio de color de iconos///
-
+  }
   /// metodo para ocultar el formulario de inicio de sesion
 hiddeForm(){
   let uno=document.getElementById("is-uno");

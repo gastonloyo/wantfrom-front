@@ -1,6 +1,11 @@
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
+
 
 
 section{
@@ -10,8 +15,8 @@ section{
     flex-direction: column;
     align-items: center;
     .fondo{
-        background-color: $color-ppal;
-        height: 40vh;
+        background: linear-gradient(to bottom, $color-sec ,$color-ter,$color-menues,white);
+        height: 80vh;
         width: 100%;
         img{
             width: 200px;
@@ -24,13 +29,15 @@ section{
     .contenedor-form{
         padding-top: 20px;
         padding-bottom: 30px;
-        background-color: white;
-        border-radius: 20px;
+        background-color: $color-menues;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -170px;
-        width: 30vw;
+        margin-top: -440px;
+        width: 420px;
+        box-shadow: 2px 4px 10px grey;
+
         #contenedor-registrarse{
             width: 80%;
             height: 270px;
@@ -40,6 +47,8 @@ section{
             flex-direction: column;
             h2{
                 font-family: $fte-ppal;
+               text-transform: uppercase;
+               font-size: 23px;
                 color: $color-sec;
                 align-self: flex-start;
                 display: block;
@@ -49,8 +58,8 @@ section{
                 display: flex;
                 align-items: center;
                 i{
-                    font-size: 0.7em;
-                    color: grey;
+                    font-size:0.7em;
+                    color:rgb(34, 33, 33);
                     margin-right: 8px;
                     outline: none;
                 }
@@ -74,35 +83,44 @@ section{
                     margin-top:7px;
                     height: 44px;
                     width: 100%;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
                     &:focus{
                         outline: none;
                         border:1px solid rgb(180, 170, 170) ;
+                    } 
+                    &:focus~i{
+                        color: rgb(34, 33, 33);
                     }                     
                 }
                 #new-pasw,#new-pasw-repeat{
                     height: 44px;
                     width: 100%;
-                   font-family: $fte-ppal;
+                   font-family: $fte-sec;
                    font-size: 15px;
                     padding-left: 40px;
                    box-sizing: border-box;  
                    &:focus{
                    outline: none;
-                   border:1px solid rgb(180, 170, 170) ;
+                   border:1px solid rgb(180, 170, 170) ;    
                     }
+                    &:focus~i{
+                        color: rgb(34, 33, 33);
+                    } 
                 }
-                .fa-eye{
+                .fa-eye, .fa-eye-slash{
                     margin-left: 86%;
                  }
+                 .fa-eye-slash{
+                     visibility: hidden;
+                 }                
                  #username{
                     margin-top:7px;
                     height: 44px;
                     width: 100%;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
@@ -114,7 +132,7 @@ section{
                   #password{
                     height: 44px;
                     width: 100%;
-                   font-family: $fte-ppal;
+                   font-family: $fte-sec;
                    font-size: 15px;
                     padding-left: 40px;
                    box-sizing: border-box;  
@@ -126,41 +144,65 @@ section{
             }
         }
         #msje-registro{
-            font-family: $fte-ppal;
-            color: grey;
+            font-family: $fte-sec;
+            color: rgb(34, 33, 33);
             text-align: center;
             display: none;
+            margin-top: auto;
+            margin-bottom: auto;
+            span{
+                font-size: 16px;
+                color: $color-sec;
+            }
+            #name , #lastname{
+                margin-top:7px;
+                height: 39px;
+                width: 100%;
+                font-family: $fte-sec;
+                font-size: 15px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                &:focus{
+                    outline: none;
+                    border:1px solid rgb(180, 170, 170) ;
+                }
+            }
+            #lastname{
+                margin-bottom: 10px;
+            }
         }
     }
     .footer-is{
-        width:50% ;
+        width:100% ;
         display: flex;
-        justify-content:space-between;
+        justify-content:flex-end;
        position: absolute;
-       bottom: 8px;
-     
-      
-        
+       bottom: 0px;
+       background-color: black;
         a{
+          padding-top: 2px;
+          padding-bottom: 3px;
+          padding-right: 40px;
             text-decoration: none;
-            color: $color-sec;
-            font-family: $fte-ppal;
-            font-size: 12px;          
+            color: $color-ppal;
+            font-family: $fte-sec;
+            font-size: 13px;          
         }
     }
 }  
 .boton{
     width: 100%;
     height: 40px;
-    background-color: $color-sec;
+    background-color:rgb(34, 33, 33);
     color: white;
     font-family:$fte-ppal;
+    text-transform: uppercase;
     font-size: 16px;
-    border-radius: 30px;
     border: none;
     &:hover{
         box-shadow: 1px 2px 2px gray;
-     }
+        background-color: $color-sec;
+    }
      outline: none;
     
-}      
+}  
