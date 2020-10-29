@@ -15,9 +15,19 @@ export class CardGridComponent implements OnInit {
   @Input() producto:Producto
   constructor(private catalogoservice:CatalogoService,private _cartService:CartService) { }
   infoProducto:Producto;
+  oferta:boolean=true;
+  destacado:boolean=true;
 
   ngOnInit(): void {
     this.infoProducto=new Producto();
+
+      //mostrar tags sin superponerse
+      if (this.oferta && this.destacado) {
+        let oferta = document.getElementsByClassName("off")  as HTMLCollectionOf<HTMLElement>;
+        for (let i = 0; i < oferta.length; i++) {
+          oferta[i].style.top="20px"       
+        } 
+        }
   }
 
 saveToFav(){

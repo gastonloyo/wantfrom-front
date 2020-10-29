@@ -1,90 +1,147 @@
-$color-fondo:rgba(45, 123, 224, 0.192);
-$fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
 
+$fte-ppal: 'Poppins', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
+ $fte-sec: 'Open Sans', sans-serif;
+
+%prop-botones-prod {
+   background-color:$color-sec;
+   font-size: 14px;
+   color: white;
+   font-family: $fte-ppal;
+   text-transform: uppercase;
+   border-radius: 0px 0px 15px 15px;
+   border: 0px ;
+   margin-top:5px ;
+   padding: 3px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
 
 .items{
     width: 240px;
-    height: 340px;
+    height: fit-content;
     border-radius: 15px;
-    border: 1px solid rgba(128, 128, 128, 0.363);
     margin-top:15px ;
     margin-bottom:15px ;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20px 140px 55px 50px 30px 45px;
+    grid-template-rows: 20px 140px 55px  30px 45px;
     justify-items: center;
     box-sizing: border-box;
     outline: none;
+    box-shadow: 2px 2px 2px grey;
+
+    background-image: linear-gradient(0deg, rgb(243, 236, 236) 20%,  white 45%, );
     &:hover{
-        transform: scale(1.05);
-        border: 1px solid $color-sec;
+        transform: scale(1.06);
         cursor: pointer;
+        box-shadow: 2px 3px 4px grey;
     }
     &:hover > h3{
        color: $color-sec;  
    }
-   i{
-    justify-self: flex-end;
-    position: relative;
-    font-size: 1.2em;
-    margin-right: 20px;
-    margin-top: 10px;
+  
+   .img-fondo{
+       background-color: $color-ppal;
+       width: 100%;
+       outline: none;
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       .etiqueta{
+            display: block;
+            color: white;
+            font-family: $fte-sec;
+            padding: 1px 6px;
+            text-align: center;
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.719);
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: -7px;
+       }
+       .off{
+        background-color: rgb(187, 24, 24);
+        font-size: 14px;
+
+       }
+       .destacado{
+        background-color: rgb(255, 238, 0);
+        color: black;
+        font-size: 12px;
+       }
+        img{
+            width: 140px ;
+            height: 140px;
+            display: block;
+            position: absolute;
+            top: 0;
+        }
     }
-    img{
-        width: 140px ;
-        height: 140px;
-        outline: none;       
+    .i-fondo{
+        background-color: $color-ppal;
+        outline: none;
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+        position: relative;
+        i{ outline: none;
+            position: absolute;
+            font-size: 1.2em;
+            right: 20px;
+            top: 10px;
+            z-index: 1;
+        }
     }
-    h3{
+    h3{ outline: none;
         text-align: center;
         font-size: 18px;
         font-weight: bold;
         padding-left: 5px;
         padding-right: 5px;
+        font-family: $fte-sec;
+        margin-top: 12px;
+        &::first-letter{
+            text-transform: uppercase;
+        }
     }
+    a{
+     @extend %prop-botones-prod;
+
     .botones{
-        background-color:$color-sec;
-        font-size: 13px;
-        color: white;
-        font-family: $fte-ppal;
-        border-radius: 0px 0px 15px 15px;
-        border: 0px ;
-        margin-top:5px ;
-        padding: 3px 10px;
-         width: 100%;
+     @extend %prop-botones-prod;
      
-    }
-    .descrip{
-        font-size: 15px;
-        text-align: center;
-        color: grey;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+    }}
+    .cont-precios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+        outline: none;
     .precio{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
+        font-family: $fte-sec;
+        outline: none;
     }
-  
+    span{
+        text-decoration: line-through;
+         font-size: 13px;
+        //  color: rgb(187, 24, 24);
+         font-family: $fte-sec;
+         margin-bottom: -10px;
+         outline: none;
+    }
+    }
+   
 }
-
-@media  screen and (max-width: 500px)  {
-
-    .items{
-        width: 70vw;
-        height: 350px;
-        padding: 15px 15px;
-                             
-        h3{
-            font-size: 16px;
-        }
-       
-        .descrip{
-            font-size: 14px; 
-        }
-        
-    }
-
+.move{
+    top: 20px;
+    margin-top: 20px;
+    
 }

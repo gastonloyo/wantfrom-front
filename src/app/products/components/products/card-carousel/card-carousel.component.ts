@@ -31,11 +31,11 @@ export class CardCarouselComponent implements OnInit {
   }
 
   saveToFav(){
-  let hearts=document.getElementsByClassName("fav") as HTMLCollectionOf<HTMLElement>;
-  for (let i = 0; i < hearts.length; i++) {
-    hearts[i].style.color="red";
-    hearts[i].classList.add("fas");       
-  } 
+  // let hearts=document.getElementsByClassName("fav") as HTMLCollectionOf<HTMLElement>;
+  // for (let i = 0; i < hearts.length; i++) {
+  //     hearts[i].style.color="red";
+  //   hearts[i].classList.add("fas");       
+  // } 
  
 }
   addCart(infoProducto:Producto){
