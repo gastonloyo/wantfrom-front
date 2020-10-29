@@ -15,4 +15,8 @@ export class AppComponent {
     this.user=true;
     this.admin=false;
   }
+
+  onActivate(event) {
+    window.scroll(0, 0);
+  }
 }

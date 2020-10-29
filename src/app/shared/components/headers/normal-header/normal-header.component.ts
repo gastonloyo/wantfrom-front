@@ -3,9 +3,11 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Router } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
-import { Carrito } from 'src/app/cart/clases/carrito';
-import { CartService } from 'src/app/cart/services/cart.service';
+import { MockCarrito } from 'src/app/cart/clases/cart';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
 import { AuthService } from '../../../../log-in/services/auth.service';
+import { CarritoService } from '../../../../cart/services/carrito.service';
+import { Carrito } from '../../../../cart/clases/carrito';
 
 @Component({
   selector: 'app-normal-header',
@@ -20,17 +22,20 @@ export class NormalHeaderComponent implements OnInit {
   items: Array<ItemCarrito>;
   totalPrice:number = 0;
   totalQuantity:number = 0;
-  carrito:Carrito;
+  carrito: Carrito;
 
   // Para perfil de usuario
   estaLogueado: boolean;
   
   constructor (private catalogoservice:CatalogoService,
               private router:Router,
-              private _cartService:CartService,
-              private authService: AuthService) { }
+              private _cartService:MockCartService,
+              private authService: AuthService,
+              private carritoService: CarritoService) { }
 
   ngOnInit(): void {
+    this.totalQuantity = this.carritoService.getTotalItems();
+    this.carritoService.totalItemsEmmiter.subscribe(resp => this.totalQuantity = resp)
 
     this.verificarSesion();
 
@@ -41,13 +46,16 @@ export class NormalHeaderComponent implements OnInit {
     this.getListaCategorias();
 
     //cart counter
-   this._cartService.currentDataCart$.subscribe(x=>{
-    if(x) {
-      this.items = x;
-      this.totalQuantity = x.length;
-       this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
-    }
-      })
+    this.carritoService.getCarrito().subscribe(response => {
+      this.totalQuantity = response.carrito.items.length;
+    });
+  //  this._cartService.currentDataCart$.subscribe(x=>{
+  //   if(x) {
+  //     this.items = x;
+  //     this.totalQuantity = x.length;
+  //      this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
+  //   }
+  //     })
   }
 
    /***** GET CATEGORIES *****/

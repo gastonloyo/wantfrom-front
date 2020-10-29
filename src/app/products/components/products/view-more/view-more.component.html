@@ -1,31 +1,31 @@
-<div id="contenedor-vermas">   
+<div id="contenedor-vermas">
     <section>
         <article class="contenedor-uno">
             <div id="izquierda">
                 <div id="img-sec">
-                  
+
                     <div id="img-uno"></div>
                     <div id="img-dos"></div>
                     <div id="img-tres"></div>
                     <div id="img-cuatro"></div>
-                </div> 
+                </div>
                 <div id="img-ppal">
-                    
-                
-                </div> 
+
+
+                </div>
             </div>
             <div id="derecha">
                 <div id="caja-titulo">
                     <h2>{{infoProducto.nombre}} </h2>
                     <div class="iconos-detalle-producto">
-                        <a title="Agregar a Favoritos" > <i class=" iconos far fa-heart"></i></a>
-                        <a title="Copiá este link!" >  <i class="iconos fas fa-link"></i></a>
-                     </div>
-                 
+                        <a title="Agregar a Favoritos"> <i class=" iconos far fa-heart"></i></a>
+                        <a title="Copiá este link!"> <i class="iconos fas fa-link"></i></a>
+                    </div>
+
                 </div>
                 <div id="caja-precio">
                     <h3>${{infoProducto.precio}}</h3>
-                    <div class="medios-de-pago" >
+                    <div class="medios-de-pago">
                         <h4>Medios de Pago</h4>
                         <img src="../../../../assets/imagenes/visa.png" alt="">
                         <img src="../../../../assets/imagenes/master.png" alt="">
@@ -42,37 +42,37 @@
                             
                         </select>
                     </div>
-                    <button  (click)="addCart(infoProducto)" id="btn-carrito" >Agregar al Carrito</button>
-                   
+                    <button (click)="agregarCarrito(infoProducto.id)" id="btn-carrito">Agregar al Carrito</button>
+
                 </div>
-                
+
             </div>
         </article>
         <article class="contenedor-dos">
             <div id="datos">
-                <p>Marca:     {{infoProducto.marca.nombre}}</p>
+                <p>Marca: {{infoProducto.marca?.nombre}}</p>
                 <p>Modelo:</p>
-                <p>Año:     {{infoProducto.fechaCreacion}}</p>
+                <p>Año: {{infoProducto.fechaCreacion}}</p>
                 <p>Stock:</p>
 
             </div>
-            <div id="descripcion-producto" >
+            <div id="descripcion-producto">
                 <h3>Descripción </h3>
-                <p >{{infoProducto.descripcion}}</p>
+                <p>{{infoProducto.descripcion}}</p>
             </div>
         </article>
 
         <article class="contenedor-tres" id="contenedor-tres">
             <p>¿Tenés alguna pregunta?</p>
-            
-           <textarea  name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+            <textarea name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
             <div id="contenedorCartel">
                 <p id="cartel">Estamos para despejar todas tus dudas, dejános tu consulta</p>
             </div>
             <button type="submit" id="enviarMsg">
                 <i class="fas fa-paper-plane"></i>
             </button>
-           
+
         </article>
     </section>
-</div> 
+</div>

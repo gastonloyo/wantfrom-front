@@ -14,4 +14,8 @@ export class PruebaService {
   getProductos(): Observable<any> {
     return this.http.get('https://api.deofisdev.online/api/productos');
   }
+
+  getCarrito() {
+    return this.http.get('https://api.deofisdev.online/api/perfil/carrito');
+  }
 }

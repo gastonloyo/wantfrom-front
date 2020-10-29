@@ -11,15 +11,26 @@ export class PruebaComponent implements OnInit {
 
   prods: Producto[];
   count: number;
+  carrito: any;
 
   constructor(private ps: PruebaService) {
     this.prods = [];
   }
 
   ngOnInit(): void {
+    this.getCarrito();
+  }
+  
+  getProds() {    
     this.ps.getProductos().subscribe(resp => {
       console.log(resp);
       this.prods = resp.productos;
+    });
+  }
+
+  getCarrito() {
+    this.ps.getCarrito().subscribe(resp => {
+      console.log(resp);
     });
   }
 

@@ -25,7 +25,7 @@ const routes: Routes = [
 {path:"shopping-cart",component:ShoppingCartComponent},
 {path:"checkout",component:CheckoutComponent},
 {path:"pre-checkout", component:PreCheckoutComponent},
-{path:'test', component: PruebaComponent, canActivate: [AuthGuard, RoleGuard], data: {role: 'ROLE_ADMIN'}},
+{path:'test', component: PruebaComponent, canActivate: [AuthGuard]},
 {path:"**", pathMatch:"full", redirectTo:"home"}
 ];
 

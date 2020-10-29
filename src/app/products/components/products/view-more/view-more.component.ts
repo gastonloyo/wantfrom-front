@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
-import { CartService } from 'src/app/cart/services/cart.service';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
+import { CarritoService } from '../../../../cart/services/carrito.service';
 
 
 @Component({
@@ -12,8 +13,14 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
   styleUrls: ['./view-more.component.scss']
 })
 export class ViewMoreComponent implements OnInit {
+
   infoProducto:Producto;
-  constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute,private _cartService:CartService) { 
+
+  constructor(private catalogoservice:CatalogoService,
+              private activatedroute:ActivatedRoute,
+              private _cartService:MockCartService,
+              private carritoService: CarritoService) { 
+                
     this.infoProducto=new Producto();
   }
 
@@ -80,18 +87,22 @@ export class ViewMoreComponent implements OnInit {
       let id= param.id;
       this.catalogoservice.getInfoProducto(id).subscribe(response => {
         this.infoProducto=response;
-        console.log(this.infoProducto);
-      }
-        )
-    })
+      });
+    });
+  }
+
+  agregarCarrito(productoId: number): void {
+    this.carritoService.agregarProducto(productoId.toString()).subscribe(response => {
+      alert('Producto agregado al carrito');
+    });
   }
 ///////// Agregar al carrito /////////
-  addCart(producto:Producto){
-    let item:ItemCarrito=new ItemCarrito();
-    item.cantidad=1;
-    item.producto=producto;
-    console.log(item.producto);
-    this._cartService.changeCart(item);
- }
+//   addCart(producto:Producto){
+//     let item:ItemCarrito=new ItemCarrito();
+//     item.cantidad=1;
+//     item.producto=producto;
+//     console.log(item.producto);
+//     this._cartService.changeCart(item);
+//  }
 
 }
