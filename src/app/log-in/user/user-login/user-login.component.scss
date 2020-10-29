@@ -1,10 +1,15 @@
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
 
 %titulo-h2{
     font-family: $fte-ppal;
+    text-transform: uppercase;
     color: $color-sec;
     align-self: flex-start;
     display: block;
@@ -25,13 +30,13 @@ $color-sec:rgb(16, 61, 119);
     position: absolute;
     padding: 13px;
     font-size: 1.1em;
-    color: grey;
+    color: $color-ter;
 }
 %campo-user{
     margin-top:7px;
     height: 44px;
     width: 100%;
-    font-family: $fte-ppal;
+    font-family: $fte-sec;
     font-size: 15px;
     padding-left: 40px;
     box-sizing: border-box;
@@ -43,7 +48,7 @@ $color-sec:rgb(16, 61, 119);
 %contrasena{
     height: 44px;
      width: 100%;
-    font-family: $fte-ppal;
+    font-family: $fte-sec;
     font-size: 15px;
      padding-left: 40px;
     box-sizing: border-box;  
@@ -59,9 +64,11 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     .fondo{
-        background-color: $color-ppal;
-        height: 40vh;
+        //background-color: $color-sec;
+        background: linear-gradient(to bottom, $color-sec ,$color-ter,$color-menues,white);
+        height: 80vh;
         width: 100%;
         img{
             width: 200px;
@@ -73,16 +80,16 @@ section{
     }
     .contenedor-form{
         padding-top: 20px;
-        padding-bottom: 40px;
-        background-color: white;
-        border-radius: 20px;
+        padding-bottom: 30px;
+        background: $color-menues;
         display: flex;
+        border-radius: 15px;
         flex-direction: column;
         align-items: center;
-        margin-top: -190px;
-        width: 30vw;
-        
-        
+        margin-top: -460px;
+        width: 420px;
+        box-shadow: 2px 4px 10px grey;
+
         .campos-inicio-s{
             display: flex;
             flex-direction: column;
@@ -108,10 +115,16 @@ section{
                    margin-left: 86%;
                 }
                 #username{
-                  @extend %campo-user;                   
+                  @extend %campo-user; 
+                  &:focus~i{
+                      color: rgb(34, 33, 33);
+                  }                  
                 }
                 #password{
                 @extend %contrasena;
+                &:focus~i{
+                    color: rgb(34, 33, 33);
+                }
                 }
             }
             
@@ -122,8 +135,8 @@ section{
            
             p{
                 align-self: flex-start;
-                font-family: $fte-ppal;
-                color:$color-ppal;
+                font-family: $fte-sec;
+                color: rgb(34, 33, 33);
                 font-size:12px ;
                 margin-top: -5px;
                 margin-bottom: 5px;
@@ -139,12 +152,14 @@ section{
             
             width: 80%;
             p{
-            color: grey;
+                margin-bottom: 0px;
+                display: block;
+                color: rgb(34, 33, 33);
             font-size: 17px;
             }
             span{
                 display: block;
-                border-bottom: 1px solid grey;
+                border-bottom: 1px solid $color-sec;
                 width: 42%;
                 
             }   
@@ -160,7 +175,7 @@ section{
             button{
                 width: 100%;
                 height: 40px;
-                border-radius: 30px;
+                // border-radius: 30px;
                 border: none;
                 outline: none;
                 &:hover{
@@ -169,7 +184,7 @@ section{
                 a{
                     text-decoration: none;
                     color: white;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                     font-size:15px ;
                     display: block;
                     width: 100%;
@@ -198,17 +213,20 @@ section{
 
             h2{
                 @extend %titulo-h2;
+                font-size: 23px;
                 display: flex;
                 align-items: center;
                 i{
                     font-size: 0.7em;
-                    color: grey;
+                    color:rgb(34, 33, 33);
+                    
                     margin-right: 8px;
                 }
             }
             p{
-                font-family: $fte-ppal;
-                color: gray;
+                font-family: $fte-sec;
+                color: rgb(34, 33, 33);
+                margin-bottom: -15px;
             }
             .campo{
                 @extend %cont-input;
@@ -219,7 +237,10 @@ section{
                    top: 7.1px;
                 }
                 #emailPsw{
-                    @extend %campo-user;                     
+                    @extend %campo-user; 
+                    &:focus~i{
+                        color: rgb(34, 33, 33);
+                    }                    
                 }
                 
             }
@@ -232,14 +253,11 @@ section{
         display: flex;
         justify-content:space-between;
        position: absolute;
-       bottom: 8px;
-     
-      
-        
+       bottom: 8px;        
         a{
             text-decoration: none;
             color: $color-sec;
-            font-family: $fte-ppal;
+            font-family: $fte-sec;
             font-size: 12px;          
         }
     }
@@ -248,15 +266,17 @@ section{
 .boton{
     width: 100%;
     height: 40px;
-    background-color: $color-sec;
+    background-color:rgb(34, 33, 33);
     color: white;
     font-family:$fte-ppal;
+    text-transform: uppercase;
+
     font-size: 16px;
-    border-radius: 30px;
     border: none;
     &:hover{
         box-shadow: 1px 2px 2px gray;
-     }
+        background-color: $color-sec;
+    }
      outline: none;
     
 }

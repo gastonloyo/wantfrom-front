@@ -10,22 +10,22 @@ export class UserLoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-     //CAMBIAR COLOR ICONOS C/ FOCUS
-     let userName=document.getElementById("username");
-     userName.addEventListener("focus",this.changeUserIcon)
+    //  //CAMBIAR COLOR ICONOS C/ FOCUS
+    //  let userName=document.getElementById("username");
+    //  userName.addEventListener("focus",this.changeUserIcon)
      
-     let password = document.getElementById("password");
-     password.addEventListener("focus",this.changePswIcon);
+    //  let password = document.getElementById("password");
+    //  password.addEventListener("focus",this.changePswIcon);
      
     
      
-     let emailFP=document.getElementById("emailPsw");
-     emailFP.addEventListener("focus",this. changeEnvelopeIcon);
+    //  let emailFP=document.getElementById("emailPsw");
+    //  emailFP.addEventListener("focus",this. changeEnvelopeIcon);
      
-     /// volver a la normalidad
-     userName.addEventListener("blur",this.originalUserIcon);
-     password.addEventListener("blur",this.originalPswIcon);
-     emailFP.addEventListener("blur",this.originalEnvelopeIcon);
+    //  /// volver a la normalidad
+    //  userName.addEventListener("blur",this.originalUserIcon);
+    //  password.addEventListener("blur",this.originalPswIcon);
+    //  emailFP.addEventListener("blur",this.originalEnvelopeIcon);
      
      //// OLVIDE MI CONTRASENA
      let recuperar= document.getElementById("recuperar");
@@ -60,37 +60,37 @@ export class UserLoginComponent implements OnInit {
    
 }
 
-///// inicio metodos para el cambio de color de iconos///
-changeUserIcon(){
-  let icon = document.getElementById("icono-user");
-  icon.style.color="rgb(45, 123, 224)";
-}
-changePswIcon(){
-  let icon = document.getElementById("icono-lock");
-  icon.style.color="rgb(45, 123, 224)";
-  let icon2 = document.getElementById("icono-lock-r");
-  icon2.style.color="rgb(45, 123, 224)";
-}
-changeEnvelopeIcon(){
-  let icon4=document.getElementById("icono-env-psw");
-  icon4.style.color="rgb(45, 123, 224)";
-}
-originalUserIcon(){
-  let icon = document.getElementById("icono-user");
-  icon.style.color="grey"
-}
-originalPswIcon(){
-  let icon = document.getElementById("icono-lock");
-  icon.style.color="grey"
-  let icon2 = document.getElementById("icono-lock-r");
-  icon2.style.color="grey";
-}
-originalEnvelopeIcon(){
-  let icon3 = document.getElementById("icono-envelope");
-  icon3.style.color="grey";
-  let icon4 = document.getElementById("icono-env-psw");
-  icon4.style.color="grey"
-}
+// ///// inicio metodos para el cambio de color de iconos///
+// changeUserIcon(){
+//   let icon = document.getElementById("icono-user");
+//   icon.style.color="rgb(45, 123, 224)";
+// }
+// changePswIcon(){
+//   let icon = document.getElementById("icono-lock");
+//   icon.style.color="rgb(45, 123, 224)";
+//   let icon2 = document.getElementById("icono-lock-r");
+//   icon2.style.color="rgb(45, 123, 224)";
+// }
+// changeEnvelopeIcon(){
+//   let icon4=document.getElementById("icono-env-psw");
+//   icon4.style.color="rgb(45, 123, 224)";
+// }
+// originalUserIcon(){
+//   let icon = document.getElementById("icono-user");
+//   icon.style.color="grey"
+// }
+// originalPswIcon(){
+//   let icon = document.getElementById("icono-lock");
+//   icon.style.color="grey"
+//   let icon2 = document.getElementById("icono-lock-r");
+//   icon2.style.color="grey";
+// }
+// originalEnvelopeIcon(){
+//   let icon3 = document.getElementById("icono-envelope");
+//   icon3.style.color="grey";
+//   let icon4 = document.getElementById("icono-env-psw");
+//   icon4.style.color="grey"
+// }
   ///// FIN metodos para el cambio de color de iconos///
 
   /// metodo para ocultar el formulario de inicio de sesion
