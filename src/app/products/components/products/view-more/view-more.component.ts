@@ -5,6 +5,7 @@ import { CartService } from 'src/app/cart/services/cart.service';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
 
+
 @Component({
   selector: 'app-view-more',
   templateUrl: './view-more.component.html',
@@ -12,7 +13,8 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 })
 export class ViewMoreComponent implements OnInit {
   infoProducto:Producto;
-  stock:boolean=true
+  stock:boolean=true;
+  items: Array<ItemCarrito>;
   constructor(private catalogoservice:CatalogoService, private activatedroute:ActivatedRoute,private _cartService:CartService) { 
     this.infoProducto=new Producto();
   }

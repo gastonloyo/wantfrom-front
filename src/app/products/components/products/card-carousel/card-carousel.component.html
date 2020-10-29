@@ -1,10 +1,14 @@
 
      <div class="items"[routerLink]="['/viewmore',producto.id]" >  
-      <div class="i-fondo"><i id="fav" class=" iconos far fa-heart" (click)=saveToFav()></i></div>
-      <div class="img-fondo"><img src="../../../../../assets/imagenes/celu.jpg" alt="." ></div>
+      <div class="i-fondo"><i id="fav" class=" iconos far fa-heart fav" (click)=saveToFav()></i></div>
+      <div class="img-fondo">
+        <p class="off etiqueta" *ngIf="oferta" >20% 0FF</p>
+        <p class="destacado etiqueta" *ngIf="destacado">DESTACADO</p>
+        <img src="../../../../../assets/imagenes/celu.jpg" alt="." >
+      </div>
       <h3>{{producto.nombre}}</h3>
       <div class="cont-precios">
-      <span>${{producto.precio + 600}}</span> 
+      <span *ngIf="oferta">${{producto.precio + 600}}</span> 
       <p class="precio">${{producto.precio}}</p>
     </div>
       <!-- <button class="botones" (click)="addCart(producto)">Ver Más</button> -->

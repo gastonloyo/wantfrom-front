@@ -14,7 +14,7 @@ export class ShoppingCartComponent implements OnInit {
    items: Array<ItemCarrito>;
    totalPrice:number ;
    totalQuantity:number;
-  carrito:Carrito;
+   carrito:Carrito;
 
   constructor(private _cartService:CartService) {
     this.carrito=new Carrito();
