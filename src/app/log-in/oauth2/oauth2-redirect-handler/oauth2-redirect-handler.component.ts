@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -12,7 +11,6 @@ export class Oauth2RedirectHandlerComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
-              private toastr: ToastrService,
               private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -34,12 +32,12 @@ export class Oauth2RedirectHandlerComponent implements OnInit {
         this.authService.loggedIn.emit(true);
         this.authService.useremail.emit(userEmail);
 
-        this.toastr.success(`¡Bienvenido ${userEmail}!`);
+        alert(`¡Bienvenido ${userEmail}!`);
 
         this.router.navigate(['home']);
       } else {
         this.router.navigate(['userLogIn']);
-        this.toastr.error(error);
+        alert(error);
       }
     });
   }

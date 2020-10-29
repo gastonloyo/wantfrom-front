@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { IniciarSesionRequest } from '../../clases/login-request';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
@@ -21,7 +20,7 @@ export class UserLoginComponent implements OnInit {
 
   usuario: IniciarSesionRequest;
 
-  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router, private toastr: ToastrService) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {
     this.usuario = new IniciarSesionRequest();
   }
 
@@ -94,10 +93,10 @@ export class UserLoginComponent implements OnInit {
 
     this.authService.login(this.usuario).subscribe(response => {
       console.log(response);
-      this.toastr.success('¡Sesión Iniciada!')
+      alert('¡Sesión Iniciada!')
       this.router.navigate(['home'])
     }, err => {
-      this.toastr.warning('Bad Credentials');
+      alert('Bad Credentials');
       console.log(err);
     });
   }
