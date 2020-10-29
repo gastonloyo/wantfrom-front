@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEG,AAAA,CAAC,CAAA;EACQ,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,GAAG;EACf,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,KAAK,EAAC,0BAA0B;CAEnC",
+    "mappings": "",
     "sources": [
         "banner.component.scss"
     ],

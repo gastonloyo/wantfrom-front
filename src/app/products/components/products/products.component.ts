@@ -12,8 +12,9 @@ import { CatalogoService } from '../../services/catalogo.service';
 export class ProductsComponent implements OnInit {
   productosDestacados: Producto[];
   target: HTMLInputElement;
-  categorias:Categoria[];
-//  options={}
+   categorias:Categoria[];
+  
+
 tarjeta= document.querySelectorAll(".tarjetas")
 cantidadPaginas= Math.ceil(this.tarjeta.length /5);
   constructor(private catalogoService:CatalogoService) { 
@@ -40,12 +41,30 @@ const fila2=document.getElementById("contenedor-carouselOfertas");
      flecha3.addEventListener("click",()=>{
       fila2.scrollLeft -= fila2.offsetWidth;
     })
+
+    /// EFECTO CATEGORIAS
+    
+
   
     this.getProductosDestacados();
    
      this.getListaCategorias();
-     this.paginacion()
+     this.paginacion();
+    window.addEventListener("scroll",this.showCategoriesEffect);
   }
+//// mostar categorias
+showCategoriesEffect() {
+  let animado= document.querySelectorAll(".card-c");
+  let scrollTop= document.documentElement.scrollTop;
+  for ( var i=0; i< animado.length; i++){
+    let alturaAnimado= (animado[i] as HTMLElement).offsetTop;
+    if(alturaAnimado-450<scrollTop){
+      (animado[i] as HTMLElement).style.opacity="1";
+      (animado[i] as HTMLElement).classList.add("animacion")
+    }
+  }
+}
+
 ///// PAGINACION ARREGLAR 
   paginacion(){
     const fila=document.getElementById("contenedor-carouselDestacados");

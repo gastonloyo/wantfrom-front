@@ -1,15 +1,18 @@
 
 $fte-ppal: 'Poppins', sans-serif;
+$fte-sec: 'Open Sans', sans-serif;
 $color-ppal:#fff;
  $color-sec: rgb(87, 83, 83);
  $color-ter: rgb(172, 165, 165);
  $color-menues: rgb(243, 236, 236);
 
 .footer{
-    background-color: rgb(218, 216, 216);
+    background-color: $color-menues;
     clear: both;
     font-family: $fte-ppal;
     article{
+        position: relative;
+        box-sizing: border-box;
        .row1{
         display: flex;
         justify-content: space-around;
@@ -19,19 +22,21 @@ $color-ppal:#fff;
         width: fit-content;
         margin-left: 50px;
         .caja{
-            width: 300px;
+            width: 340px;
             h4{
                 margin-bottom: 10px;
                 color: $color-sec;
+                text-transform: uppercase;
             }
             p{
                 font-size: 15px;
                 color: rgb(102, 100, 100);
-                line-height: 27px;
+                line-height: 20px;
+                font-family: $fte-sec;
             }
             .campo{
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 margin-bottom: 7px;
                 i{
                     margin-right: 15px;
@@ -79,76 +84,76 @@ $color-ppal:#fff;
             }
         }
         .newsletter{
-            border-radius: 15px;
-            background-color: $color-ppal;
+            
+            background-color: $color-sec;
+            background: linear-gradient(to bottom, $color-menues , black);
             align-self: center;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 20px 15px;
+            padding: 20px 5px;
             box-shadow: 3px 4px 3px grey;
+            margin-left: -90px;
+            width: 340px;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            top: 0;
             h3{
-                color: black;
+                margin-top: -25px;
+                color:$color-ppal;
                 font-family: $fte-ppal;
                 margin-bottom: 12px;
                 font-weight: 600;
+                text-align: center;
+                font-size: 35px;
+                text-shadow: 1px 2px 2px $color-ter;
+                span{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
             }
             p{
                 text-align: center;
-                width: 260px;
-                line-height: 18px;
-                color: white;
-                margin-bottom: 16px;
+                width: 280px;
+                line-height: 16px;
+                color:rgb(192, 184, 184) ;
+                margin-bottom: 30px;
+                margin-top: 15px;
+                font-family: $fte-sec;
             }
             .form{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
+            position: relative;
+            width: 270px;
             .insertemail{
-                width:80%;
+                width:100%;
                 height: 40px;
-            
+                outline: none;
                 border-radius: 25px; 
                 border: 1px solid $color-ppal;
                 font-family: $fte-ppal;
                 font-size: 16px;
                 padding-left: 15px;
                 padding-right: 30px;
+                &:hover{
+                    box-shadow: 1px 2px 2px $color-menues;
+                }
+                &:focus ~ i{
+                    color: black;
+                }
                }
-            .enviar{
-                width: fit-content;
-                position: relative;
-                margin-top: 15px;
-                display: flex;
-                align-items: center;
                 
                 i{
                     position: absolute;
                     font-size: 18px;
                     color: $color-sec;
-                    right: 5px;
-                    
-                }
-                .btn_suscribir{
-                    box-sizing: border-box;
-                    height: 24px;
-                    display: block;
-                    padding: 4px 30px 20px 10px;
-                    font-family: $fte-ppal;
-                    background-color: white;
-                    color:$color-sec;
-                    font-weight: bolder;
-                    border: 1px solid $color-sec;
-                    border-radius: 5px;
-                    
-                    &:hover{
-                        box-shadow: 1px 2px 1px rgba(255, 255, 255, 0.534);
-                    }
-                }
-              
-               
-            }
-            
+                    right: 16px;
+                }            
             }
             
         }
@@ -162,7 +167,7 @@ $color-ppal:#fff;
            align-items: center;
            width: 30vw;
            margin-left: 50px;
-           margin-bottom: 40px;
+           padding-bottom: 40px;
            h4{
                color: $color-sec;
                font-family: $fte-ppal;
@@ -172,6 +177,7 @@ $color-ppal:#fff;
            img{
                width: 44px;
                height:28px;
+               margin-right: 20px;
            }
        }
   
