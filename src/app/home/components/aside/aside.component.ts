@@ -15,7 +15,10 @@ categorias:Categoria[];
 
 }
 ngOnInit():void {
-  this.getListaCategorias()
+  this.getListaCategorias();
+
+  
+  
 }
 
 getListaCategorias():void{

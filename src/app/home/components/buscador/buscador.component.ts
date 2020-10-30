@@ -24,6 +24,10 @@ export class BuscadorComponent implements OnInit {
       if (termino!==null && termino!==undefined) {
         this.catalogoservice.getRdoBusqueda(termino).subscribe(response=>
           this.rdosBusqueda=response);
+        let mostrarTermino= document.getElementById("termino-busqueda");
+        mostrarTermino.innerText=termino;
+       let mostrarTerminoRuta= document.getElementById("nombre-busqueda");
+       mostrarTerminoRuta.innerText=termino
       }
     })
   }

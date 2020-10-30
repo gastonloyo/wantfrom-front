@@ -1,12 +1,23 @@
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
+ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
 
 %prop-items-ppales {
-    color:$color-sec;
+    background-color: $color-sec;
+    color:$color-ppal;
 	display: block;
-	padding: 15px 20px;
-    background:white;
+    padding: 15px 20px;
+    &:hover{
+        cursor: default;
+    }
 }
 
 
@@ -17,33 +28,29 @@ a {
     width: 22vw;
     float: left;
     margin-left: 30px;
-    margin-top: 6vh;
+    margin-top: 30px;
+    margin-bottom: 30px;
     .contenedor-menu {
         width: 22vw;
         min-width: 300px;
-        font-family: $fte-ppal;
+        font-family: $fte-sec;
         line-height: 20px;
         .menu{
-            background-color:rgb(255, 255, 255);
-            padding: 9px 7px 40px 7px;
-            border-radius: 25px 0px 25px 25px;
-           
-             li{
+           padding-bottom: 30px;
+           box-shadow:1px 2px 2px $color-ter ;
+           background-color: $color-menues;
+           li{
                  
                  ul{
-                    display: none;
                     li{
-                    background:$color-sec;
-                    color:white;
+                    color:$color-sec;
+                    font-size: 14px;
                     padding-left: 50px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;    
+                    padding-top: 4px;
+                    padding-bottom: 4px;    
                     &:hover{
-                        cursor: default;
-                        background: white;
-                        color:$color-sec;
-                        font-family: $fte-ppal;
-                        } 
+                        cursor: pointer;
+                    }
                     }
                 }
                 .izquierda {
@@ -62,23 +69,11 @@ a {
              }
             
             .filtros{
-                color:$color-sec;
-                display: block;
-                padding: 5px 60px;
-                background:white;
                 font-size: 14px;
                 font-weight: bold;
-                .submenu_estatico{
-                    list-style: none;
-                    padding-left: 30px;
-                    font-weight: normal;
-                    li{
-                        line-height: 30px;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                    }
-                }
+                color:$color-sec;
+                display: block;
+                padding: 5px 60px;             
             }
             
             
@@ -86,7 +81,33 @@ a {
     }
 }
 
-
+.filtro{
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    padding-left: 70px;
+    input{
+        margin-right: 7px;
+    }
+    .pcio{
+        width: 30%;
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 10px;
+    }
+    i{
+        font-size: 1.1em;
+        &:hover{
+           transform:scale(1.1);
+           background-color: $color-menues;
+           color: $color-sec;
+        }
+    }
+}
+.pcio-min-max{
+    display: flex;
+}
 
 ul {
     list-style: none;
@@ -94,20 +115,14 @@ ul {
 
 .contenedor-menu .menu li a {
 	@extend %prop-items-ppales;
-    &:hover{
-        background-color: $color-ppal;
-        color: white;
-    }
+   
 }
 
 #filtros{
     @extend %prop-items-ppales;
 }
 
-.contenedor-menu .menu .activado > a {
-	background: $color-ppal;
-	color:#fff;
-}
+
 
 @media  screen and (max-width: 500px)  {
 .contenedor{

@@ -1,7 +1,12 @@
+<div class="routes">
+    <p><a  [routerLink]="['/home']" title="Home">Inicio </a> > <a href=""> Categoría</a> > <a href=""> Subcategoria </a> > <a href="" id="nombre-busqueda"> </a></p>
+    <span class="cantidad-rdos"><span id="nro-rdos">179</span> resultados</span>
+</div> 
+
 <app-aside></app-aside>
 
 <section class="contenedorProductos">
-    <h2 id="titulo"> Resultados para " "</h2>
+    <h2 id="titulo"> Resultados para  "<span id="termino-busqueda"></span>"</h2>
     <div class="contenedor-grid">
         <div class="tarjetas" *ngFor="let resultado of rdosBusqueda">
             <app-card-grid [producto]="resultado"></app-card-grid>

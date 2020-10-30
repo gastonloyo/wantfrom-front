@@ -1,37 +1,48 @@
-$color-fondo:rgba(45, 123, 224, 0.192);
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
 
-%prop-botones-prod {
-   background-color:$color-sec;
-   font-size: 13px;
-   color: white;
-   font-family: $fte-ppal;
-   border-radius: 5px;
-   border: 0px ;
-   margin-top:5px ;
-   padding: 3px 10px;
-}
 
+ .routes{
+    margin-left: 30px;
+    margin-top: 5px;
+    p{
+        a{
+            text-decoration: none;
+            font-family: $fte-sec;
+            font-size: 14px;
+        } 
+    }
+    .cantidad-rdos{
+        display: block;
+        margin-top: -20px;
+        font-family: $fte-sec;
+        color: $color-ter;
+        font-size: 14px;
+    }
+} 
 
       .contenedorProductos{
         width: 70vw;
-        background-color: #ffffff;
-        font-family: $fte-ppal;
         margin-right:2vw;
-        margin-top: 6vh;
+        margin-top: -30px;
         margin-bottom: 70px;
         border-radius: 7px;
         float: right;
         padding-bottom:25px ;
           h2{ 
-              font-family: $fte-ppal;
+              font-family: $fte-sec;
               color: $color-sec;
               display: block;
-              margin: 25px 0px 10px 17px;
+              margin: 25px 0px 0px 17px;
+              padding-bottom: 10px;
               text-align: left;
-              font-size: 25px;
+              font-size: 23px;
+              border-bottom: 1px solid $color-ter;
           }
           .contenedor-grid{
               display: grid;

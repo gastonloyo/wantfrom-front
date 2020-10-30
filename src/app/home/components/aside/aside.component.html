@@ -2,34 +2,83 @@
 <div class="contenedor-menu">
 		
     <ul class="menu">
-        
-        <li><a href="#"><i class="icono izquierda fas fa-heart" style="color: red;"></i>Favoritos</a></li>
+<!-- 
         <li><a href="#"><i class="icono izquierda fas fa-swatchbook"></i>Categorias<i class="icono derecha fa fa-chevron-down"></i></a>
             <ul class="submenu_lateral" id="submenu_categorias">
                 <li *ngFor="let categoria of categorias">{{categoria.nombre}}</li>
               
             </ul>
-        </li>
-        <li><a href="#"><i class="icono izquierda fas fa-sort-amount-down-alt"></i>Ordenar<i class="icono derecha fa fa-chevron-down"></i></a>
+        </li> -->
+        <li><a href="#"><i class="icono izquierda fas fa-sort-amount-down-alt"></i>Ordenar</a>
             <ul class="submenu_lateral">
-                <li id="masVendidos">Más vendidos</li>
+                <li id="masVendidos">A-Z</li>
                 <li  id="menorPrecio">Menor Precio</li>
                 <li id="mayorPrecio">Mayor Precio</li>
             </ul>
         </li>
         <li id="filtros"><i class="icono izquierda fas fa-sliders-h"></i>Filtros</li>
  
-        
-            <li class="filtros" > Marcas
-                <ol class="submenu_estatico">
-                    <li id="Samsung"> Samsung</li>
-                    <li id="Iphone">  Iphone</li>
-                    <li id="Stanley"> Stanley</li>
-                </ol>
-            </li>
+            <!-- Filtro por marcas  -->
+            <li class="filtros" > Marcas</li>
+            <div class="filtro marca">
+                <input type="checkbox" id="Samsung">
+                <label for="Samsung"> Samsung</label>
+            </div>
+            <div class="filtro marca">
+                <input type="checkbox" id="Stanley">
+                <label for="Stanley"> Stanley</label>
+            </div>
+            <div class="filtro marca">
+                <input type="checkbox" id="iPhone">
+                <label for="iPhone"> iPhone</label>
+            </div>
+            <div class="filtro marca">
+                <input type="checkbox" id="Lenovo">
+                <label for="Lenovo"> Lenovo</label>
+            </div>
+            <!--FIN Filtro por Marca -->
 
+            <!-- filtro Talle  -->
+            <li class="filtros"> Talle</li>
+            
+            <div class="filtro talle">
+                <input type="checkbox" id="S">
+                <label for="S"> S</label>
+            </div>
+            <div class="filtro talle">
+                <input type="checkbox" id="M">
+                <label for="M"> M</label>
+            </div>
+            <div class="filtro talle">
+                <input type="checkbox" id="L">
+                <label for="L"> L</label>
+            </div>
+            <!-- FIN filtro por talle -->
+            <!-- filtro material  -->
+         <li class="filtros">Material</li>
+           <div class="filtro material">
+            <input type="checkbox" id="metal">
+            <label for="metal"> Metal</label>
+         </div>
+        <div class="filtro material">
+            <input type="checkbox" id="Madera">
+            <label for="Madera"> Madera</label>
+        </div>
+            <div class="filtro material">
+                <input type="checkbox" id="PVC">
+                <label for="PVC"> PVC</label>
+            </div>
+            <!-- FIN filtro material  -->
+            
+            
+            <!-- Filtro por precio -->
             <li class="filtros" > Filtrar por precio</li>
-
+            <div class="filtro pcio-min-max">
+                <input class="pcio" type="number" placeholder="Minimo">
+                <input class="pcio" type="number" placeholder="Máximo">
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+            <!-- FIN Filtro por precio -->
         
 </ul>
 </div>
