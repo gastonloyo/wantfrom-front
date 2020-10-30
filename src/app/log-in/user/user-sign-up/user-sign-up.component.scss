@@ -1,12 +1,9 @@
-
 $fte-ppal: 'Poppins', sans-serif;
 $fte-sec: 'Open Sans', sans-serif;
 $color-ppal:#fff;
  $color-sec: rgb(87, 83, 83);
  $color-ter: rgb(172, 165, 165);
  $color-menues: rgb(243, 236, 236);
-
-
 
 section{
     height: 100%;
@@ -204,5 +201,64 @@ section{
         background-color: $color-sec;
     }
      outline: none;
-    
 }  
+
+
+@media  screen and (max-width: 500px)  {
+    section{
+        .fondo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                top: 15px;
+              left: 20px;
+              width: 150px;
+              height: 45px;
+            }
+        }
+        .contenedor-form{
+            padding-top: 20px;
+            padding-bottom: 35px;
+            margin-top: -400px;
+            width: 85vw;
+            height: 280px;
+            #contenedor-registrarse{
+                h2{
+                    font-size: 18px;
+                    i{
+                        font-size: 0.9em;
+                    }
+                }
+                .campo{
+                    i{
+                    font-size: 1em;                  
+                    }
+                   
+                    #email{
+                        margin-top: -5px;
+                        height: 38px;
+                        width: 100%;
+                        font-family: $fte-sec;
+                        font-size: 15px;
+                        padding-left: 40px;
+                        margin-bottom: -8px;    
+                    }
+                    #new-pasw,#new-pasw-repeat{
+                        height: 38px;
+                        padding-left: 40px;
+                       box-sizing: border-box; 
+                       margin-bottom: -8px;
+                       margin-top: -3px;  
+                    }
+                    .fa-eye, .fa-eye-slash{
+                        margin-left: 82%;
+                     }                
+                      #password{
+                        height: 38px;
+                      }
+                }
+            }
+        }
+    }
+}

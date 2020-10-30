@@ -12,18 +12,15 @@
                 <input type="text" id="username" placeholder="Nombre de usuario">
                 <i class="fas fa-user" id="icono-user"></i>
             </div>
-
             <div class="campo">
                 <input type="password" id="password" placeholder="Contraseña">
                 <i class="fas fa-lock" id="icono-lock"></i>
                 <i class="far fa-eye"id="show" (click)="mostrarPsw()"></i>
                 <i class="far fa-eye-slash" id="hide" (click)="mostrarPsw()"></i>
             </div>
-
             <p id="recuperar">¿Olvidaste tu contraseña?</p>
             <input type="submit" value="Entrar" id="btn-entrar" class="boton">
             <input type="submit" value="Registrarme" id="btn-registrar" class="boton"  [routerLink]="['/user-sign-up']" >
-
         </div>
         <div class="separacion" id="is-dos">
             <span class="raya"></span>
