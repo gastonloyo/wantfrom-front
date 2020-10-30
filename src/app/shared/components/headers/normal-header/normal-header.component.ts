@@ -3,9 +3,11 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Router } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
-import { Carrito } from 'src/app/cart/clases/carrito';
-import { CartService } from 'src/app/cart/services/cart.service';
-import { Subcategoria } from 'src/app/products/clases/subcategoria';
+import { MockCarrito } from 'src/app/cart/clases/cart';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
+import { AuthService } from '../../../../log-in/services/auth.service';
+import { CarritoService } from '../../../../cart/services/carrito.service';
+import { Carrito } from '../../../../cart/clases/carrito';
 
 @Component({
   selector: 'app-normal-header',
@@ -13,19 +15,30 @@ import { Subcategoria } from 'src/app/products/clases/subcategoria';
   styleUrls: ['./normal-header.component.scss']
 })
 export class NormalHeaderComponent implements OnInit {
+
   categorias:Categoria[];
 
   //para el numero del carrito
   items: Array<ItemCarrito>;
   totalPrice:number = 0;
   totalQuantity:number = 0;
-  carrito:Carrito;
-  
-  constructor (private catalogoservice:CatalogoService, private router:Router,private _cartService:CartService) {
+  carrito: Carrito;
 
-   }
+  // Para perfil de usuario
+  estaLogueado: boolean;
+  
+  constructor (private catalogoservice:CatalogoService,
+              private router:Router,
+              private _cartService:MockCartService,
+              private authService: AuthService,
+              private carritoService: CarritoService) { }
 
   ngOnInit(): void {
+    this.totalQuantity = this.carritoService.getTotalItems();
+    this.carritoService.totalItemsEmmiter.subscribe(resp => this.totalQuantity = resp)
+
+    this.verificarSesion();
+
     //to keep seeing the scroll and adjust the header opacity
     // window.addEventListener("scroll",this.headerEffect)
  
@@ -33,13 +46,16 @@ export class NormalHeaderComponent implements OnInit {
     this.getListaCategorias();
 
     //cart counter
-   this._cartService.currentDataCart$.subscribe(x=>{
-    if(x) {
-      this.items = x;
-      this.totalQuantity = x.length;
-       this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
-    }
-      })
+    this.carritoService.getCarrito().subscribe(response => {
+      this.totalQuantity = response.carrito.items.length;
+    });
+  //  this._cartService.currentDataCart$.subscribe(x=>{
+  //   if(x) {
+  //     this.items = x;
+  //     this.totalQuantity = x.length;
+  //      this.totalPrice = x.reduce((sum, current) => sum + (current.producto.precio * current.cantidad), 0); 
+  //   }
+  //     })
   }
 
    /***** GET CATEGORIES *****/
@@ -136,5 +152,32 @@ hiddeBgMenu(){
   //     subcategories.style.top="115px"
   //   }
   // }
-   
+  
+  /**
+   * Se encarga de recibir los cambios en la sesión. La primera vez que carga el componente
+   * recibe el estado actual de la sesión, pero esta subscripto a un EventEmitter que notifica
+   * a todos los subscriptores cada vez que se realiza un cambio de estado en la sesión del
+   * usuario.
+   */
+  verificarSesion(): void {
+    this.authService.loggedIn.subscribe(resp => this.estaLogueado = resp);
+    this.estaLogueado = this.authService.isLoggedIn();
+  }
+
+  /**
+   * Valida que el usuario posea el rol para poder visualizar el recurso solicitado.
+   * @param role string rol requerido para mostrar el recurso.
+   */
+  hasRole(role: string): boolean {
+    return this.authService.hasRole(role);
+  }
+
+  /**
+   * Cerrar sesión y eliminar datos de la misma.
+   */
+  logout(): void {
+    this.authService.logout();
+    
+    this.router.navigate(['/home']);
+  }
 }

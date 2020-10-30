@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Carrito } from 'src/app/cart/clases/carrito';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
-import { CartService } from 'src/app/cart/services/cart.service';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -13,7 +13,7 @@ export class CheckoutComponent implements OnInit {
   totalPrice:number ;
   totalQuantity:number;
   carrito:Carrito;
-  constructor(private _cartService:CartService) { 
+  constructor(private _cartService:MockCartService) { 
     this.carrito=new Carrito();
     this.items=[]
   }

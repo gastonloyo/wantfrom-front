@@ -1,23 +1,22 @@
-
-$fte-ppal: 'Poppins', sans-serif;
-$fte-sec: 'Open Sans', sans-serif;
+$fte-ppal: 'Poppins',
+sans-serif;
+$fte-sec: 'Open Sans',
+sans-serif;
 $color-ppal:#fff;
- $color-sec: rgb(87, 83, 83);
- $color-ter: rgb(172, 165, 165);
- $color-menues: rgb(243, 236, 236);
-
-section{
+$color-sec: rgb(87, 83, 83);
+$color-ter: rgb(172, 165, 165);
+$color-menues: rgb(243, 236, 236);
+section {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    .fondo{
-        background: linear-gradient(to bottom, $color-sec ,$color-ter,$color-menues,white);
+    .fondo {
+        background: linear-gradient(to bottom, $color-sec, $color-ter, $color-menues, white);
         height: 80vh;
         width: 100%;
-        img{
+        img {
             width: 200px;
             height: 60px;
             position: absolute;
@@ -25,7 +24,7 @@ section{
             top: 20px;
         }
     }
-    .contenedor-form{
+    .contenedor-form {
         padding-top: 20px;
         padding-bottom: 30px;
         background: $color-menues;
@@ -36,8 +35,7 @@ section{
         margin-top: -460px;
         width: 420px;
         box-shadow: 2px 4px 10px grey;
-
-        .campos-inicio-s{
+        .campos-inicio-s {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -45,7 +43,7 @@ section{
             width: 80%;
             margin-bottom: 10px;
             height: 300px;
-            h2{
+            h2 {
                 font-family: $fte-ppal;
                 text-transform: uppercase;
                 color: $color-sec;
@@ -55,97 +53,94 @@ section{
                 width: 100%;
                 padding-bottom: 5px;
             }
-            .campo{
+            .campo {
                 width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 position: relative;
-                i{
+                i {
                     position: absolute;
                     padding: 13px;
                     font-size: 1.1em;
-                    color: $color-ter;                  
+                    color: $color-ter;
                 }
-                .fa-user{
-                   top: 7.1px;
+                .fa-user {
+                    top: 7.1px;
                 }
-                .fa-eye, .fa-eye-slash{
-                   margin-left: 86%;
+                .fa-eye,
+                .fa-eye-slash {
+                    margin-left: 86%;
                 }
-                .fa-eye-slash{
+                .fa-eye-slash {
                     visibility: hidden;
                 }
-                #username{
-                    margin-top:7px;
+                #username {
+                    margin-top: 7px;
                     height: 44px;
                     width: 100%;
                     font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
-                    &:focus{
+                    &:focus {
                         outline: none;
-                        border:1px solid rgb(180, 170, 170) ;
+                        border: 1px solid rgb(180, 170, 170);
                     }
-                  &:focus~i{
-                      color: rgb(34, 33, 33);
-                  }                  
+                    &:focus~i {
+                        color: rgb(34, 33, 33);
+                    }
                 }
-                #password{
+                #password {
                     height: 44px;
                     width: 100%;
-                   font-family: $fte-sec;
-                   font-size: 15px;
+                    font-family: $fte-sec;
+                    font-size: 15px;
                     padding-left: 40px;
-                   box-sizing: border-box;  
-                   &:focus{
-                   outline: none;
-                   border:1px solid rgb(180, 170, 170) ;
+                    box-sizing: border-box;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid rgb(180, 170, 170);
                     }
-                &:focus~.fa-lock{
-                    color: rgb(34, 33, 33);
-                }
+                    &:focus~.fa-lock {
+                        color: rgb(34, 33, 33);
+                    }
                 }
             }
-            
-           #btn-entrar{
-               margin-top: 5px;
-               margin-bottom: 2px;
-           }
-           
-            p{
+            #btn-entrar {
+                margin-top: 5px;
+                margin-bottom: 2px;
+            }
+            p {
                 align-self: flex-start;
                 font-family: $fte-sec;
                 color: rgb(34, 33, 33);
-                font-size:12px ;
+                font-size: 12px;
                 margin-top: -5px;
                 margin-bottom: 5px;
-                &:hover{
+                &:hover {
                     cursor: pointer;
                 }
             }
         }
-        .separacion{
+        .separacion {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
             width: 80%;
-            p{
+            p {
                 margin-bottom: 0px;
                 display: block;
                 color: rgb(34, 33, 33);
-            font-size: 17px;
+                font-size: 17px;
             }
-            span{
+            span {
                 display: block;
                 border-bottom: 1px solid $color-sec;
                 width: 42%;
-                
-            }   
+            }
         }
-        .social-media{
+        .social-media {
             width: 80%;
             display: flex;
             flex-direction: column;
@@ -153,46 +148,40 @@ section{
             align-items: center;
             height: 90px;
             margin-top: 15px;
-            button{
+            button {
                 width: 100%;
                 height: 40px;
                 // border-radius: 30px;
                 border: none;
                 outline: none;
-                &:hover{
+                &:hover {
                     box-shadow: 1px 2px 2px gray;
                 }
-                a{
+                a {
                     text-decoration: none;
                     color: white;
                     font-family: $fte-sec;
-                    font-size:15px ;
+                    font-size: 15px;
                     display: block;
                     width: 100%;
-                    
-                    i{
+                    i {
                         margin-right: 10px;
                     }
-                    
                 }
-
             }
-            .btn1{
+            .btn1 {
                 background-color: #3b5998;
             }
-            .btn2{
+            .btn2 {
                 background-color: #db4a39;
             }
         }
-        
-        #contenedor-forgot-psw{
-            
-             width: 80%;
-             margin-bottom: 10px;
+        #contenedor-forgot-psw {
+            width: 80%;
+            margin-bottom: 10px;
             display: none;
             height: 230px;
-
-            h2{
+            h2 {
                 font-family: $fte-ppal;
                 text-transform: uppercase;
                 color: $color-sec;
@@ -204,211 +193,203 @@ section{
                 font-size: 23px;
                 display: flex;
                 align-items: center;
-                i{
+                i {
                     font-size: 0.7em;
-                    color:rgb(34, 33, 33);
-                    
+                    color: rgb(34, 33, 33);
                     margin-right: 8px;
                 }
             }
-            p{
+            p {
                 font-family: $fte-sec;
                 color: rgb(34, 33, 33);
                 margin-bottom: -15px;
             }
-            .campo{
+            .campo {
                 width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 position: relative;
-                i{
+                i {
                     position: absolute;
                     padding: 13px;
                     font-size: 1.1em;
-                    color: $color-ter;                    
+                    color: $color-ter;
                 }
-                .fa-user{
-                   top: 7.1px;
+                .fa-user {
+                    top: 7.1px;
                 }
-                #emailPsw{
-                    margin-top:7px;
+                #emailPsw {
+                    margin-top: 7px;
                     height: 44px;
                     width: 100%;
                     font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
-                    &:focus{
+                    &:focus {
                         outline: none;
-                        border:1px solid rgb(180, 170, 170) ;
+                        border: 1px solid rgb(180, 170, 170);
                     }
-                    &:focus~i{
+                    &:focus~i {
                         color: rgb(34, 33, 33);
-                    }                    
+                    }
                 }
-                
             }
         }
     }
-    .footer-is{
-        width:100% ;
+    .footer-is {
+        width: 100%;
         display: flex;
-        justify-content:flex-end;
-       position: absolute;
-       bottom: 0px;
-       background-color: black;
-        a{
-          padding-top: 2px;
-          padding-bottom: 3px;
-          padding-right: 40px;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0px;
+        background-color: black;
+        a {
+            padding-top: 2px;
+            padding-bottom: 3px;
+            padding-right: 40px;
             text-decoration: none;
             color: $color-ppal;
             font-family: $fte-sec;
-            font-size: 13px;          
+            font-size: 13px;
         }
     }
 }
 
-.boton{
+.boton {
     width: 100%;
     height: 40px;
-    background-color:rgb(34, 33, 33);
+    background-color: rgb(34, 33, 33);
     color: white;
-    font-family:$fte-ppal;
+    font-family: $fte-ppal;
     text-transform: uppercase;
     font-size: 16px;
     border: none;
-    &:hover{
+    &:hover {
         box-shadow: 1px 2px 2px gray;
         background-color: $color-sec;
     }
-     outline: none;
-    
+    outline: none;
 }
-.primer{
+
+.primer {
     margin-top: 15px;
 }
 
- @media  screen and (max-width: 500px)  {
-    section{
-    .fondo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            top: 15px;
-          left: 20px;
-          width: 150px;
-          height: 45px;
+@media screen and (max-width: 500px) {
+    section {
+        .fondo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                top: 15px;
+                left: 20px;
+                width: 150px;
+                height: 45px;
+            }
         }
-    }
-    .contenedor-form{
-        padding-top: 20px;
-        padding-bottom: 35px;
-        margin-top: -400px;
-        width: 85vw;
-        .campos-inicio-s{
-            h2{
-                font-size: 19px;
-                margin-bottom: -12px;
+        .contenedor-form {
+            padding-top: 20px;
+            padding-bottom: 35px;
+            margin-top: -400px;
+            width: 85vw;
+            .campos-inicio-s {
+                h2 {
+                    font-size: 19px;
+                    margin-bottom: -12px;
+                }
+                .campo {
+                    i {
+                        font-size: 0.9em;
+                    }
+                    .fa-user {
+                        top: -27px;
+                    }
+                    .fa-lock {
+                        top: -24px
+                    }
+                    .fa-eye,
+                    .fa-eye-slash {
+                        margin-left: 83%;
+                        top: -24px;
+                    }
+                    .fa-eye-slash {
+                        visibility: hidden;
+                    }
+                    #username {
+                        margin-top: -25px;
+                        height: 38px;
+                    }
+                    #password {
+                        height: 38px;
+                        margin-top: -25px;
+                    }
+                }
+                #btn-entrar {
+                    margin-top: -20px;
+                    margin-bottom: -25px;
+                }
+                p {
+                    margin-top: -33px;
+                    margin-bottom: 0px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
-            .campo{
-                i{
-                    font-size: 0.9em;                  
-                }
-                .fa-user{
-                   top: -27px;
-                }
-                .fa-lock{
-                    top: -24px
-                }
-                .fa-eye, .fa-eye-slash{
-                   margin-left: 83%;
-                   top: -24px;
-                }
-                .fa-eye-slash{
-                    visibility: hidden;
-                }
-                #username{
-                  margin-top: -25px;
-                    height: 38px;                
-                }
-                #password{
-                    height: 38px;
-                    margin-top: -25px;
-                }
-            }
-            #btn-entrar{
+            .separacion {
                 margin-top: -20px;
-                margin-bottom: -25px;
+                margin-bottom: -5px;
             }
-             p{
-                 margin-top: -33px;
-                 margin-bottom: 0px;
-                 &:hover{
-                     cursor: pointer;
-                 }
-             }
-        }
-        .separacion{
-            margin-top: -20px;
-            margin-bottom: -5px;
-        }
-        .social-media{
-            height: 80px;
-            button{
-                height: 37px;
+            .social-media {
+                height: 80px;
+                button {
+                    height: 37px;
+                }
+                .btn2 {
+                    margin-top: -15px;
+                }
             }
-            .btn2{
-                margin-top: -15px;
+            #contenedor-forgot-psw {
+                height: 210px;
+                padding-bottom: 0px;
+                h2 {
+                    font-size: 17px;
+                    i {
+                        font-size: 0.8em;
+                    }
+                }
+                p {
+                    margin-top: -30px;
+                    font-size: 14px;
+                    margin-bottom: -30px;
+                }
+                .campo {
+                    width: 100%;
+                    i {
+                        font-size: 1em;
+                    }
+                    .fa-user {
+                        top: 7.1px;
+                    }
+                    #emailPsw {
+                        margin-top: 5px;
+                        height: 38px;
+                        &:focus {
+                            outline: none;
+                            border: 1px solid rgb(180, 170, 170);
+                        }
+                        &:focus~i {
+                            color: rgb(34, 33, 33);
+                        }
+                    }
+                }
             }
         }
-        #contenedor-forgot-psw{
-           height: 210px;
-            padding-bottom: 0px;
-           h2{
-               font-size: 17px;
-               i{
-                   font-size: 0.8em;
-                                  }
-           }
-           p{
-               margin-top: -30px;
-               font-size: 14px;
-               margin-bottom: -30px;
-           }
-           .campo{
-               width: 100%;
-               i{
-                   font-size: 1em;               
-               }
-               .fa-user{
-                  top: 7.1px;
-               }
-               #emailPsw{
-                   margin-top:5px;
-                   height: 38px;
-                   &:focus{
-                       outline: none;
-                       border:1px solid rgb(180, 170, 170) ;
-                   }
-                   &:focus~i{
-                       color: rgb(34, 33, 33);
-                   }                    
-               }
-               
-           }
-          
-       }
+        .footer-is {
+            display: none;
+        }
     }
-    .footer-is{
-        display: none;
-    }
-
-
-}    
- }
-
-        
-    
+}

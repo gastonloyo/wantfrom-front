@@ -1,6 +1,6 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/cart/services/cart.service';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
 import { Producto } from 'src/app/products/clases/producto';
 import { CatalogoService } from 'src/app/products/services/catalogo.service';
@@ -12,7 +12,7 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 })
 export class CardCarouselComponent implements OnInit {
   @Input() producto:Producto
-  constructor(private catalogoservice:CatalogoService,private _cartService:CartService) { }
+  constructor(private catalogoservice:CatalogoService,private _cartService:MockCartService) { }
   infoProducto:Producto;
   oferta:boolean=true;
   destacado:boolean=true;

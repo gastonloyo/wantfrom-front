@@ -1,12 +1,12 @@
-
-$fte-ppal: 'Poppins', sans-serif;
-$fte-sec: 'Open Sans', sans-serif;
+$fte-ppal: 'Poppins',
+sans-serif;
+$fte-sec: 'Open Sans',
+sans-serif;
 $color-ppal:#fff;
- $color-sec: rgb(87, 83, 83);
- $color-ter: rgb(172, 165, 165);
- $color-menues: rgb(243, 236, 236);
-
-header{
+$color-sec: rgb(87, 83, 83);
+$color-ter: rgb(172, 165, 165);
+$color-menues: rgb(243, 236, 236);
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,250 +17,231 @@ header{
     // position: sticky;
     // top:0;
     position: relative;
-     z-index: 5;
+    z-index: 5;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    .contacto{
+    .contacto {
         display: flex;
         justify-content: flex-end;
         width: 97%;
-        border-bottom:1px solid rgba(221, 212, 212, 0.623);
-        padding-top:10px;
+        border-bottom: 1px solid rgba(221, 212, 212, 0.623);
+        padding-top: 10px;
         padding-bottom: 5px;
-        a{
+        a {
             text-decoration: none;
-        
-            i{
-                color:$color-ter;
+            i {
+                color: $color-ter;
                 font-size: 1.2em;
                 margin-left: 20px;
-                &:hover{
+                &:hover {
                     color: $color-sec;
                 }
-            }         
+            }
         }
     }
-    
-    .menu-header{
+    .menu-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        .logo{
+        .logo {
             width: 15vw;
-            a{
-                img{
-                width: 215px;
-                height: 72px;
-                margin-left: 25px;
-                } 
+            a {
+                img {
+                    width: 215px;
+                    height: 72px;
+                    margin-left: 15px;
+                }
             }
         }
-        #fila-header{
-        display: flex;
-        justify-content: space-between;
-        align-items:center;
-        width: 80%;
+        #fila-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 83%;
             /////// menu ///////
-            nav{
+            nav {
                 display: block;
                 align-self: center;
                 height: fit-content;
-                ul{ // para todos los ul menu y submenu
+                ul {
+                    // para todos los ul menu y submenu
                     list-style: none;
                     font-family: $fte-ppal;
                     font-size: 16px;
-                    margin-bottom: 0; 
-                }  
-                .menu{
-                        display: flex;
-                        justify-content: space-around;
-                        width: 18vw;
-                        li{
-                            
-                            a{
-                                text-decoration: none;
-                                background-image: linear-gradient(currentColor, currentColor);
-                                background-position: 0% 100%;
-                                background-repeat: no-repeat;
-                                background-size: 0% 2px;
-                                transition: background-size .3s;
+                    margin-bottom: 0;
+                }
+                .menu {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 18vw;
+                    li {
+                        a {
+                            text-decoration: none;
+                            background-image: linear-gradient(currentColor, currentColor);
+                            background-position: 0% 100%;
+                            background-repeat: no-repeat;
+                            background-size: 0% 2px;
+                            transition: background-size .3s;
+                            color: $color-sec;
+                            &:visited {
                                 color: $color-sec;
-                                &:visited{
-                                    color: $color-sec;
-                                }
-                                &:hover{
-                                    background-size: 100% 2px;
-                                }
-                                &:focus{
-                                    background-size: 100% 2px;
-                                }
-                            }        
+                            }
+                            &:hover {
+                                background-size: 100% 2px;
+                            }
+                            &:focus {
+                                background-size: 100% 2px;
+                            }
                         }
                     }
-                
-            }
-            ///// icono menu hamburguesa///
-            #menu{
-                display: none;
-            }
-            //// buscador ////
-            .buscador{
-                .barraDeBusqueda{
-                    border: 1px solid rgb(199, 195, 195);
-                    width:39vw;
-                    box-sizing: content-box;
-                    height: 40px;
-                    border-radius: 30px 4px 4px 30px; 
-                    color: black;
-                    font-family: $fte-ppal;
-                    font-size: 16px;
-                    padding-left: 15px;
-                    padding-right: 30px;
-                     background-color: $color-menues;
-                   
-                    
-                    &:focus{
-                        outline: none;
-                        border: 1px solid rgba(43, 41, 41, 0.582);
-                        box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
-                    }
-                    &:hover{
-                    
-                        cursor: text;
-                    } 
                 }
-                .btn-lupa{
-                    background-color:" ";
-                    border: none;
-                    .fa-search {
-                        margin-left: -2.5vw;
-                        color: rgb(95, 93, 93);
-                    }
-                }
-                
-            
             }
-            ////iconos////
-            #contenedor_iconos{
+        }
+        ///// icono menu hamburguesa///
+        #menu {
+            display: none;
+        }
+        //// buscador ////
+        .buscador {
+            .barraDeBusqueda {
+                width: 36vw;
+                box-sizing: content-box;
+                height: 40px;
+                border-radius: 30px 4px 4px 30px;
+                border: 1px solid rgb(199, 195, 195);
+                color: black;
+                font-family: $fte-ppal;
+                font-size: 16px;
+                padding-left: 15px;
+                padding-right: 30px;
+                margin-left: -20px;
+                background-color: $color-menues;
+                &:focus {
+                    outline: none;
+                    border: 1px solid rgba(43, 41, 41, 0.582);
+                    box-shadow: 3px 2px 3px rgba(255, 255, 255, 0.466);
+                }
+                &:hover {
+                    cursor: text;
+                }
+            }
+            .btn-lupa {
+                background-color: " ";
+                border: none;
+                .fa-search {
+                    margin-left: -2.5vw;
+                    color: rgb(95, 93, 93);
+                }
+            }
+        }
+        ////iconos////
+        #contenedor_iconos {
+            display: flex;
+            justify-content: space-between;
+            width: 21vw;
+            align-items: baseline;
+            .iconos {
                 display: flex;
-                justify-content: space-around;
-                width: 12vw;
-                align-items: baseline;
+                flex-direction: column;
+                width: 19.5vw;
                 margin-right: 20px;
-                
-                .iconos {
-                    display: flex;
-                    flex-direction: column;
-                    width: 12.5vw;
-                    margin-right: 20px;
-                    align-items: center;   
-                    outline: none; 
-                    align-self: baseline;
-                    margin-top: 13px;
-                    position: relative;
-
-                    i{
-                        color: $color-sec;
-                        font-size: 1.4em;
-                        margin-bottom: 5px;
-                        &:hover{
-                            transform: scale(1.1);
-                            cursor: pointer;
-                        } 
-                    }
-                    .fa-user-circle{
-                        font-size: 1.9em;
-                    }
-                    p{
-                        font-family: $fte-ppal;
-                        font-size: 10px;
-                        color: $color-sec;
+                align-items: center;
+                align-self: baseline;
+                margin-top: 13px;
+                position: relative;
+                i {
+                    color: $color-sec;
+                    font-size: 1.4em;
+                    margin-bottom: 5px;
+                    &:hover {
+                        transform: scale(1.1);
                         cursor: pointer;
                     }
-                
-                    .circulo {
-                        background-color: rgb(187, 24, 24);
-                        border-radius: 20px;
-                        width: 15px;
-                        height: 15px;
-                        top: -5px;
-                        left: 34px;
-                        position: absolute;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        span{
-                            
-                            font-weight: normal;
-                            display: block;
-                            color: $color-ppal;
-                            text-align: center;
-                            font-size: 12px;
-                            margin-top: -2px; 
-                        }
+                }
+                .fa-user-circle {
+                    font-size: 1.9em;
+                }
+                p {
+                    font-family: $fte-ppal;
+                    font-size: 10px;
+                    color: $color-sec;
+                    cursor: pointer;
+                    text-align: center;
+                    line-height: 10px
+                }
+                .circulo {
+                    background-color: rgb(187, 24, 24);
+                    border-radius: 20px;
+                    width: 15px;
+                    height: 15px;
+                    top: -5px;
+                    left: 34px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        font-weight: normal;
+                        display: block;
+                        color: $color-ppal;
+                        text-align: center;
+                        font-size: 12px;
+                        margin-top: -2px;
                     }
-                    
-                    
                 }
-                .notificaciones{
-                    display: none;
-                }
-                .menu{
-                    display: none; 
-                }
-
+            }
+            .menu {
+                display: none;
             }
         }
     }
 }
+
 //////////// user Options //////
-#userOptions{
+#userOptions {
     position: absolute;
     z-index: 4;
-    right: 25px;
+    right: 10px;
     background-color: $color-menues;
-    width: 190px;
+    width: 200px;
     border-radius: 0px 0px 10px 10px;
     padding-bottom: 10px;
     padding-top: 10px;
     list-style: none;
     display: none;
     cursor: pointer;
-    a{
+    a {
         text-decoration: none;
     }
-    li{
-        background-color:$color-menues;
+    li {
+        background-color: $color-menues;
         font-size: 16px;
-        color:$color-sec;
+        color: $color-sec;
         width: 100%;
-        padding:7px 23px ;
+        padding: 7px 23px;
         box-sizing: border-box;
         font-family: $fte-ppal;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-transform: uppercase;
-        &:hover{
+        &:hover {
             background-color: $color-sec;
             color: $color-ppal;
             cursor: pointer;
         }
-        &:hover >i{
+        &:hover>i {
             font-size: 1em;
         }
-        i{
+        i {
             font-size: 0.8em;
             margin-bottom: 3px;
         }
-     
     }
 }
 
-//// bg menu abierto
-.bg-menu{
+.bg-menu {
     width: 100%;
     height: 100vh;
     background-color: rgba(31, 27, 27, 0.26);
@@ -272,152 +253,105 @@ header{
 }
 
 // categorias y subcategorias
-.contenedor-categorias{
-    .submenu{
-    display: none;
-    width: 210px;
-    background-color:$color-menues;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border-radius: 0px 0px 10px 10px;   
-  position: absolute;
-    left: 10vw;
-    z-index: 4;
-//    top: 115px;        
-    li{
-        background-color:$color-menues;
-        font-size: 16px;
-        color:$color-sec;
-        width: 100%;
-        padding:7px 23px ;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-transform: uppercase;
-        &:hover{
-            color:$color-ppal;
-            background-color: $color-sec;
-            cursor: default;
+.contenedor-categorias {
+    .submenu {
+        display: none;
+        width: 210px;
+        background-color: $color-menues;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        border-radius: 0px 0px 10px 10px;
+        position: absolute;
+        left: 10vw;
+        z-index: 4;
+        //    top: 115px;        
+        li {
+            background-color: $color-menues;
+            font-size: 16px;
+            color: $color-sec;
+            width: 100%;
+            padding: 7px 23px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            &:hover {
+                color: $color-ppal;
+                background-color: $color-sec;
+                cursor: default;
             }
-        &:hover>i{
-            transform: rotate(-90deg);
-            transition-duration: 0.5s;
-            cursor: default;
+            &:hover>i {
+                transform: rotate(-90deg);
+                transition-duration: 0.5s;
+                cursor: default;
             }
-    } 
-    }
-    #container-sub{
-    background: $color-menues;
-    width: 30vw;
-    height: fit-content;
-    position: absolute;
-    // top: 115px;
-    left: 24vw;
-    z-index: 3;
-    border-radius: 0px 0px 10px 0px;
-    height: 200px;
-    display: none;
-    li{
-        color: $color-sec;
-        font-family: $fte-sec;
-        list-style: none;
-    }
         }
     }
+    #container-sub {
+        background: $color-menues;
+        width: 30vw;
+        height: fit-content;
+        position: absolute;
+        // top: 115px;
+        left: 24vw;
+        z-index: 3;
+        border-radius: 0px 0px 10px 0px;
+        height: 200px;
+        display: none;
+        li {
+            color: $color-sec;
+            font-family: $fte-sec;
+            list-style: none;
+        }
+    }
+}
 
-
-
-@media  screen and (max-width: 500px)  {
-    header{
+@media screen and (max-width: 500px) {
+    header {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         height: 100px;
         padding-bottom: 15px;
-        padding-top: 5px;
-        .logo{
-            width: 15vw;
-            a{
-                img{
-                width: 160px;
-                height: 55px;
-                margin-left: 0px;
-                } 
-            }
-        }
-        #fila-header{
-            width: 93%;
+        border-radius: 0px 0px 10px 10px;
+        position: absolute;
+        left: 10vw;
+        z-index: 4;
+        //    top: 115px;        
+        li {
+            background-color: $color-menues;
+            font-size: 16px;
+            color: $color-sec;
+            width: 100%;
+            padding: 7px 23px;
+            box-sizing: border-box;
+            display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            padding-left: 24px;
-            padding-left: 0px;
-           
-            nav{
-                /////// menu ///////
-            display: none;
-        
+            align-items: center;
+            text-transform: uppercase;
+            &:hover {
+                color: $color-ppal;
+                background-color: $color-sec;
+                cursor: default;
             }
-            .iconos{
-                display: initial;
-                flex-direction:initial;
-                width:auto;
-                margin-right: 0px; 
-            }
-            .menu{
-                display: initial;
-                i{
-                    color: white;
-                    font-size: 1.5em;
-                }
-            }
-            .buscador{
-                //// buscador /////
-                .barraDeBusqueda{
-                    width:53vw;
-                    height: 28px;
-                    font-size: 16px;
-                    padding-left: 35px;
-                    padding-right: 30px;
-                    margin-left: 2px;
-                }
-                .btn-lupa{
-                    .fa-search {
-                        margin-left: -12vw;
-                    }
-                }
-            }
-            #contenedor_iconos{
-                    ////iconos////
-                display: initial;
-                width: fit-content;
-                margin-top: 0px;
-                .iconos {
-                    display: initial;
-                    flex-direction:initial;
-                    width:auto;
-                    margin-right: 0px;  
-                    p{
-                        display: none;
-                    }                 
-                }
-                .notificaciones{
-                    display: none;
-                }
-                .miperfil{
-                    position: absolute;
-                    top: 20px;
-                    right: 3.5%;
-                    a{
-                        i{
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-        
+            &:hover>i {
+                transform: rotate(-90deg);
+                transition-duration: 0.5s;
+                cursor: default;
             }
         }
     }
-
+    #container-subcategories {
+        background: rgba(255, 255, 255, 0.966);
+        width: 30vw;
+        height: fit-content;
+        position: absolute;
+        // top: 115px;
+        left: 28vw;
+        z-index: 3;
+        border-radius: 0px 0px 10px 0px;
+        display: none;
+    }
 }

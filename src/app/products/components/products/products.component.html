@@ -1,44 +1,54 @@
 <section class="contenedorProductos">
-  
-<article class="cont-destacados">
-    <h2>Productos Destacados</h2>
-    <div class="contenedor-principal">
-        <button role="button" id="flecha-izquierda-fila1" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-        <div class="contenedor-carousel" id="contenedor-carouselDestacados">
-            <div class="carousel">
-                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
-                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+    <article class="cont-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="contenedor-principal">
+            <button role="button" id="flecha-izquierda-fila1" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+            <div class="contenedor-carousel" id="contenedor-carouselDestacados">
+                <div class="carousel">
+                    <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                        <app-card-carousel [producto]="destacado"></app-card-carousel>
+                    </div>
                 </div>
+                <button class=" button featured next" id="next">></button>
             </div>
+
+            <button role="button" id="flecha-derecha-fila1" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
+        <div class="indicadores">
 
-        <button role="button" id="flecha-derecha-fila1" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
-    </div>
-    <div class="indicadores">
-      
-    </div>
-</article>
+        </div>
+    </article>
 
-<article class="cont-ofertas">
-    <h2 id="section-ofertas">Ofertas</h2>
-    <div class="contenedor-principal">
-        <button role="button" id="flecha-izquierda-fila2" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+    <!-- <article class="cont-ofertas">
+        <h2 id="section-ofertas">Ofertas</h2>
+        <div class="contenedor-principal">
+            <button role="button" id="flecha-izquierda-fila2" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-        <div class="contenedor-carousel" id="contenedor-carouselOfertas">
-            <div class="carousel">
-                <div class="tarjetas" *ngFor="let destacado of productosDestacados">
-                    <app-card-carousel [producto]="destacado"></app-card-carousel>
+        </div>
+    </article> -->
+
+    <article class="cont-ofertas">
+        <h2>Ofertas</h2>
+        <div class="contenedor-principal">
+            <button role="button" id="flecha-izquierda-fila2" class="flecha flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+            <div class="contenedor-carousel" id="contenedor-carouselOfertas">
+                <div class="carousel">
+                    <div class="tarjetas" *ngFor="let destacado of productosDestacados">
+                        <app-card-carousel [producto]="destacado"></app-card-carousel>
+                    </div>
                 </div>
+                <button class=" button ofertas next" id="nextOfertas">></button>
             </div>
+
+            <button role="button" id="flecha-derecha-fila2" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
-        
-        <button role="button" id="flecha-derecha-fila2" class="flecha flecha-derecha"><i class="fas fa-angle-right"></i></button>
-    </div>
-    <div class="indicadores-ofertas">
-      
-    </div>
-</article>
+        <div class="indicadores-ofertas">
+
+        </div>
+    </article>
     <!-- banner beneficios-->
     <app-benefits-row></app-benefits-row>
     <!--FIN banner beneficios-->
@@ -49,7 +59,7 @@
 
         <div class="card-c" id="card-c" *ngFor="let categoria of categorias">
             <img src="https://limpiezademalaga.es/wp-content/uploads/2020/07/GettyImages-513631128-compressed.jpg" alt="">
-               
+
             <h3>{{categoria.nombre}}</h3>
         </div>
     </div>

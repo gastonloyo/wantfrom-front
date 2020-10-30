@@ -1,21 +1,22 @@
-$fte-ppal: 'Poppins', sans-serif;
-$fte-sec: 'Open Sans', sans-serif;
+$fte-ppal: 'Poppins',
+sans-serif;
+$fte-sec: 'Open Sans',
+sans-serif;
 $color-ppal:#fff;
- $color-sec: rgb(87, 83, 83);
- $color-ter: rgb(172, 165, 165);
- $color-menues: rgb(243, 236, 236);
-
-section{
+$color-sec: rgb(87, 83, 83);
+$color-ter: rgb(172, 165, 165);
+$color-menues: rgb(243, 236, 236);
+section {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .fondo{
-        background: linear-gradient(to bottom, $color-sec ,$color-ter,$color-menues,white);
+    .fondo {
+        background: linear-gradient(to bottom, $color-sec, $color-ter, $color-menues, white);
         height: 80vh;
         width: 100%;
-        img{
+        img {
             width: 200px;
             height: 60px;
             position: absolute;
@@ -23,7 +24,7 @@ section{
             top: 20px;
         }
     }
-    .contenedor-form{
+    .contenedor-form {
         padding-top: 20px;
         padding-bottom: 30px;
         background-color: $color-menues;
@@ -34,18 +35,17 @@ section{
         margin-top: -440px;
         width: 420px;
         box-shadow: 2px 4px 10px grey;
-
-        #contenedor-registrarse{
+        #contenedor-registrarse {
             width: 80%;
             height: 270px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            h2{
+            h2 {
                 font-family: $fte-ppal;
-               text-transform: uppercase;
-               font-size: 23px;
+                text-transform: uppercase;
+                font-size: 23px;
                 color: $color-sec;
                 align-self: flex-start;
                 display: block;
@@ -54,209 +54,213 @@ section{
                 padding-bottom: 5px;
                 display: flex;
                 align-items: center;
-                i{
-                    font-size:0.7em;
-                    color:rgb(34, 33, 33);
+                i {
+                    font-size: 0.7em;
+                    color: rgb(34, 33, 33);
                     margin-right: 8px;
                     outline: none;
                 }
             }
-            .campo{
+            .campo {
                 width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 position: relative;
-                i{
-                position: absolute;
-                padding: 13px;
-                font-size: 1.1em;
-                color: grey;                    
+                i {
+                    position: absolute;
+                    padding: 13px;
+                    font-size: 1.1em;
+                    color: grey;
                 }
-                .fa-user{
-                   top: 7.1px;
+                .fa-user {
+                    top: 7.1px;
                 }
-                #email{
-                    margin-top:7px;
+                #email {
+                    margin-top: 7px;
                     height: 44px;
                     width: 100%;
                     font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
-                    &:focus{
+                    &:focus {
                         outline: none;
-                        border:1px solid rgb(180, 170, 170) ;
-                    } 
-                    &:focus~i{
+                        border: 1px solid rgb(180, 170, 170);
+                    }
+                    &:focus~i {
                         color: rgb(34, 33, 33);
-                    }                     
+                    }
                 }
-                #new-pasw,#new-pasw-repeat{
+                #new-pasw,
+                #new-pasw-repeat {
                     height: 44px;
                     width: 100%;
-                   font-family: $fte-sec;
-                   font-size: 15px;
+                    font-family: $fte-sec;
+                    font-size: 15px;
                     padding-left: 40px;
-                   box-sizing: border-box;  
-                   &:focus{
-                   outline: none;
-                   border:1px solid rgb(180, 170, 170) ;    
+                    box-sizing: border-box;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid rgb(180, 170, 170);
                     }
-                    &:focus~i{
+                    &:focus~i {
                         color: rgb(34, 33, 33);
-                    } 
+                    }
                 }
-                .fa-eye, .fa-eye-slash{
+                .fa-eye,
+                .fa-eye-slash {
                     margin-left: 86%;
-                 }
-                 .fa-eye-slash{
-                     visibility: hidden;
-                 }                
-                 #username{
-                    margin-top:7px;
+                }
+                .fa-eye-slash {
+                    visibility: hidden;
+                }
+                #username {
+                    margin-top: 7px;
                     height: 44px;
                     width: 100%;
                     font-family: $fte-sec;
                     font-size: 15px;
                     padding-left: 40px;
                     box-sizing: border-box;
-                    &:focus{
+                    &:focus {
                         outline: none;
-                        border:1px solid rgb(180, 170, 170) ;
-                    }                  
-                  }
-                  #password{
+                        border: 1px solid rgb(180, 170, 170);
+                    }
+                }
+                #password {
                     height: 44px;
                     width: 100%;
-                   font-family: $fte-sec;
-                   font-size: 15px;
+                    font-family: $fte-sec;
+                    font-size: 15px;
                     padding-left: 40px;
-                   box-sizing: border-box;  
-                   &:focus{
-                   outline: none;
-                   border:1px solid rgb(180, 170, 170) ;
+                    box-sizing: border-box;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid rgb(180, 170, 170);
                     }
-                  }
+                }
             }
         }
-        #msje-registro{
+        #msje-registro {
             font-family: $fte-sec;
             color: rgb(34, 33, 33);
             text-align: center;
             display: none;
             margin-top: auto;
             margin-bottom: auto;
-            span{
+            span {
                 font-size: 16px;
                 color: $color-sec;
             }
-            #name , #lastname{
-                margin-top:7px;
+            #name,
+            #lastname {
+                margin-top: 7px;
                 height: 39px;
                 width: 100%;
                 font-family: $fte-sec;
                 font-size: 15px;
                 padding-left: 20px;
                 box-sizing: border-box;
-                &:focus{
+                &:focus {
                     outline: none;
-                    border:1px solid rgb(180, 170, 170) ;
+                    border: 1px solid rgb(180, 170, 170);
                 }
             }
-            #lastname{
+            #lastname {
                 margin-bottom: 10px;
             }
         }
     }
-    .footer-is{
-        width:100% ;
+    .footer-is {
+        width: 100%;
         display: flex;
-        justify-content:flex-end;
-       position: absolute;
-       bottom: 0px;
-       background-color: black;
-        a{
-          padding-top: 2px;
-          padding-bottom: 3px;
-          padding-right: 40px;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0px;
+        background-color: black;
+        a {
+            padding-top: 2px;
+            padding-bottom: 3px;
+            padding-right: 40px;
             text-decoration: none;
             color: $color-ppal;
             font-family: $fte-sec;
-            font-size: 13px;          
+            font-size: 13px;
         }
     }
-}  
-.boton{
+}
+
+.boton {
     width: 100%;
     height: 40px;
-    background-color:rgb(34, 33, 33);
+    background-color: rgb(34, 33, 33);
     color: white;
-    font-family:$fte-ppal;
+    font-family: $fte-ppal;
     text-transform: uppercase;
     font-size: 16px;
     border: none;
-    &:hover{
+    &:hover {
         box-shadow: 1px 2px 2px gray;
         background-color: $color-sec;
     }
-     outline: none;
-}  
+    outline: none;
+}
 
-
-@media  screen and (max-width: 500px)  {
-    section{
-        .fondo{
+@media screen and (max-width: 500px) {
+    section {
+        .fondo {
             display: flex;
             justify-content: center;
             align-items: center;
-            img{
+            img {
                 top: 15px;
-              left: 20px;
-              width: 150px;
-              height: 45px;
+                left: 20px;
+                width: 150px;
+                height: 45px;
             }
         }
-        .contenedor-form{
+        .contenedor-form {
             padding-top: 20px;
             padding-bottom: 35px;
             margin-top: -400px;
             width: 85vw;
             height: 280px;
-            #contenedor-registrarse{
-                h2{
+            #contenedor-registrarse {
+                h2 {
                     font-size: 18px;
-                    i{
+                    i {
                         font-size: 0.9em;
                     }
                 }
-                .campo{
-                    i{
-                    font-size: 1em;                  
+                .campo {
+                    i {
+                        font-size: 1em;
                     }
-                   
-                    #email{
+                    #email {
                         margin-top: -5px;
                         height: 38px;
                         width: 100%;
                         font-family: $fte-sec;
                         font-size: 15px;
                         padding-left: 40px;
-                        margin-bottom: -8px;    
+                        margin-bottom: -8px;
                     }
-                    #new-pasw,#new-pasw-repeat{
+                    #new-pasw,
+                    #new-pasw-repeat {
                         height: 38px;
                         padding-left: 40px;
-                       box-sizing: border-box; 
-                       margin-bottom: -8px;
-                       margin-top: -3px;  
+                        box-sizing: border-box;
+                        margin-bottom: -8px;
+                        margin-top: -3px;
                     }
-                    .fa-eye, .fa-eye-slash{
+                    .fa-eye,
+                    .fa-eye-slash {
                         margin-left: 82%;
-                     }                
-                      #password{
+                    }
+                    #password {
                         height: 38px;
-                      }
+                    }
                 }
             }
         }

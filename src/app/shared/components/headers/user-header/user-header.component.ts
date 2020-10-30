@@ -3,8 +3,8 @@ import { CatalogoService } from 'src/app/products/services/catalogo.service';
 import { Categoria } from 'src/app/products/clases/categoria';
 import { Router } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
-import { Carrito } from 'src/app/cart/clases/carrito';
-import { CartService } from 'src/app/cart/services/cart.service';
+import { MockCarrito } from 'src/app/cart/clases/cart';
+import { MockCartService } from 'src/app/cart/services/mock-cart.service';
 @Component({
   selector: 'app-user-header',
   templateUrl: './user-header.component.html',
@@ -18,10 +18,10 @@ export class UserHeaderComponent implements OnInit {
   items: Array<ItemCarrito>;
   totalPrice:number = 0;
   totalQuantity:number = 0;
-  carrito:Carrito;
+  carrito:MockCarrito;
   
-  constructor(private catalogoservice:CatalogoService, private router:Router,private _cartService:CartService) { 
-    this.carrito=new Carrito();
+  constructor(private catalogoservice:CatalogoService, private router:Router,private _cartService:MockCartService) { 
+    this.carrito=new MockCarrito();
   }
 
   ngOnInit(): void {

@@ -9,17 +9,23 @@ import { UserSignUpComponent } from './log-in/user/user-sign-up/user-sign-up.com
 import { ShoppingCartComponent } from './cart/components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './cart/components/checkout/checkout/checkout.component';
 import { PreCheckoutComponent } from './cart/components/checkout/pre-checkout/pre-checkout.component';
+import { Oauth2RedirectHandlerComponent } from './log-in/oauth2/oauth2-redirect-handler/oauth2-redirect-handler.component';
+import { PruebaComponent } from './prueba/prueba/prueba.component';
+import { AuthGuard } from './log-in/guards/auth.guard';
+import { RoleGuard } from './log-in/guards/role.guard';
 
 const routes: Routes = [
 {path:"home",component:HomeComponent},
-{path: "viewmore/:id", component:ViewMoreComponent},
-{path: "userLogIn", component:UserLoginComponent},
+{path:"viewmore/:id", component:ViewMoreComponent},
+{path:"userLogIn", component:UserLoginComponent},
+{path:'oauth2/redirect', component: Oauth2RedirectHandlerComponent},
 {path:"search/:termino", component:BuscadorComponent},
 {path:"user-profile",component:UserProfileComponent},
 {path:"user-sign-up",component:UserSignUpComponent},
 {path:"shopping-cart",component:ShoppingCartComponent},
 {path:"checkout",component:CheckoutComponent},
 {path:"pre-checkout", component:PreCheckoutComponent},
+{path:'test', component: PruebaComponent, canActivate: [AuthGuard]},
 {path:"**", pathMatch:"full", redirectTo:"home"}
 ];
 

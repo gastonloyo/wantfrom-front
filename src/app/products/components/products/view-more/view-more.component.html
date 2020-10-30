@@ -1,7 +1,7 @@
-<div id="contenedor-vermas">  
+<div id="contenedor-vermas">
     <div class="routes">
-        <p><a  [routerLink]="['/home']" title="Home">Inicio </a> > <a href=""> {{infoProducto.categoria.nombre}}</a> > <a href=""> Subcategoria </a> > <a href="">{{infoProducto.nombre}} </a></p>
-    </div> 
+        <p><a [routerLink]="['/home']" title="Home">Inicio </a> > <a href=""> {{infoProducto.categoria.nombre}}</a> > <a href=""> Subcategoria </a> > <a href="">{{infoProducto.nombre}} </a></p>
+    </div>
     <section>
         <article class="contenedor-uno">
             <div id="izquierda">
@@ -12,26 +12,26 @@
                     <div id="img-cuatro"></div>
                     <div id="img-cinco"></div>
                     <div id="img-seis"></div>
-                </div> 
+                </div>
                 <div id="img-ppal">
-                 
-                </div> 
+
+                </div>
             </div>
             <div id="derecha">
                 <div id="caja-titulo">
                     <h2>{{infoProducto.nombre}} </h2>
                     <div class="iconos-detalle-producto">
-                        <a title="Agregar a Favoritos" > <i class=" iconos far fa-heart"></i></a>
-                        <a title="Copiá este link!" >  <i class="iconos fas fa-link"></i></a>
-                     </div>
-                 
+                        <a title="Agregar a Favoritos"> <i class=" iconos far fa-heart"></i></a>
+                        <a title="Copiá este link!"> <i class="iconos fas fa-link"></i></a>
+                    </div>
+
                 </div>
                 <div id="caja-precio">
                     <h3>${{infoProducto.precio}}</h3>
                     <div class="oferta">
-                    <span>${{infoProducto.precio + 1900}}</span>
-                    <p>20% 0FF</p>
-                </div>
+                        <span>${{infoProducto.precio + 1900}}</span>
+                        <p>20% 0FF</p>
+                    </div>
                 </div>
                 <div id="caja-carrito">
                     <div class="color-quantity">
@@ -39,10 +39,10 @@
                             <!-- <i class="fas fa-minus-circle" (click)="removeOne(items.cantidad"></i>
                             <span class="item-quantity">  {{items.cantidad}}</span>
                             <i class="fas fa-plus-circle" (click)="addOne(item.cantidad)"></i> -->
-                            <i class="fas fa-minus-circle" ></i>
+                            <i class="fas fa-minus-circle"></i>
                             <span class="item-quantity">  1</span>
-                            <i class="fas fa-plus-circle" ></i>
-                          </div>
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
                         <select id="color">
                             <option >-Color-</option>
                             <option value="negro">{{infoProducto.color}}</option>
@@ -82,38 +82,38 @@
                     </div>
                     <hr>
                     <p>Costo de envío se informará al realizar la operación.</p>
-                    <button  (click)="addCart(infoProducto)" class="btn"id="btn-carrito" >Agregar al Carrito</button>
-                    <button  (click)="addCart(infoProducto)"class="btn" id="btn-comprar" >Comprar ahora</button>
-                   
+                    <button (click)="agregarCarrito(infoProducto.id)" id="btn-carrito">Agregar al Carrito</button>
+                    <button (click)="agregarCarrito(infoProducto.id)" class="btn" id="btn-comprar">Comprar ahora</button>
+
                 </div>
-                
+
             </div>
         </article>
         <article class="contenedor-dos">
             <div id="datos">
-                <p>Marca:     {{infoProducto.marca.nombre}}</p>
+                <p>Marca: {{infoProducto.marca?.nombre}}</p>
                 <p>Modelo:</p>
-               
+
                 <p>Disponible: <span *ngIf="stock">Si</span> <span *ngIf="!stock">No</span> </p>
 
             </div>
-            <div id="descripcion-producto" >
+            <div id="descripcion-producto">
                 <h3>Descripción </h3>
-                <p >{{infoProducto.descripcion}}</p>
+                <p>{{infoProducto.descripcion}}</p>
             </div>
         </article>
 
         <article class="contenedor-tres" id="contenedor-tres">
             <p id="titulo-a">¿Tenés alguna pregunta?</p>
-            
-           <textarea  name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+            <textarea name="pregunta" id="pregunta" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
             <div id="contenedorCartel">
                 <p id="cartel">Estamos para despejar todas tus dudas, dejános tu consulta</p>
             </div>
             <button type="submit" id="enviarMsg">
                 <i class="fas fa-paper-plane"></i>
             </button>
-           
+
         </article>
     </section>
-</div> 
+</div>

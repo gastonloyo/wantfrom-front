@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Carrito } from 'src/app/cart/clases/carrito';
+import { MockCarrito } from 'src/app/cart/clases/cart';
 import { ItemCarrito } from '../clases/item-carrito';
 import { Producto } from 'src/app/products/clases/producto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
+export class MockCartService {
   private cart = new BehaviorSubject<Array<ItemCarrito>>(null); 
   public currentDataCart$ = this.cart.asObservable();
-  carrito:Carrito;
+  carrito:MockCarrito;
 
   constructor() {
-    this.carrito=new Carrito()
+    this.carrito=new MockCarrito()
    }
   //**Esta función se encarga de recibir el item que debemos agregar al carrito, nos fijamos si ya existe aumentamos su cantidad, sino lo agregamos y volvemos a enviar el valor a todos los observers
   public changeCart(newData: ItemCarrito) {

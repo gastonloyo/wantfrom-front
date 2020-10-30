@@ -12,6 +12,10 @@ export class AppComponent {
   admin:boolean=false;
 
   constructor(public router: Router){
+    
+  }
 
+  onActivate(event) {
+    window.scroll(0, 0);
   }
 }
