@@ -1,7 +1,11 @@
-$color-fondo:rgba(45, 123, 224, 0.192);
+
 $fte-ppal: 'Poppins', sans-serif;
-$color-ppal: rgb(45, 123, 224);
-$color-sec:rgb(16, 61, 119);
+$fte-sec: 'Open Sans', sans-serif;
+$color-ppal:#fff;
+ $color-sec: rgb(87, 83, 83);
+ $color-ter: rgb(172, 165, 165);
+ $color-menues: rgb(243, 236, 236);
+
 
 section{
     display: flex;
@@ -17,17 +21,17 @@ section{
 }
 .container-left{
     box-sizing: border-box;
-    background-color:#fff;
+    background-color:$color-ppal;
     border-radius: 20px;
     width: 65%;
     padding: 30px 30px 60px 30px;
-    margin-top: 40px;
     #userInfo{
-        border-radius: 0px 60px 60px 0px;
-        background-color: $color-fondo;
+       box-shadow: 2px 4px 4px $color-sec;
+        background-color: $color-menues;
         padding:25px 20px;
         h2{
             font-family: $fte-ppal;
+            text-transform: uppercase;
             font-size: 20px;
             font-weight: normal;
         }
@@ -36,23 +40,29 @@ section{
             display: flex;
             justify-content: space-between;
         p{
-            font-family: $fte-ppal;
-            color: $color-ppal;
+            font-family: $fte-sec;
+            color: $color-sec;
             font-size:13px ;
             span{
-                color: grey;
+                color: $color-ter;
             }
         }
     }
     }
     form{
+        box-sizing: border-box;
+      
+        background-color: $color-menues;
+        box-shadow: 2px 4px 5px $color-sec;
         .deliveryMethod{
             margin-top: 30px;
+            padding-top: 15px;
            fieldset{
-            padding-top: 30px;
-            padding-bottom: 30px;
+            // padding-top: 30px;
+            // padding-bottom: 30px;
+            
             legend{
-                font-family: $fte-ppal;
+                font-family: $fte-sec;
                 font-size: 20px;
                 padding-left: 20px;
                 padding-right: 20px;
@@ -63,11 +73,11 @@ section{
                 align-items: center;
             }
             .deliver{
-                width: 18%;
+                width: 28%;
                 padding-left: 40px;
                 label{
                     font-size: 16px;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                 }
                 i{
                  color: $color-sec;
@@ -79,7 +89,7 @@ section{
                 border-top: 1px solid grey;
                 padding-top: 10px;
                 margin-top: 20px;
-                font-family: $fte-ppal;
+                font-family: $fte-sec;
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
@@ -97,31 +107,34 @@ section{
                         width: 40%;
                     }
                     #number{
-                        width: 7%;
+                        width: 9%;
                     }
                     #dto{
-                        width: 6%;
+                        width: 9%;
                     }
                     #CP{
-                        width: 7%;
+                        width: 10%;
                     }
                     input{
-                        border: 2px solid $color-sec;
-                        border-radius: 7px 7px 7px 0;
-                        font-family: $fte-ppal;
+                        border: 1px solid $color-sec;
+                        font-family: $fte-sec;
                         padding: 2px 10px;
                         width: 60%;
+                        outline: none;
+                        &:focus{
+                            border: 2px solid $color-sec;
+                        }
                     }
                 }
                
             }
             .pick-up{
-                width: 37%;
+                width: 47%;
                 margin-top: 30px;
                 padding-left: 40px;
                 label{
                     font-size: 16px;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                 }
                 i{
                  color: $color-sec;
@@ -141,7 +154,7 @@ section{
                 span{
                     color:grey;
                     display: block;
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                     font-size: 13px;
                     padding-left: 50px;
                 }
@@ -154,7 +167,7 @@ section{
                 padding-top: 30px;
                 padding-bottom: 20px;
                 legend{
-                    font-family: $fte-ppal;
+                    font-family: $fte-sec;
                     font-size: 20px;
                     padding-left: 20px;
                     padding-right: 20px;
@@ -163,7 +176,7 @@ section{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 18.5%;
+                    width: 25%;
                     margin-bottom: 10px;
                     padding-left: 40px;
                     img{
@@ -178,7 +191,7 @@ section{
                     margin-top: 20px;
                     margin-bottom: 10px;
                     padding-left: 40px;
-                    width: 53%;
+                    width: 58%;
                     display: none;
                     div{
                         display: flex;
@@ -193,7 +206,7 @@ section{
                     }
                     }
                     p{
-                        font-family: $fte-ppal;
+                        font-family: $fte-sec;
                         font-size: 13px;
                         color:grey;
                     }
@@ -205,18 +218,20 @@ section{
 
 .container-right{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 28%;
     height: fit-content;
-    margin-top: 40px;
-    box-sizing: border-box;
+    margin-top: 45px;
+    box-shadow: 2px 4px 4px $color-sec;
     .summary{
-        font-family: $fte-ppal;
+        font-family: $fte-sec;
         display: flex;
         flex-direction: column;
         h2{
+            font-family: $fte-ppal;
+            text-transform: uppercase;
             color: $color-sec;
             font-size: 20px;
             border-bottom: 1px solid rgb(190, 187, 187);
@@ -238,35 +253,71 @@ section{
             }
         }
         #subtotal-summary{
-            color: grey;
-            font-size: 15px;
+            color: $color-ter;
+            font-size: 16px;
             
         }
         #total-summary{
             font-weight: bolder;
             font-size: 19px;
-            background-color:rgba(221, 210, 210, 0.692);
+            background-color:$color-menues;
            
         }
-       
+        .coupon{
+            border: 2px solid $color-sec;
+            border-radius: 10px;
+            width: 85%;
+            align-self: center;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 5px 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            outline: none;
+            i{
+                color: $color-sec;
+                transform: rotate(-45deg);
+            }
+            span{
+                font-size: 13px;
+                font-weight: bolder;
+                color: $color-sec;
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: $color-sec;
+            }
+            &:hover>i{
+                color: white;
+            }
+            &:hover>span{
+                color: white;
+                font-weight: normal;
+            }
+
+            
+        }
 
     }
     button{
-        background-color:$color-sec;
-        font-size: 15px;
+        background-color:rgb(34, 33, 33);
+        font-size: 16px;
         color: white;
         font-family: $fte-ppal;
-        border-radius: 0px 0px 20px 20px;
+        border-radius: 0px 0px 15px 15px;
         border: 0px ;
         margin-top:5px ;
         box-sizing: border-box;
         width: 100%;
-        padding: 3px 25px;
+        padding: 4px 25px;
         align-self: flex-end;
         outline: none;
         &:hover{
             font-size: 16px;
             cursor: pointer;
+            background-color:$color-sec;
         }
     }
 }

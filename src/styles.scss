@@ -26,36 +26,6 @@ app-banner{
     display: block;
 
 }
-
-.carousel-cell {
-    width: 100%; /* full width */
-    height: 60vh; /* height of carousel */
-    margin-right: 10px;
-  }
-
-  ///////////FLECHITAS ////////
-  /* no circle */
-  .flickity-button {
-    background: rgba(255, 255, 255, 0.212);
-    &:hover{
-        background:none;
-    }
-  }
-  /* big previous & next buttons */
-  .flickity-prev-next-button {
-    width: 30px;
-    height: 30px;
-  }
-  /* icon color */
-  .flickity-button-icon {
-    fill:white;
-  }
-  /* hide disabled button */
-  .flickity-button:disabled {
-    display: none;
-  }
-
-
 }
 
 

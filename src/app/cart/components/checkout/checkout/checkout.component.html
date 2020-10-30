@@ -21,9 +21,9 @@
                         <p>Ingrese su dirección de entrega</p>
                         <div class="inputAdress">
                         <input type="text" required id="deliveryAdress" placeholder="Calle">
-                        <input type="number" required id="number" placeholder="nro.">
-                        <input type="number" required id="dto" placeholder="dto">
-                        <input type="number" required id="CP" placeholder="CP">
+                        <input type="text" required id="number" placeholder="nro.">
+                        <input type="text" required id="dto" placeholder="dto">
+                        <input type="text" required id="CP" placeholder="CP">
                     </div>
                         <!-- <select name="ciudad" id="ciudad">
                             <option value="uno" selected>-Seleccione una ciudad-</option>
@@ -70,10 +70,10 @@
 
 
             </div>
-            <!-- <div id="subtotal-summary"><span>Subtotal:</span> <span> ${{totalPrice}}</span> </div>
-            <div id="total-summary"><span>Total:</span> <span>${{totalPrice}} </span> </div> -->
+            <div id="subtotal-summary"><span>Subtotal:</span> <span> ${{totalPrice}}</span> </div>
+            <div id="total-summary"><span>Total:</span> <span>${{totalPrice}} </span> </div>
             
           </div>
-          <button [routerLink]="['/pre-checkout']">CONTINUAR</button>
+          <button [routerLink]="['/pre-checkout']">COMPRAR</button>
     </div>
 </section>
