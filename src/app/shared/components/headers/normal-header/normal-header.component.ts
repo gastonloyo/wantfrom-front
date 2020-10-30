@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ItemCarrito } from 'src/app/cart/clases/item-carrito';
 import { Carrito } from 'src/app/cart/clases/carrito';
 import { CartService } from 'src/app/cart/services/cart.service';
+import { Subcategoria } from 'src/app/products/clases/subcategoria';
 
 @Component({
   selector: 'app-normal-header',
@@ -45,30 +46,43 @@ export class NormalHeaderComponent implements OnInit {
   getListaCategorias():void{
     this.catalogoservice.getListaCategorias().subscribe( response =>{
      this.categorias=response;
-     console.log(response) }
+     console.log(response);
+    }
      )
   }
-    /////end get categories///
-
- 
               /********DROP DOWN MENUS */
 //***categories */
   showCategories(){
     let categoriesList= document.getElementById("categoriesList");
     categoriesList.style.display="block";
 
+    
+
     this.bgOpenMenu();    
   }
  
-// showSubcategories(){
-//  let containerSubcategories = document.getElementById("container-subcategories");
-//  containerSubcategories.style.display="initial";
-//  let categoriesList= document.getElementById("categoriesList");
-//  categoriesList.style.borderBottomRightRadius="0px";
-// }
+showsubcategories(index:number){
+ let container = document.getElementById("container-sub");
+ container.style.display="initial";
+//  console.log(this.categorias[index].subcategorias);
+ let categoriaActual=this.categorias[index];
+ 
+ let subcatActuales=categoriaActual.subcategorias;
+ console.log(subcatActuales);
+
+ for (let x = 0; x < subcatActuales.length ; x++) {
+  let itemSubcategoria= document.createElement("p")
+  itemSubcategoria.classList.add("borrar")
+  itemSubcategoria.innerText=subcatActuales[x].nombre;
+  document.getElementById("container-sub").appendChild(itemSubcategoria);
+   
+ }
+let borrar = document.querySelectorAll(".borrar") ;
+
+}
 hiddeSubAndCategories(){
-//   let containerSubcategories = document.getElementById("container-subcategories");
-//  containerSubcategories.style.display="none";
+  let containerSubcategories = document.getElementById("container-sub");
+ containerSubcategories.style.display="none";
  let categoriesList= document.getElementById("categoriesList");
  categoriesList.style.display="none";
   this.hiddeBgMenu();

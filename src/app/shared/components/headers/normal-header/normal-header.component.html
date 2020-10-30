@@ -19,7 +19,7 @@
         <div id="fila-header">
             <nav>
                 <ul class="menu">
-                    <li (mouseover)="showCategories()"><a href="#section-categories">Categorías</a></li>
+                    <li (mouseover)="showCategories()" ><a href="#section-categories">Categorías</a></li>
                     <li><a href="#section-ofertas">Ofertas</a></li>
                 </ul>
             </nav>
@@ -51,7 +51,7 @@
                     <p>Notificaciones</p>
                 </div>
 
-                <div class="iconos miperfil" (mouseover)="showUserMenu()" [routerLink]="['/userLogIn']">
+                <div class="iconos miperfil" (mouseover)="showUserMenu()"  (mouseout)="hiddeUserMenu()" [routerLink]="['/userLogIn']">
                     <i class="fas fa-user-circle opciones"></i>
                     <p>Mi Perfil</p>
 
@@ -73,11 +73,14 @@
 <div class="bg-menu" id="bg-menu"></div>
 <div class="contenedor-categorias"  (mouseover)="showCategories()"  (mouseout)="hiddeSubAndCategories()" id="container-subcategories">
     <ul class="submenu " id="categoriesList">
-        <li class="items-categories" *ngFor="let categoria of categorias"
-            >{{categoria.nombre}}<i
-                class="fas fa-angle-down"></i></li>
+        <li class="items-categories" *ngFor="let categoria of categorias; let i=index"
+        (mouseover)="showsubcategories(i)" >{{categoria.nombre}}<i
+                class="fas fa-angle-down"></i>
+                
+            </li>
     </ul>
-    <div id="container-subcategories" >
-
+    <div id="container-sub" >
+ 
+      
     </div>
 </div>

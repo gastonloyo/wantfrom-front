@@ -1,5 +1,6 @@
+import { Subcategoria } from './subcategoria';
 export class Categoria {
     id:number;
     nombre:string;
-    codigo:string;
+   subcategorias:Subcategoria[];
 }

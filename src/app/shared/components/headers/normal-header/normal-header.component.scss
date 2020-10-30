@@ -1,10 +1,10 @@
 
 $fte-ppal: 'Poppins', sans-serif;
+$fte-sec: 'Open Sans', sans-serif;
 $color-ppal:#fff;
  $color-sec: rgb(87, 83, 83);
  $color-ter: rgb(172, 165, 165);
  $color-menues: rgb(243, 236, 236);
-
 
 header{
     display: flex;
@@ -307,16 +307,22 @@ header{
             }
     } 
     }
-    #container-subcategories{
-    background: rgba(255, 255, 255, 0.966);
+    #container-sub{
+    background: $color-menues;
     width: 30vw;
     height: fit-content;
     position: absolute;
     // top: 115px;
-    left: 28vw;
+    left: 24vw;
     z-index: 3;
     border-radius: 0px 0px 10px 0px;
+    height: 200px;
     display: none;
+    li{
+        color: $color-sec;
+        font-family: $fte-sec;
+        list-style: none;
+    }
         }
     }
 
